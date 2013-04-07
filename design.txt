@@ -1,0 +1,7 @@
+- get number of bits in all number -> b
+
+___for_loop___
+- get c values for all pairs
+- calculate S for all C-s
+- compare Ss with limit
+- print pairs to output
