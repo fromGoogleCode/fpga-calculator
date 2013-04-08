@@ -6,33 +6,42 @@ main();
 sub main
 {
 	my @vectors;
-	#print get_tani(50,90,50);
-	generate_rnd_1024();
-}
-
-
-sub generate_rnd_1024()
-{
-	my $numofones = $1;
 	my $i = 0;
-	my $num_of_ones = 0 ;
-	my $output_str = "";
-	while($i < 32)
-	{
-		my $tmp_num = 0;
-		$tmp_num = int(rand(255));
-		$num_of_ones = $num_of_ones + bit_count($tmp_num);
-		$output_str .= sprintf("%b",$tmp_num);
-		$i = $i + 1;
-	}
-	print "\n".$output_str."\n";
-	print "\n".$num_of_ones."\n";
-	#while($numofones)
-	#{
-	#	bit_count(int(rand(255)));
-	#}
+	#print get_tani(50,90,50);
+	my $num_of_ones = 32;
+	generate_vector(\@vectors,$num_of_ones);
+	print_vectors(\@vectors);
+	print_report();
+
 }
 
+sub generate_vector()
+{
+	my $vectors = $_[0];
+	my $ones = $_[1];
+	my $tmp_str = "";
+	my $i = 0;
+	while($i != (1024 - $ones))
+	{
+		$tmp_str = ("0" x $i).("1"x 32).("0" x (1024 - $ones - $i - 1));
+		@{$vectors}[$i] = $tmp_str;
+		$i = $i + 1; 
+	}
+}
+sub print_vectors()
+{
+	my $vectors = $_[0];
+	open (FILE,">test_vectors.txt");
+	foreach my $vector (@{$vectors})
+	{
+		print FILE "$vector \n";
+	}
+	
+}
+sub print_report()
+{
+	print get_tani(32,32,31)
+}
 sub bit_count()
 {
 	my $num = $_[0];
