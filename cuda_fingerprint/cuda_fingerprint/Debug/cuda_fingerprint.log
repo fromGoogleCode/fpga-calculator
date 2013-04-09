@@ -1,15 +1,26 @@
-﻿Build started 2013.04.07. 19:55:02.
+﻿Build started 2013.04.09. 20:26:18.
      1>Project "G:\Sandboxes\VS\cuda_fingerprint\cuda_fingerprint\cuda_fingerprint.vcxproj" on node 2 (build target(s)).
-     1>PrepareForBuild:
-         Creating directory "G:\Sandboxes\VS\cuda_fingerprint\Debug\".
-       InitializeBuildStatus:
-         Creating "Debug\cuda_fingerprint.unsuccessfulbuild" because "AlwaysCreate" was specified.
+     1>InitializeBuildStatus:
+         Touching "Debug\cuda_fingerprint.unsuccessfulbuild".
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt main.c
          main.c
-     1>g:\sandboxes\vs\cuda_fingerprint\cuda_fingerprint\main.c(15): warning C4716: 'get_tanimoto' : must return a value
+     1>g:\sandboxes\vs\cuda_fingerprint\cuda_fingerprint\main.c(26): warning C4020: 'compare_fingerprints' : too many actual parameters
+     1>g:\sandboxes\vs\cuda_fingerprint\cuda_fingerprint\main.c(31): warning C4029: declared formal parameter list different from definition
+     1>g:\sandboxes\vs\cuda_fingerprint\cuda_fingerprint\main.c(47): warning C4013: 'count_bits' undefined; assuming extern returning int
+     1>g:\sandboxes\vs\cuda_fingerprint\cuda_fingerprint\main.c(47): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>g:\sandboxes\vs\cuda_fingerprint\cuda_fingerprint\main.c(48): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>g:\sandboxes\vs\cuda_fingerprint\cuda_fingerprint\main.c(49): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>g:\sandboxes\vs\cuda_fingerprint\cuda_fingerprint\main.c(64): warning C4142: benign redefinition of type
+     1>g:\sandboxes\vs\cuda_fingerprint\cuda_fingerprint\main.c(26): warning C4700: uninitialized local variable 'output_buffer' used
+     1>g:\sandboxes\vs\cuda_fingerprint\cuda_fingerprint\main.c(26): warning C4700: uninitialized local variable 'cbdsize' used
+     1>g:\sandboxes\vs\cuda_fingerprint\cuda_fingerprint\main.c(26): warning C4700: uninitialized local variable 'dbsize' used
+     1>g:\sandboxes\vs\cuda_fingerprint\cuda_fingerprint\main.c(26): warning C4700: uninitialized local variable 'compare_database' used
+     1>g:\sandboxes\vs\cuda_fingerprint\cuda_fingerprint\main.c(26): warning C4700: uninitialized local variable 'database' used
+     1>g:\sandboxes\vs\cuda_fingerprint\cuda_fingerprint\main.c(61): warning C4716: 'compare_fingerprints' : must return a value
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\Sandboxes\VS\cuda_fingerprint\Debug\cuda_fingerprint.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\cuda_fingerprint.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"G:\Sandboxes\VS\cuda_fingerprint\Debug\cuda_fingerprint.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\Sandboxes\VS\cuda_fingerprint\Debug\cuda_fingerprint.lib" /MACHINE:X86 Debug\main.obj
+         LINK : G:\Sandboxes\VS\cuda_fingerprint\Debug\cuda_fingerprint.exe not found or not built by the last incremental link; performing full link
          cuda_fingerprint.vcxproj -> G:\Sandboxes\VS\cuda_fingerprint\Debug\cuda_fingerprint.exe
        Manifest:
          C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"G:\Sandboxes\VS\cuda_fingerprint\Debug\cuda_fingerprint.exe;#1" /manifest Debug\cuda_fingerprint.exe.intermediate.manifest
@@ -20,4 +31,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.01
+Time Elapsed 00:00:00.67
