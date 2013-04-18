@@ -4,6 +4,7 @@
 
 void load_database(int * database);
 float compare_fingerprints(int* database);
+void getFootprint(unsigned int* pointer);
 
 typedef struct
 {
@@ -20,7 +21,7 @@ void main()
 	int* compare_database;
 	tTanimotoOut* output_buffer;
 	int dbsize, cbdsize;
-
+    database = (unsigned int*) malloc(1000*32*sizeof(unsigned int));
 	dbsize = load_database(database);
 	cbdsize = load_database(compare_database);
 	
@@ -80,4 +81,52 @@ float count_bits(int value)
 int load_database(int * database)
 {
 	//TODO: load text based database
+}
+
+
+void getFootprint(unsigned int *pointer)
+{
+	unsigned int footprint[992][32];
+
+	unsigned int negated = 0x0u;
+	unsigned int number = ~0x0u;
+	
+	
+	unsigned int i, j, k, tmp = 0u, pos = 0u;
+
+	
+
+	for (i = 0u; i < 31u; i++)
+	{
+		tmp = number >> i; 
+		negated = ~tmp;
+
+		printf("%u num: %u\nnegated: %u\n\n", i, tmp, negated);
+		
+		for(j=0u; j < 32u; j++)
+		{
+			footprint[pos+j][j] = tmp;
+			if(j<31u)
+			footprint[pos+j][j+1u] = negated;
+			for(k=0u; k < j; k++)
+			{
+				footprint[pos+j] [k] = 0u;
+			}
+			for(k=j+2; k < 32; k++)
+			{
+				footprint[pos+j] [k] = 0u;
+			}
+		}
+
+		pos += 32;
+	}
+
+	
+	for(i=0u; i < 992; i++)
+	{
+		for(j = 0u; j < 32; j++)
+		{
+			pointer[(i * 32u) + j] = footprint[i][j];
+		}
+	}
 }
