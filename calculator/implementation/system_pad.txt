@@ -1,0 +1,174 @@
+Release 13.2 - par O.61xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Thu Apr 04 17:13:02 2013
+
+
+INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
+1. The <design name>_pad.txt file (this file) designed to provide information on IO usage in a human readable ASCII text format viewable through common text editors.
+2. The <design namd>_pad.csv file for use with spreadsheet programs such as MS Excel. This file can also be read by PACE to communicate post PAR IO information.
+3. The <design name>.pad file designed for parsing by customers.  It uses the "|" as a data field separator.
+
+INPUT FILE:       system_map.ncd
+OUTPUT FILE:      system_pad.txt
+PART TYPE:        xc3s250e
+SPEED GRADE:      -4
+PACKAGE:          tq144
+
+Pinout by Pin Number:
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|Pin Number|Signal Name                              |Pin Usage|Pin Name                 |Direction|IO Standard|IO Bank Number|Drive (mA)|Slew Rate|Termination|IOB Delay|Voltage|Constraint|IO Register|Signal Integrity|
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|P1        |                                         |         |PROG_B                   |         |           |              |          |         |           |         |       |          |           |                |
+|P2        |                                         |DIFFM    |IO_L01P_3                |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
+|P3        |                                         |DIFFS    |IO_L01N_3                |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
+|P4        |                                         |DIFFM    |IO_L02P_3                |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
+|P5        |                                         |DIFFS    |IO_L02N_3/VREF_3         |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
+|P6        |                                         |IBUF     |IP                       |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
+|P7        |                                         |DIFFM    |IO_L03P_3                |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
+|P8        |fpga_0_LEDs_Displays_GPIO_IO_O_pin<0>    |IOB      |IO_L03N_3                |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P9        |                                         |         |VCCINT                   |         |           |              |          |         |           |         |1.2    |          |           |                |
+|P10       |                                         |IBUF     |IP                       |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
+|P11       |                                         |         |GND                      |         |           |              |          |         |           |         |       |          |           |                |
+|P12       |fpga_0_Switches_Buttons_GPIO_IO_I_pin<0> |IBUF     |IP/VREF_3                |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
+|P13       |                                         |         |VCCO_3                   |         |           |3             |          |         |           |         |2.50   |          |           |                |
+|P14       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<1>    |IOB      |IO_L04P_3/LHCLK0         |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P15       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<2>    |IOB      |IO_L04N_3/LHCLK1         |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P16       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<16>   |IOB      |IO_L05P_3/LHCLK2         |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P17       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<15>   |IOB      |IO_L05N_3/LHCLK3/IRDY2   |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P18       |                                         |IBUF     |IP                       |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
+|P19       |                                         |         |GND                      |         |           |              |          |         |           |         |       |          |           |                |
+|P20       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<14>   |IOB      |IO_L06P_3/LHCLK4/TRDY2   |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P21       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<13>   |IOB      |IO_L06N_3/LHCLK5         |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P22       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<5>    |IOB      |IO_L07P_3/LHCLK6         |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P23       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<4>    |IOB      |IO_L07N_3/LHCLK7         |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P24       |fpga_0_Switches_Buttons_GPIO_IO_I_pin<1> |IBUF     |IP                       |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
+|P25       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<3>    |IOB      |IO_L08P_3                |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P26       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<6>    |IOB      |IO_L08N_3                |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P27       |                                         |         |GND                      |         |           |              |          |         |           |         |       |          |           |                |
+|P28       |                                         |         |VCCO_3                   |         |           |3             |          |         |           |         |2.50   |          |           |                |
+|P29       |                                         |IBUF     |IP                       |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
+|P30       |                                         |         |VCCAUX                   |         |           |              |          |         |           |         |2.5    |          |           |                |
+|P31       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<12>   |IOB      |IO/VREF_3                |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P32       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<11>   |IOB      |IO_L09P_3                |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P33       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<10>   |IOB      |IO_L09N_3                |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P34       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<9>    |IOB      |IO_L10P_3                |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P35       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<7>    |IOB      |IO_L10N_3                |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P36       |fpga_0_Switches_Buttons_GPIO_IO_I_pin<2> |IBUF     |IP                       |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
+|P37       |                                         |         |GND                      |         |           |              |          |         |           |         |       |          |           |                |
+|P38       |fpga_0_Switches_Buttons_GPIO_IO_I_pin<3> |IBUF     |IP                       |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
+|P39       |                                         |DIFFM    |IO_L01P_2/CSO_B          |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
+|P40       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<8>    |IOB      |IO_L01N_2/INIT_B         |OUTPUT   |LVCMOS25*  |2             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P41       |fpga_0_rst_1_sys_rst_pin                 |IBUF     |IP                       |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
+|P42       |                                         |         |VCCO_2                   |         |           |2             |          |         |           |         |2.50   |          |           |                |
+|P43       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<17>   |IOB      |IO_L02P_2/DOUT/BUSY      |OUTPUT   |LVCMOS25*  |2             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P44       |                                         |DIFFS    |IO_L02N_2/MOSI/CSI_B     |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
+|P45       |                                         |         |VCCINT                   |         |           |              |          |         |           |         |1.2    |          |           |                |
+|P46       |                                         |         |GND                      |         |           |              |          |         |           |         |       |          |           |                |
+|P47       |fpga_0_Switches_Buttons_GPIO_IO_I_pin<4> |IBUF     |IP_L03P_2                |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
+|P48       |fpga_0_Switches_Buttons_GPIO_IO_I_pin<5> |IBUF     |IP_L03N_2/VREF_2         |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
+|P49       |                                         |         |VCCO_2                   |         |           |2             |          |         |           |         |2.50   |          |           |                |
+|P50       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<18>   |IOB      |IO_L04P_2/D7/GCLK12      |OUTPUT   |LVCMOS25*  |2             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P51       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<19>   |IOB      |IO_L04N_2/D6/GCLK13      |OUTPUT   |LVCMOS25*  |2             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P52       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<20>   |IOB      |IO/D5                    |OUTPUT   |LVCMOS25*  |2             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P53       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<21>   |IOB      |IO_L05P_2/D4/GCLK14      |OUTPUT   |LVCMOS25*  |2             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P54       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<22>   |IOB      |IO_L05N_2/D3/GCLK15      |OUTPUT   |LVCMOS25*  |2             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P55       |                                         |         |GND                      |         |           |              |          |         |           |         |       |          |           |                |
+|P56       |fpga_0_clk_1_sys_clk_pin                 |IBUF     |IP_L06P_2/RDWR_B/GCLK0   |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
+|P57       |                                         |DIFFSI   |IP_L06N_2/M2/GCLK1       |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
+|P58       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<23>   |IOB      |IO_L07P_2/D2/GCLK2       |OUTPUT   |LVCMOS25*  |2             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P59       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<24>   |IOB      |IO_L07N_2/D1/GCLK3       |OUTPUT   |LVCMOS25*  |2             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P60       |xps_ps2_0_PS2_1_DATA                     |IOB      |IO/M1                    |BIDIR    |LVCMOS25*  |2             |12        |SLOW     |NONE**     |IFD      |       |UNLOCATED |YES        |NONE            |
+|P61       |                                         |         |GND                      |         |           |              |          |         |           |         |       |          |           |                |
+|P62       |                                         |DIFFM    |IO_L08P_2/M0             |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
+|P63       |                                         |DIFFS    |IO_L08N_2/DIN/D0         |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
+|P64       |                                         |         |VCCO_2                   |         |           |2             |          |         |           |         |2.50   |          |           |                |
+|P65       |                                         |         |VCCAUX                   |         |           |              |          |         |           |         |2.5    |          |           |                |
+|P66       |                                         |IOB      |IO/VREF_2                |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
+|P67       |                                         |DIFFM    |IO_L09P_2/VS2/A19        |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
+|P68       |                                         |DIFFS    |IO_L09N_2/VS1/A18        |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
+|P69       |fpga_0_Switches_Buttons_GPIO_IO_I_pin<6> |IBUF     |IP                       |INPUT    |LVCMOS25*  |2             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
+|P70       |                                         |DIFFM    |IO_L10P_2/VS0/A17        |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
+|P71       |                                         |DIFFS    |IO_L10N_2/CCLK           |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
+|P72       |                                         |         |DONE                     |         |           |              |          |         |           |         |       |          |           |                |
+|P73       |                                         |         |GND                      |         |           |              |          |         |           |         |       |          |           |                |
+|P74       |                                         |DIFFM    |IO_L01P_1/A16            |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P75       |                                         |DIFFS    |IO_L01N_1/A15            |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P76       |                                         |DIFFM    |IO_L02P_1/A14            |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P77       |                                         |DIFFS    |IO_L02N_1/A13            |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P78       |fpga_0_Switches_Buttons_GPIO_IO_I_pin<7> |IBUF     |IP                       |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
+|P79       |                                         |         |VCCO_1                   |         |           |1             |          |         |           |         |2.50   |          |           |                |
+|P80       |                                         |         |VCCINT                   |         |           |              |          |         |           |         |1.2    |          |           |                |
+|P81       |                                         |DIFFM    |IO_L03P_1/A12            |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P82       |                                         |DIFFS    |IO_L03N_1/A11            |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P83       |                                         |DIFFS    |IO/VREF_1                |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P84       |fpga_0_Switches_Buttons_GPIO_IO_I_pin<8> |IBUF     |IP                       |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
+|P85       |                                         |DIFFM    |IO_L04P_1/A10/RHCLK0     |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P86       |                                         |DIFFS    |IO_L04N_1/A9/RHCLK1      |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P87       |                                         |DIFFM    |IO_L05P_1/A8/RHCLK2      |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P88       |                                         |DIFFS    |IO_L05N_1/A7/RHCLK3/TRDY1|UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P89       |fpga_0_Switches_Buttons_GPIO_IO_I_pin<9> |IBUF     |IP                       |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
+|P90       |                                         |         |GND                      |         |           |              |          |         |           |         |       |          |           |                |
+|P91       |                                         |DIFFM    |IO_L06P_1/A6/RHCLK4/IRDY1|UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P92       |                                         |DIFFS    |IO_L06N_1/A5/RHCLK5      |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P93       |                                         |DIFFM    |IO_L07P_1/A4/RHCLK6      |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P94       |                                         |DIFFS    |IO_L07N_1/A3/RHCLK7      |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P95       |fpga_0_Switches_Buttons_GPIO_IO_I_pin<10>|IBUF     |IP/VREF_1                |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
+|P96       |                                         |DIFFM    |IO_L08P_1/A2             |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P97       |                                         |DIFFS    |IO_L08N_1/A1             |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P98       |                                         |DIFFS    |IO/A0                    |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P99       |                                         |         |GND                      |         |           |              |          |         |           |         |       |          |           |                |
+|P100      |                                         |         |VCCO_1                   |         |           |1             |          |         |           |         |2.50   |          |           |                |
+|P101      |fpga_0_Switches_Buttons_GPIO_IO_I_pin<11>|IBUF     |IP                       |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
+|P102      |                                         |         |VCCAUX                   |         |           |              |          |         |           |         |2.5    |          |           |                |
+|P103      |                                         |DIFFM    |IO_L09P_1/HDC            |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P104      |                                         |DIFFS    |IO_L09N_1/LDC0           |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P105      |                                         |DIFFM    |IO_L10P_1/LDC1           |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P106      |                                         |DIFFS    |IO_L10N_1/LDC2           |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P107      |                                         |IBUF     |IP                       |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|P108      |                                         |         |TMS                      |         |           |              |          |         |           |         |       |          |           |                |
+|P109      |                                         |         |TDO                      |         |           |              |          |         |           |         |       |          |           |                |
+|P110      |                                         |         |TCK                      |         |           |              |          |         |           |         |       |          |           |                |
+|P111      |                                         |IBUF     |IP                       |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P112      |                                         |DIFFM    |IO_L01P_0                |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P113      |                                         |DIFFS    |IO_L01N_0                |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P114      |                                         |IBUF     |IP                       |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P115      |                                         |         |VCCINT                   |         |           |              |          |         |           |         |1.2    |          |           |                |
+|P116      |                                         |DIFFM    |IO_L02P_0                |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P117      |                                         |DIFFS    |IO_L02N_0                |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P118      |                                         |         |GND                      |         |           |              |          |         |           |         |       |          |           |                |
+|P119      |                                         |DIFFMI   |IP_L03P_0                |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P120      |                                         |DIFFSI   |IP_L03N_0                |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P121      |                                         |         |VCCO_0                   |         |           |0             |          |         |           |         |2.50   |          |           |                |
+|P122      |                                         |DIFFM    |IO_L04P_0/GCLK4          |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P123      |                                         |DIFFS    |IO_L04N_0/GCLK5          |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P124      |                                         |IOB      |IO/VREF_0                |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P125      |                                         |DIFFM    |IO_L05P_0/GCLK6          |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P126      |                                         |DIFFS    |IO_L05N_0/GCLK7          |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P127      |                                         |         |GND                      |         |           |              |          |         |           |         |       |          |           |                |
+|P128      |                                         |DIFFMI   |IP_L06P_0/GCLK8          |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P129      |                                         |DIFFSI   |IP_L06N_0/GCLK9          |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P130      |                                         |DIFFM    |IO_L07P_0/GCLK10         |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P131      |                                         |DIFFS    |IO_L07N_0/GCLK11         |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P132      |                                         |IOB      |IO                       |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P133      |                                         |         |GND                      |         |           |              |          |         |           |         |       |          |           |                |
+|P134      |                                         |DIFFM    |IO_L08P_0                |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P135      |                                         |DIFFS    |IO_L08N_0/VREF_0         |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P136      |                                         |IBUF     |IP                       |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P137      |                                         |         |VCCAUX                   |         |           |              |          |         |           |         |2.5    |          |           |                |
+|P138      |                                         |         |VCCO_0                   |         |           |0             |          |         |           |         |2.50   |          |           |                |
+|P139      |                                         |DIFFM    |IO_L09P_0                |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P140      |                                         |DIFFS    |IO_L09N_0                |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P141      |                                         |IBUF     |IP                       |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P142      |xps_ps2_0_PS2_1_CLK                      |IOB      |IO_L10P_0                |BIDIR    |LVCMOS25*  |0             |12        |SLOW     |NONE**     |IFD      |       |LOCATED   |YES        |NONE            |
+|P143      |                                         |DIFFS    |IO_L10N_0/HSWAP          |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P144      |                                         |         |TDI                      |         |           |              |          |         |           |         |       |          |           |                |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+* Default value.
+** This default Pullup/Pulldown value can be overridden in Bitgen. 
+****** Special VCCO requirements may apply. Please consult the device 
+       family datasheet for specific guideline on VCCO requirements. 
+
+

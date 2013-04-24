@@ -1,0 +1,8 @@
+-batch 
+-create vgat_test 
+-ver 1.00.a 
+-dir "G:\Sandboxes\Xilinx\calculator" 
+-lang verilog 
+-bus plbv46 s 
+-mem 1 
+-xps 

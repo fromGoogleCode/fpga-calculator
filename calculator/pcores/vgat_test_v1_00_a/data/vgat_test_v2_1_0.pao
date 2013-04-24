@@ -1,0 +1,10 @@
+##############################################################################
+## Filename:          G:/Sandboxes/Xilinx/calculator/pcores/vgat_test_v1_00_a/data/vgat_test_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Wed Apr 10 09:33:24 2013 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a  all 
+lib plbv46_slave_single_v1_01_a  all 
+lib vgat_test_v1_00_a user_logic verilog
+lib vgat_test_v1_00_a vgat_test vhdl

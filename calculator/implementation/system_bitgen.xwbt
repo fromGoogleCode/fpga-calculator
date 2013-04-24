@@ -1,0 +1,7 @@
+INFILE=G:\Sandboxes\Xilinx\calculator\implementation\system.ncd
+OUTFILE=G:\Sandboxes\Xilinx\calculator\implementation\system.bit
+FAMILY=Spartan3E
+PART=xc3s250e-4tq144
+WORKINGDIR=G:\Sandboxes\Xilinx\calculator\implementation
+LICENSE=WebPack
+USER_INFO=__0_0_0

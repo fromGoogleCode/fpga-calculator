@@ -1,0 +1,12 @@
+run
+-opt_level 2
+-opt_mode speed
+-ifmt mixed
+-ifn "G:\Sandboxes\Xilinx\calculator\pcores\vga_v1_00_a\devl\synthesis\vga_xst.prj"
+-top vga
+-p virtex6
+-ofn "G:\Sandboxes\Xilinx\calculator\pcores\vga_v1_00_a\devl\synthesis\vga_xst.ngc"
+-iobuf NO
+-rtlview YES
+-hierarchy_separator /
+-work_lib vga_v1_00_a

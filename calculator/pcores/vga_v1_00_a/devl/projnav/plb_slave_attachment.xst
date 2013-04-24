@@ -1,0 +1,5 @@
+set -tmpdir "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/xst/projnav.tmp"
+set -xsthdpdir "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/xst"
+elaborate
+-ifn plb_slave_attachment.prj
+-ifmt mixed

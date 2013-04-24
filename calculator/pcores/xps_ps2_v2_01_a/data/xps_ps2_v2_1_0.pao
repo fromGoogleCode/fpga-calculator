@@ -1,0 +1,14 @@
+##############################################################################
+## Filename:          G:\Sandboxes\Xilinx\calculator\pcores/xps_ps2_v2_01_a/data/xps_ps2_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Thu Apr 04 16:25:18 2013 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v3_00_a all vhdl
+lib plbv46_slave_single_v1_01_a all vhdl
+lib interrupt_control_v2_01_a all vhdl
+lib xps_ps2_v1_01_a ps2_counter vhdl
+lib xps_ps2_v1_01_a ps2_reg vhdl
+lib xps_ps2_v1_01_a ps2_sie vhdl
+lib xps_ps2_v1_01_a ps2 vhdl
+lib xps_ps2_v1_01_a xps_ps2 vhdl

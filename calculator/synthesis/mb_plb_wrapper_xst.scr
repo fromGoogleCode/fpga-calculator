@@ -1,0 +1,13 @@
+run
+-opt_mode speed
+-netlist_hierarchy as_optimized
+-opt_level 1
+-p xc3s250etq144-4
+-top mb_plb_wrapper
+-ifmt MIXED
+-ifn mb_plb_wrapper_xst.prj
+-ofn ../implementation/mb_plb_wrapper.ngc
+-hierarchy_separator /
+-iobuf NO
+-sd {../implementation}
+-vlgincdir {"G:\Sandboxes\Xilinx\calculator\pcores\" "G:\Xilinx\13.2\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "G:\Xilinx\13.2\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }

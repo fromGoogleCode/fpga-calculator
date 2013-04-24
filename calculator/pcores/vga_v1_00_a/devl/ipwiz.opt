@@ -1,0 +1,10 @@
+-batch 
+-create vga 
+-ver 1.00.a 
+-dir "G:\Sandboxes\Xilinx\calculator" 
+-lang verilog 
+-bus plbv46 s 
+-mem 2 
+-xps 
+-ise 
+-driver 
