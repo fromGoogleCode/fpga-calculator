@@ -1,5 +1,5 @@
 
-<EDKSYSTEM EDKVERSION="13.2" EDWVERSION="1.2" TIMESTAMP="Wed Apr 24 17:01:40 2013">
+<EDKSYSTEM EDKVERSION="13.2" EDWVERSION="1.2" TIMESTAMP="Fri Apr 26 08:54:16 2013">
 
   <SYSTEMINFO ARCH="spartan3e" DEVICE="xc3s250e" PACKAGE="tq144" PART="xc3s250etq144-4" SOURCE="G:/Sandboxes/Xilinx/calculator/system.xmp" SPEEDGRADE="-4"/>
 
@@ -12,6 +12,7 @@
     <PORT DIR="IO" MHS_INDEX="5" NAME="xps_ps2_0_PS2_1_CLK" SIGNAME="xps_ps2_0_PS2_1_CLK"/>
     <PORT DIR="O" MHS_INDEX="6" NAME="vga_0_v_sync_pin" SIGNAME="vga_0_v_sync"/>
     <PORT DIR="O" ENDIAN="BIG" LEFT="0" LSB="6" MHS_INDEX="7" MSB="0" NAME="vga_0_video_pin" RIGHT="6" SIGNAME="vga_0_video"/>
+    <PORT DIR="O" MHS_INDEX="8" NAME="vga_0_h_sync_pin" SIGNAME="vga_0_h_sync"/>
   </EXTERNALPORTS>
 
   <MODULES>

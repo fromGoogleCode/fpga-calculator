@@ -1,13 +1,13 @@
 V3 7
 FL G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/hdl/vhdl/vga.vhd 2013/04/24.16:57:39 O.61xd
-EN work/vga 1366818687 \
+EN work/vga 1367057018 \
       FL G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/hdl/vhdl/vga.vhd \
       PB ieee/std_logic_1164 1308643377 PB ieee/std_logic_arith 1308643378 \
       PB ieee/STD_LOGIC_UNSIGNED 1308643379 LB proc_common_v3_00_a \
-      PB proc_common_v3_00_a/proc_common_pkg 1366818668 \
-      PB proc_common_v3_00_a/ipif_pkg 1366818680 LB plbv46_slave_single_v1_01_a \
-      EN plbv46_slave_single_v1_01_a/plbv46_slave_single 1366818685
-AR work/vga/IMP 1366818688 \
+      PB proc_common_v3_00_a/proc_common_pkg 1367056999 \
+      PB proc_common_v3_00_a/ipif_pkg 1367057011 LB plbv46_slave_single_v1_01_a \
+      EN plbv46_slave_single_v1_01_a/plbv46_slave_single 1367057016
+AR work/vga/IMP 1367057019 \
       FL G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/hdl/vhdl/vga.vhd \
-      EN work/vga 1366818687 CP plbv46_slave_single_v1_01_a/plbv46_slave_single \
+      EN work/vga 1367057018 CP plbv46_slave_single_v1_01_a/plbv46_slave_single \
       CP user_logic

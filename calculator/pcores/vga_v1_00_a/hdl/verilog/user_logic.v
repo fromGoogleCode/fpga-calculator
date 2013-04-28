@@ -68,7 +68,10 @@ output                                    IP2Bus_Error;
   // ------------------------------------------------------------
   // Example code to drive IP to Bus signals
   // ------------------------------------------------------------
-
+reg [9:0] x ;
+reg [9:0] y;
+wire  blank_x;
+wire  blank_y;
 // Block RAM for character table
 
    (* RAM_STYLE="{ BLOCK }" *)
@@ -92,9 +95,9 @@ output                                    IP2Bus_Error;
 // Block RAM for character codes in each position
 
    (* RAM_STYLE="{ BLOCK }" *)
-   reg [RAM_WIDTH-1:0] pos_mem [(2**RAM_ADDR_BITS)-1:0];
-   reg [RAM_WIDTH-1:0] pos_output_data;   
-   reg [RAM_ADDR_BITS-1:0] pos_read_address;   
+   reg [RAM_WIDTH-1:0] video_mem [(2**RAM_ADDR_BITS)-1:0];
+   reg [RAM_WIDTH-1:0] video_out;   
+   //reg [RAM_ADDR_BITS-1:0] pos_read_address;   
 
 	//<reg_or_wire> [RAM_ADDR_BITS-1:0] <read_address>, <write_address>;
    //<reg_or_wire> [RAM_WIDTH-1:0] <input_data>;
@@ -106,29 +109,34 @@ output                                    IP2Bus_Error;
 
   always @(posedge Bus2IP_Clk) begin
       if (Bus2IP_CS[1])
-         pos_mem[Bus2IP_Addr] <= Bus2IP_Data;
-      pos_output_data <= char_mem[pos_read_address];
+         video_mem[Bus2IP_Addr] <= Bus2IP_Data;
+         video_out <= video_mem[x + y];
    end
 
-reg [9:0] x ;
-reg [9:0] y;
 //reg char_col [1:0];
 //reg char_row [1:0];
 
 // Increment x position
 always @(posedge Bus2IP_Clk)	
 	begin
-		if(!Bus2IP_Reset)
+		if(Bus2IP_Reset || x == 799)
 		begin
-			x <= x + 1;
+			x <= 0;
 		end
+		else
+			x <= x + 1;
 end
 // Increment y position
 always @(posedge Bus2IP_Clk)
 begin
-	if(!Bus2IP_Reset)
-		begin
-			if(x == 799)
+	if(Bus2IP_Reset)
+	begin
+		y <= 0;
+	end
+	else
+	/* Reset */
+	begin
+		if(x == 799)
 			begin
 				if(y == 520)
 					begin
@@ -139,70 +147,109 @@ begin
 						y <= y + 1;
 					end
 			end
-		end
-	else
-	/* Reset */
-	begin
-		y <= 0;
 	end
 end
 // video
 always @(posedge Bus2IP_Clk)
 begin
-	if(!Bus2IP_Reset)
+	if(Bus2IP_Reset)
+		video <= 6'b000000;		
+	else
 	begin
-		video <= 6'b101010;
+		if(blank_x || blank_y)
+			video <= 6'b000000;
+		else
+			video <= 6'b110010;
+			//video <= char_mem[pos_mem[]]
 	end
 end
 // hsync
 reg hsync_phase1;
+reg hsync_phase2;
 always @(posedge Bus2IP_Clk)
 begin
-	if(!Bus2IP_Reset)
+	if(Bus2IP_Reset)
 	begin
-		/* Hsync must be reset at 655 but it shall be delayed with one clock cycle 
-		 due to delay of block RAM */
-		if(x == 654)
-		begin
-			hsync_phase1 <= 0;
-		end
-		else if(x == 750)
-		begin
-			hsync_phase1 <= 1;
-		end
-		 h_sync <= hsync_phase1;
+		hsync_phase1 <= 1;
+		h_sync <= 1;
 	end
 	else
 	begin
-		hsync_phase1 <= 0;
-		h_sync <= 0;
+	/* Hsync must be reset at 655 but it shall be delayed with one clock cycle 
+		due to delay of block RAM */
+		if(x == 653)
+		begin
+			hsync_phase1 <= 0;
+		end
+		else if(x == 749)
+		begin
+			hsync_phase1 <= 1;
+		end
+			hsync_phase2 <= hsync_phase1;
+			h_sync <= hsync_phase2;
 	end	 
 end
 
 // vsync
 reg vsync_phase1;
+reg vsync_phase2;
 always @(posedge Bus2IP_Clk)
 begin
-	if(!Bus2IP_Reset)
-	begin
-		/* Hsync must be reset at 655 but it shall be delayed with one clock cycle 
-		 due to delay of block RAM */
-		if(y == 479)
-		begin
-			vsync_phase1 <= 0;
-		end
-		else if(x == 481)
-		begin
-			vsync_phase1 <= 1;
-		end
-		 v_sync <= vsync_phase1;
+	if(Bus2IP_Reset)
+	begin	
+		vsync_phase1 <= 1;
+		v_sync <= 1;
 	end
 	else
 	begin
-		vsync_phase1 <= 0;
-		v_sync <= 0;
+		/* Hsync must be reset at 655 but it shall be delayed with one clock cycle 
+		 due to delay of block RAM */
+		if(y == 489 && x==796)
+		begin
+			vsync_phase1 <= 0;
+		end
+		else if(y == 491 && x == 796)
+		begin
+			vsync_phase1 <= 1;
+		end
+		 vsync_phase2 <= vsync_phase1;
+		 v_sync <= vsync_phase2;
 	end
 end
+
+reg [1:0] shf_blank_x;
+reg blank_x_str;
+always @(posedge Bus2IP_Clk)
+begin
+	if(Bus2IP_Reset) 
+		blank_x_str <= 0;
+	else 
+	begin
+		if(x == 797)
+			blank_x_str <= 0;
+		else if(x == 637)
+			blank_x_str <= 1;
+		shf_blank_x  <= {blank_x_str, shf_blank_x[1]};
+	end
+end
+assign blank_x = shf_blank_x[0];
+
+reg [1:0] shf_blank_y;
+reg blank_y_str;
+always @(posedge Bus2IP_Clk)
+begin
+	if(Bus2IP_Reset)
+		blank_y_str <= 0;
+	else 
+	begin
+		if(y == 479 && x==797)
+			blank_y_str <= 1;
+		else if(y == 520 && x==797)
+			blank_y_str <= 0;
+		shf_blank_y  <= {blank_y_str, shf_blank_y[1]};
+	end
+end
+assign blank_y = shf_blank_y[0];
 
  assign IP2Bus_Data    = 0;
  assign IP2Bus_WrAck   = Bus2IP_CS[0] | Bus2IP_CS[1];

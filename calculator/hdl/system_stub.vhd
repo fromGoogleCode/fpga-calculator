@@ -16,7 +16,8 @@ entity system_stub is
     xps_ps2_0_PS2_1_DATA : inout std_logic;
     xps_ps2_0_PS2_1_CLK : inout std_logic;
     vga_0_v_sync_pin : out std_logic;
-    vga_0_video_pin : out std_logic_vector(0 to 6)
+    vga_0_video_pin : out std_logic_vector(0 to 6);
+    vga_0_h_sync_pin : out std_logic
   );
 end system_stub;
 
@@ -31,7 +32,8 @@ architecture STRUCTURE of system_stub is
       xps_ps2_0_PS2_1_DATA : inout std_logic;
       xps_ps2_0_PS2_1_CLK : inout std_logic;
       vga_0_v_sync_pin : out std_logic;
-      vga_0_video_pin : out std_logic_vector(0 to 6)
+      vga_0_video_pin : out std_logic_vector(0 to 6);
+      vga_0_h_sync_pin : out std_logic
     );
   end component;
 
@@ -49,7 +51,8 @@ begin
       xps_ps2_0_PS2_1_DATA => xps_ps2_0_PS2_1_DATA,
       xps_ps2_0_PS2_1_CLK => xps_ps2_0_PS2_1_CLK,
       vga_0_v_sync_pin => vga_0_v_sync_pin,
-      vga_0_video_pin => vga_0_video_pin
+      vga_0_video_pin => vga_0_video_pin,
+      vga_0_h_sync_pin => vga_0_h_sync_pin
     );
 
 end architecture STRUCTURE;

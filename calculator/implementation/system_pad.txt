@@ -1,7 +1,7 @@
 Release 13.2 - par O.61xd (nt64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Thu Apr 04 17:13:02 2013
+Fri Apr 26 19:26:01 2013
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -21,12 +21,12 @@ Pinout by Pin Number:
 |Pin Number|Signal Name                              |Pin Usage|Pin Name                 |Direction|IO Standard|IO Bank Number|Drive (mA)|Slew Rate|Termination|IOB Delay|Voltage|Constraint|IO Register|Signal Integrity|
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |P1        |                                         |         |PROG_B                   |         |           |              |          |         |           |         |       |          |           |                |
-|P2        |                                         |DIFFM    |IO_L01P_3                |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
-|P3        |                                         |DIFFS    |IO_L01N_3                |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
-|P4        |                                         |DIFFM    |IO_L02P_3                |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
-|P5        |                                         |DIFFS    |IO_L02N_3/VREF_3         |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
+|P2        |xps_ps2_0_PS2_1_CLK                      |IOB      |IO_L01P_3                |BIDIR    |LVCMOS25*  |3             |12        |SLOW     |NONE**     |IFD      |       |LOCATED   |YES        |NONE            |
+|P3        |vga_0_v_sync_pin                         |IOB      |IO_L01N_3                |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
+|P4        |vga_0_video_pin<4>                       |IOB      |IO_L02P_3                |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |       |LOCATED   |NO         |NONE            |
+|P5        |vga_0_video_pin<2>                       |IOB      |IO_L02N_3/VREF_3         |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |       |LOCATED   |NO         |NONE            |
 |P6        |                                         |IBUF     |IP                       |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
-|P7        |                                         |DIFFM    |IO_L03P_3                |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
+|P7        |vga_0_video_pin<0>                       |IOB      |IO_L03P_3                |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |       |LOCATED   |NO         |NONE            |
 |P8        |fpga_0_LEDs_Displays_GPIO_IO_O_pin<0>    |IOB      |IO_L03N_3                |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
 |P9        |                                         |         |VCCINT                   |         |           |              |          |         |           |         |1.2    |          |           |                |
 |P10       |                                         |IBUF     |IP                       |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
@@ -79,7 +79,7 @@ Pinout by Pin Number:
 |P57       |                                         |DIFFSI   |IP_L06N_2/M2/GCLK1       |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
 |P58       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<23>   |IOB      |IO_L07P_2/D2/GCLK2       |OUTPUT   |LVCMOS25*  |2             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
 |P59       |fpga_0_LEDs_Displays_GPIO_IO_O_pin<24>   |IOB      |IO_L07N_2/D1/GCLK3       |OUTPUT   |LVCMOS25*  |2             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
-|P60       |xps_ps2_0_PS2_1_DATA                     |IOB      |IO/M1                    |BIDIR    |LVCMOS25*  |2             |12        |SLOW     |NONE**     |IFD      |       |UNLOCATED |YES        |NONE            |
+|P60       |                                         |IOB      |IO/M1                    |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
 |P61       |                                         |         |GND                      |         |           |              |          |         |           |         |       |          |           |                |
 |P62       |                                         |DIFFM    |IO_L08P_2/M0             |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
 |P63       |                                         |DIFFS    |IO_L08N_2/DIN/D0         |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
@@ -131,7 +131,7 @@ Pinout by Pin Number:
 |P109      |                                         |         |TDO                      |         |           |              |          |         |           |         |       |          |           |                |
 |P110      |                                         |         |TCK                      |         |           |              |          |         |           |         |       |          |           |                |
 |P111      |                                         |IBUF     |IP                       |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
-|P112      |                                         |DIFFM    |IO_L01P_0                |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P112      |vga_0_video_pin<6>                       |IOB      |IO_L01P_0                |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |NONE**     |         |       |UNLOCATED |NO         |NONE            |
 |P113      |                                         |DIFFS    |IO_L01N_0                |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
 |P114      |                                         |IBUF     |IP                       |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
 |P115      |                                         |         |VCCINT                   |         |           |              |          |         |           |         |1.2    |          |           |                |
@@ -153,15 +153,15 @@ Pinout by Pin Number:
 |P131      |                                         |DIFFS    |IO_L07N_0/GCLK11         |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
 |P132      |                                         |IOB      |IO                       |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
 |P133      |                                         |         |GND                      |         |           |              |          |         |           |         |       |          |           |                |
-|P134      |                                         |DIFFM    |IO_L08P_0                |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
-|P135      |                                         |DIFFS    |IO_L08N_0/VREF_0         |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P134      |vga_0_video_pin<1>                       |IOB      |IO_L08P_0                |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |NONE**     |         |       |LOCATED   |NO         |NONE            |
+|P135      |vga_0_video_pin<3>                       |IOB      |IO_L08N_0/VREF_0         |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |NONE**     |         |       |LOCATED   |NO         |NONE            |
 |P136      |                                         |IBUF     |IP                       |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
 |P137      |                                         |         |VCCAUX                   |         |           |              |          |         |           |         |2.5    |          |           |                |
 |P138      |                                         |         |VCCO_0                   |         |           |0             |          |         |           |         |2.50   |          |           |                |
-|P139      |                                         |DIFFM    |IO_L09P_0                |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
-|P140      |                                         |DIFFS    |IO_L09N_0                |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
+|P139      |vga_0_video_pin<5>                       |IOB      |IO_L09P_0                |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |NONE**     |         |       |LOCATED   |NO         |NONE            |
+|P140      |vga_0_h_sync_pin                         |IOB      |IO_L09N_0                |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |NONE**     |         |       |LOCATED   |YES        |NONE            |
 |P141      |                                         |IBUF     |IP                       |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
-|P142      |xps_ps2_0_PS2_1_CLK                      |IOB      |IO_L10P_0                |BIDIR    |LVCMOS25*  |0             |12        |SLOW     |NONE**     |IFD      |       |LOCATED   |YES        |NONE            |
+|P142      |xps_ps2_0_PS2_1_DATA                     |IOB      |IO_L10P_0                |BIDIR    |LVCMOS25*  |0             |12        |SLOW     |NONE**     |IFD      |       |LOCATED   |YES        |NONE            |
 |P143      |                                         |DIFFS    |IO_L10N_0/HSWAP          |UNUSED   |           |0             |          |         |           |         |       |          |           |                |
 |P144      |                                         |         |TDI                      |         |           |              |          |         |           |         |       |          |           |                |
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

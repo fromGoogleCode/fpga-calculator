@@ -8,6 +8,7 @@
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/vga - IMP G:|Sandboxes|Xilinx|calculator|pcores|vga_v1_00_a|hdl|vhdl|vga.vhd/PLBV46_SLAVE_SINGLE_I - plbv46_slave_single - implementation</ClosedNode>
+         <ClosedNode>/vga - IMP G:|Sandboxes|Xilinx|calculator|pcores|vga_v1_00_a|hdl|vhdl|vga.vhd/PLBV46_SLAVE_SINGLE_I - plbv46_slave_single - implementation/I_SLAVE_ATTACHMENT - plb_slave_attachment - implementation/I_DECODER - plb_address_decoder - IMP</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
          <SelectedItem>vga - IMP (G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/hdl/vhdl/vga.vhd)</SelectedItem>
@@ -27,13 +28,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Synthesize - XST</SelectedItem>
+         <SelectedItem>Generate Programming File</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e7000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e70000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Synthesize - XST</CurrentItem>
+      <CurrentItem>Generate Programming File</CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -63,7 +64,6 @@
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
-         <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
          <SelectedItem>Check Syntax</SelectedItem>

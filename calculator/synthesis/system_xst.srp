@@ -66,508 +66,507 @@ Analyzing hierarchy for entity <system> in library <work> (architecture <STRUCTU
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <system> in library <work> (Architecture <STRUCTURE>).
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'MB_Halted' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'MB_Error' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'LOCKSTEP_MASTER_OUT' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'LOCKSTEP_OUT' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_AWID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_AWADDR' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_AWLEN' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_AWSIZE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_AWBURST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_AWLOCK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_AWCACHE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_AWPROT' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_AWQOS' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_AWVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_WDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_WSTRB' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_WLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_WVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_BREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_ARID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_ARADDR' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_ARLEN' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_ARSIZE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_ARBURST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_ARLOCK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_ARCACHE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_ARPROT' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_ARQOS' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_ARVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IP_RREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_AWID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_AWADDR' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_AWLEN' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_AWSIZE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_AWBURST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_AWLOCK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_AWCACHE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_AWPROT' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_AWQOS' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_AWVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_WDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_WSTRB' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_WLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_WVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_BREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_ARID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_ARADDR' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_ARLEN' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_ARSIZE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_ARBURST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_ARLOCK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_ARCACHE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_ARPROT' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_ARQOS' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_ARVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DP_RREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_AWID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_AWADDR' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_AWLEN' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_AWSIZE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_AWBURST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_AWLOCK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_AWCACHE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_AWPROT' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_AWQOS' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_AWVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_AWUSER' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_WDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_WSTRB' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_WLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_WVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_WUSER' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_BREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_ARID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_ARADDR' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_ARLEN' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_ARSIZE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_ARBURST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_ARLOCK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_ARCACHE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_ARPROT' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_ARQOS' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_ARVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_ARUSER' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_IC_RREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_AWID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_AWADDR' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_AWLEN' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_AWSIZE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_AWBURST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_AWLOCK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_AWCACHE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_AWPROT' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_AWQOS' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_AWVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_AWUSER' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_WDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_WSTRB' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_WLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_WVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_WUSER' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_BREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_ARID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_ARADDR' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_ARLEN' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_ARSIZE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_ARBURST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_ARLOCK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_ARCACHE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_ARPROT' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_ARQOS' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_ARVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_ARUSER' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M_AXI_DC_RREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_Instruction' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_Valid_Instr' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_PC' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_Reg_Write' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_Reg_Addr' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_MSR_Reg' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_PID_Reg' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_New_Reg_Value' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_Exception_Taken' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_Exception_Kind' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_Jump_Taken' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_Delay_Slot' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_Data_Address' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_Data_Access' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_Data_Read' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_Data_Write' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_Data_Write_Value' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_Data_Byte_Enable' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_DCache_Req' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_DCache_Hit' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_DCache_Rdy' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_DCache_Read' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_ICache_Req' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_ICache_Hit' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_ICache_Rdy' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_OF_PipeRun' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_EX_PipeRun' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_MEM_PipeRun' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_MB_Halted' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'Trace_Jump_Hit' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL0_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL0_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL0_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL0_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL0_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL0_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL1_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL1_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL1_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL1_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL1_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL1_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL2_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL2_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL2_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL2_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL2_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL2_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL3_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL3_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL3_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL3_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL3_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL3_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL4_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL4_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL4_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL4_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL4_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL4_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL5_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL5_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL5_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL5_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL5_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL5_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL6_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL6_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL6_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL6_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL6_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL6_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL7_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL7_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL7_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL7_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL7_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL7_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL8_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL8_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL8_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL8_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL8_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL8_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL9_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL9_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL9_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL9_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL9_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL9_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL10_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL10_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL10_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL10_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL10_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL10_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL11_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL11_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL11_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL11_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL11_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL11_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL12_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL12_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL12_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL12_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL12_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL12_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL13_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL13_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL13_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL13_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL13_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL13_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL14_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL14_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL14_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL14_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL14_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL14_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL15_S_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL15_S_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL15_M_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL15_M_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL15_M_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'FSL15_M_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M0_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M0_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M0_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'S0_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M1_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M1_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M1_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'S1_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M2_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M2_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M2_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'S2_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M3_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M3_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M3_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'S3_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M4_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M4_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M4_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'S4_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M5_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M5_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M5_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'S5_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M6_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M6_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M6_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'S6_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M7_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M7_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M7_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'S7_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M8_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M8_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M8_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'S8_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M9_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M9_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M9_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'S9_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M10_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M10_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M10_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'S10_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M11_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M11_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M11_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'S11_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M12_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M12_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M12_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'S12_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M13_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M13_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M13_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'S13_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M14_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M14_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M14_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'S14_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M15_AXIS_TLAST' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M15_AXIS_TDATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'M15_AXIS_TVALID' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'S15_AXIS_TREADY' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'ICACHE_FSL_IN_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'ICACHE_FSL_IN_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'ICACHE_FSL_OUT_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'ICACHE_FSL_OUT_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'ICACHE_FSL_OUT_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'ICACHE_FSL_OUT_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'DCACHE_FSL_IN_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'DCACHE_FSL_IN_READ' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'DCACHE_FSL_OUT_CLK' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'DCACHE_FSL_OUT_WRITE' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'DCACHE_FSL_OUT_DATA' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1614: Unconnected output port 'DCACHE_FSL_OUT_CONTROL' of component 'microblaze_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2213: Unconnected output port 'PLB_Rst' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2213: Unconnected output port 'MPLB_Rst' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2213: Unconnected output port 'PLB_dcrAck' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2213: Unconnected output port 'PLB_dcrDBus' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2213: Unconnected output port 'PLB_SaddrAck' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2213: Unconnected output port 'PLB_SMRdErr' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2213: Unconnected output port 'PLB_SMWrErr' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2213: Unconnected output port 'PLB_SMBusy' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2213: Unconnected output port 'PLB_SrdBTerm' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2213: Unconnected output port 'PLB_SrdComp' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2213: Unconnected output port 'PLB_SrdDAck' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2213: Unconnected output port 'PLB_SrdDBus' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2213: Unconnected output port 'PLB_SrdWdAddr' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2213: Unconnected output port 'PLB_Srearbitrate' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2213: Unconnected output port 'PLB_Sssize' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2213: Unconnected output port 'PLB_Swait' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2213: Unconnected output port 'PLB_SwrBTerm' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2213: Unconnected output port 'PLB_SwrComp' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2213: Unconnected output port 'PLB_SwrDAck' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2213: Unconnected output port 'Bus_Error_Det' of component 'mb_plb_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'Interrupt' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'SPLB_CTRL_Sl_addrAck' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'SPLB_CTRL_Sl_SSize' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'SPLB_CTRL_Sl_wait' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'SPLB_CTRL_Sl_rearbitrate' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'SPLB_CTRL_Sl_wrDAck' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'SPLB_CTRL_Sl_wrComp' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'SPLB_CTRL_Sl_rdDBus' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'SPLB_CTRL_Sl_rdDAck' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'SPLB_CTRL_Sl_rdComp' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'SPLB_CTRL_Sl_MBusy' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'SPLB_CTRL_Sl_MWrErr' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'SPLB_CTRL_Sl_MRdErr' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'SPLB_CTRL_Sl_wrBTerm' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'SPLB_CTRL_Sl_rdWdAddr' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'SPLB_CTRL_Sl_rdBTerm' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'SPLB_CTRL_Sl_MIRQ' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'S_AXI_CTRL_AWREADY' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'S_AXI_CTRL_WREADY' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'S_AXI_CTRL_BRESP' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'S_AXI_CTRL_BVALID' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'S_AXI_CTRL_ARREADY' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'S_AXI_CTRL_RDATA' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'S_AXI_CTRL_RRESP' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2372: Unconnected output port 'S_AXI_CTRL_RVALID' of component 'dlmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'Interrupt' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'SPLB_CTRL_Sl_addrAck' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'SPLB_CTRL_Sl_SSize' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'SPLB_CTRL_Sl_wait' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'SPLB_CTRL_Sl_rearbitrate' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'SPLB_CTRL_Sl_wrDAck' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'SPLB_CTRL_Sl_wrComp' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'SPLB_CTRL_Sl_rdDBus' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'SPLB_CTRL_Sl_rdDAck' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'SPLB_CTRL_Sl_rdComp' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'SPLB_CTRL_Sl_MBusy' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'SPLB_CTRL_Sl_MWrErr' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'SPLB_CTRL_Sl_MRdErr' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'SPLB_CTRL_Sl_wrBTerm' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'SPLB_CTRL_Sl_rdWdAddr' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'SPLB_CTRL_Sl_rdBTerm' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'SPLB_CTRL_Sl_MIRQ' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'S_AXI_CTRL_AWREADY' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'S_AXI_CTRL_WREADY' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'S_AXI_CTRL_BRESP' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'S_AXI_CTRL_BVALID' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'S_AXI_CTRL_ARREADY' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'S_AXI_CTRL_RDATA' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'S_AXI_CTRL_RRESP' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2456: Unconnected output port 'S_AXI_CTRL_RVALID' of component 'ilmb_cntlr_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2558: Unconnected output port 'IP2INTC_Irpt' of component 'leds_displays_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2558: Unconnected output port 'GPIO_IO_T' of component 'leds_displays_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2558: Unconnected output port 'GPIO2_IO_O' of component 'leds_displays_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2558: Unconnected output port 'GPIO2_IO_T' of component 'leds_displays_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2611: Unconnected output port 'IP2INTC_Irpt' of component 'switches_buttons_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2611: Unconnected output port 'GPIO_IO_O' of component 'switches_buttons_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2611: Unconnected output port 'GPIO_IO_T' of component 'switches_buttons_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2611: Unconnected output port 'GPIO2_IO_O' of component 'switches_buttons_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2611: Unconnected output port 'GPIO2_IO_T' of component 'switches_buttons_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2664: Unconnected output port 'CLKOUT1' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2664: Unconnected output port 'CLKOUT2' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2664: Unconnected output port 'CLKOUT3' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2664: Unconnected output port 'CLKOUT4' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2664: Unconnected output port 'CLKOUT5' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2664: Unconnected output port 'CLKOUT6' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2664: Unconnected output port 'CLKOUT7' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2664: Unconnected output port 'CLKOUT8' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2664: Unconnected output port 'CLKOUT9' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2664: Unconnected output port 'CLKOUT10' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2664: Unconnected output port 'CLKOUT11' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2664: Unconnected output port 'CLKOUT12' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2664: Unconnected output port 'CLKOUT13' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2664: Unconnected output port 'CLKOUT14' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2664: Unconnected output port 'CLKOUT15' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2664: Unconnected output port 'CLKFBOUT' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2664: Unconnected output port 'PSDONE' of component 'clock_generator_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Interrupt' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'S_AXI_AWREADY' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'S_AXI_WREADY' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'S_AXI_BRESP' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'S_AXI_BVALID' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'S_AXI_ARREADY' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'S_AXI_RDATA' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'S_AXI_RRESP' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'S_AXI_RVALID' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Clk_1' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_TDI_1' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Reg_En_1' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Capture_1' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Shift_1' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Update_1' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Rst_1' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Clk_2' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_TDI_2' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Reg_En_2' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Capture_2' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Shift_2' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Update_2' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Rst_2' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Clk_3' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_TDI_3' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Reg_En_3' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Capture_3' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Shift_3' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Update_3' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Rst_3' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Clk_4' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_TDI_4' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Reg_En_4' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Capture_4' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Shift_4' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Update_4' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Rst_4' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Clk_5' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_TDI_5' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Reg_En_5' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Capture_5' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Shift_5' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Update_5' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Rst_5' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Clk_6' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_TDI_6' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Reg_En_6' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Capture_6' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Shift_6' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Update_6' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Rst_6' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Clk_7' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_TDI_7' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Reg_En_7' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Capture_7' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Shift_7' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Update_7' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Dbg_Rst_7' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'bscan_tdi' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'bscan_reset' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'bscan_shift' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'bscan_update' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'bscan_capture' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'bscan_sel1' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'bscan_drck1' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Ext_JTAG_DRCK' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Ext_JTAG_RESET' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Ext_JTAG_SEL' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Ext_JTAG_CAPTURE' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Ext_JTAG_SHIFT' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Ext_JTAG_UPDATE' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2693: Unconnected output port 'Ext_JTAG_TDI' of component 'mdm_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2842: Unconnected output port 'RstcPPCresetcore_0' of component 'proc_sys_reset_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2842: Unconnected output port 'RstcPPCresetchip_0' of component 'proc_sys_reset_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2842: Unconnected output port 'RstcPPCresetsys_0' of component 'proc_sys_reset_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2842: Unconnected output port 'RstcPPCresetcore_1' of component 'proc_sys_reset_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2842: Unconnected output port 'RstcPPCresetchip_1' of component 'proc_sys_reset_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2842: Unconnected output port 'RstcPPCresetsys_1' of component 'proc_sys_reset_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2842: Unconnected output port 'Peripheral_Reset' of component 'proc_sys_reset_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2842: Unconnected output port 'Interconnect_aresetn' of component 'proc_sys_reset_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2842: Unconnected output port 'Peripheral_aresetn' of component 'proc_sys_reset_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2868: Unconnected output port 'IP2INTC_Irpt_1' of component 'xps_ps2_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2868: Unconnected output port 'IP2INTC_Irpt_2' of component 'xps_ps2_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2868: Unconnected output port 'PS2_2_DATA_O' of component 'xps_ps2_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2868: Unconnected output port 'PS2_2_DATA_T' of component 'xps_ps2_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2868: Unconnected output port 'PS2_2_CLK_O' of component 'xps_ps2_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2868: Unconnected output port 'PS2_2_CLK_T' of component 'xps_ps2_0_wrapper'.
-WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2928: Unconnected output port 'hsync_port' of component 'vga_0_wrapper'.
-WARNING:Xst:2211 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2977: Instantiating black box module <IOBUF>.
-WARNING:Xst:2211 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2985: Instantiating black box module <IOBUF>.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'MB_Halted' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'MB_Error' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'LOCKSTEP_MASTER_OUT' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'LOCKSTEP_OUT' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_AWID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_AWADDR' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_AWLEN' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_AWSIZE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_AWBURST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_AWLOCK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_AWCACHE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_AWPROT' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_AWQOS' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_AWVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_WDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_WSTRB' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_WLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_WVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_BREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_ARID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_ARADDR' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_ARLEN' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_ARSIZE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_ARBURST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_ARLOCK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_ARCACHE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_ARPROT' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_ARQOS' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_ARVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IP_RREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_AWID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_AWADDR' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_AWLEN' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_AWSIZE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_AWBURST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_AWLOCK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_AWCACHE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_AWPROT' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_AWQOS' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_AWVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_WDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_WSTRB' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_WLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_WVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_BREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_ARID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_ARADDR' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_ARLEN' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_ARSIZE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_ARBURST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_ARLOCK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_ARCACHE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_ARPROT' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_ARQOS' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_ARVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DP_RREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_AWID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_AWADDR' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_AWLEN' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_AWSIZE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_AWBURST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_AWLOCK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_AWCACHE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_AWPROT' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_AWQOS' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_AWVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_AWUSER' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_WDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_WSTRB' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_WLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_WVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_WUSER' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_BREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_ARID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_ARADDR' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_ARLEN' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_ARSIZE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_ARBURST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_ARLOCK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_ARCACHE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_ARPROT' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_ARQOS' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_ARVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_ARUSER' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_IC_RREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_AWID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_AWADDR' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_AWLEN' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_AWSIZE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_AWBURST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_AWLOCK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_AWCACHE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_AWPROT' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_AWQOS' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_AWVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_AWUSER' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_WDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_WSTRB' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_WLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_WVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_WUSER' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_BREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_ARID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_ARADDR' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_ARLEN' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_ARSIZE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_ARBURST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_ARLOCK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_ARCACHE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_ARPROT' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_ARQOS' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_ARVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_ARUSER' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M_AXI_DC_RREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_Instruction' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_Valid_Instr' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_PC' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_Reg_Write' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_Reg_Addr' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_MSR_Reg' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_PID_Reg' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_New_Reg_Value' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_Exception_Taken' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_Exception_Kind' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_Jump_Taken' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_Delay_Slot' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_Data_Address' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_Data_Access' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_Data_Read' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_Data_Write' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_Data_Write_Value' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_Data_Byte_Enable' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_DCache_Req' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_DCache_Hit' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_DCache_Rdy' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_DCache_Read' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_ICache_Req' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_ICache_Hit' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_ICache_Rdy' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_OF_PipeRun' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_EX_PipeRun' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_MEM_PipeRun' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_MB_Halted' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'Trace_Jump_Hit' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL0_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL0_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL0_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL0_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL0_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL0_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL1_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL1_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL1_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL1_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL1_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL1_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL2_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL2_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL2_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL2_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL2_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL2_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL3_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL3_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL3_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL3_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL3_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL3_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL4_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL4_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL4_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL4_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL4_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL4_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL5_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL5_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL5_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL5_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL5_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL5_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL6_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL6_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL6_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL6_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL6_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL6_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL7_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL7_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL7_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL7_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL7_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL7_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL8_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL8_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL8_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL8_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL8_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL8_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL9_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL9_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL9_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL9_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL9_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL9_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL10_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL10_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL10_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL10_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL10_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL10_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL11_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL11_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL11_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL11_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL11_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL11_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL12_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL12_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL12_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL12_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL12_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL12_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL13_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL13_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL13_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL13_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL13_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL13_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL14_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL14_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL14_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL14_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL14_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL14_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL15_S_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL15_S_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL15_M_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL15_M_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL15_M_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'FSL15_M_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M0_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M0_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M0_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'S0_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M1_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M1_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M1_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'S1_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M2_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M2_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M2_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'S2_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M3_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M3_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M3_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'S3_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M4_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M4_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M4_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'S4_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M5_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M5_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M5_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'S5_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M6_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M6_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M6_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'S6_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M7_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M7_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M7_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'S7_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M8_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M8_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M8_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'S8_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M9_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M9_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M9_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'S9_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M10_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M10_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M10_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'S10_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M11_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M11_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M11_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'S11_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M12_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M12_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M12_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'S12_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M13_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M13_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M13_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'S13_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M14_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M14_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M14_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'S14_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M15_AXIS_TLAST' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M15_AXIS_TDATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'M15_AXIS_TVALID' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'S15_AXIS_TREADY' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'ICACHE_FSL_IN_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'ICACHE_FSL_IN_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'ICACHE_FSL_OUT_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'ICACHE_FSL_OUT_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'ICACHE_FSL_OUT_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'ICACHE_FSL_OUT_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'DCACHE_FSL_IN_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'DCACHE_FSL_IN_READ' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'DCACHE_FSL_OUT_CLK' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'DCACHE_FSL_OUT_WRITE' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'DCACHE_FSL_OUT_DATA' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 1617: Unconnected output port 'DCACHE_FSL_OUT_CONTROL' of component 'microblaze_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2216: Unconnected output port 'PLB_Rst' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2216: Unconnected output port 'MPLB_Rst' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2216: Unconnected output port 'PLB_dcrAck' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2216: Unconnected output port 'PLB_dcrDBus' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2216: Unconnected output port 'PLB_SaddrAck' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2216: Unconnected output port 'PLB_SMRdErr' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2216: Unconnected output port 'PLB_SMWrErr' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2216: Unconnected output port 'PLB_SMBusy' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2216: Unconnected output port 'PLB_SrdBTerm' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2216: Unconnected output port 'PLB_SrdComp' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2216: Unconnected output port 'PLB_SrdDAck' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2216: Unconnected output port 'PLB_SrdDBus' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2216: Unconnected output port 'PLB_SrdWdAddr' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2216: Unconnected output port 'PLB_Srearbitrate' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2216: Unconnected output port 'PLB_Sssize' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2216: Unconnected output port 'PLB_Swait' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2216: Unconnected output port 'PLB_SwrBTerm' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2216: Unconnected output port 'PLB_SwrComp' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2216: Unconnected output port 'PLB_SwrDAck' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2216: Unconnected output port 'Bus_Error_Det' of component 'mb_plb_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'Interrupt' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'SPLB_CTRL_Sl_addrAck' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'SPLB_CTRL_Sl_SSize' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'SPLB_CTRL_Sl_wait' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'SPLB_CTRL_Sl_rearbitrate' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'SPLB_CTRL_Sl_wrDAck' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'SPLB_CTRL_Sl_wrComp' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'SPLB_CTRL_Sl_rdDBus' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'SPLB_CTRL_Sl_rdDAck' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'SPLB_CTRL_Sl_rdComp' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'SPLB_CTRL_Sl_MBusy' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'SPLB_CTRL_Sl_MWrErr' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'SPLB_CTRL_Sl_MRdErr' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'SPLB_CTRL_Sl_wrBTerm' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'SPLB_CTRL_Sl_rdWdAddr' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'SPLB_CTRL_Sl_rdBTerm' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'SPLB_CTRL_Sl_MIRQ' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'S_AXI_CTRL_AWREADY' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'S_AXI_CTRL_WREADY' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'S_AXI_CTRL_BRESP' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'S_AXI_CTRL_BVALID' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'S_AXI_CTRL_ARREADY' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'S_AXI_CTRL_RDATA' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'S_AXI_CTRL_RRESP' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2375: Unconnected output port 'S_AXI_CTRL_RVALID' of component 'dlmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'Interrupt' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'SPLB_CTRL_Sl_addrAck' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'SPLB_CTRL_Sl_SSize' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'SPLB_CTRL_Sl_wait' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'SPLB_CTRL_Sl_rearbitrate' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'SPLB_CTRL_Sl_wrDAck' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'SPLB_CTRL_Sl_wrComp' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'SPLB_CTRL_Sl_rdDBus' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'SPLB_CTRL_Sl_rdDAck' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'SPLB_CTRL_Sl_rdComp' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'SPLB_CTRL_Sl_MBusy' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'SPLB_CTRL_Sl_MWrErr' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'SPLB_CTRL_Sl_MRdErr' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'SPLB_CTRL_Sl_wrBTerm' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'SPLB_CTRL_Sl_rdWdAddr' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'SPLB_CTRL_Sl_rdBTerm' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'SPLB_CTRL_Sl_MIRQ' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'S_AXI_CTRL_AWREADY' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'S_AXI_CTRL_WREADY' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'S_AXI_CTRL_BRESP' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'S_AXI_CTRL_BVALID' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'S_AXI_CTRL_ARREADY' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'S_AXI_CTRL_RDATA' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'S_AXI_CTRL_RRESP' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2459: Unconnected output port 'S_AXI_CTRL_RVALID' of component 'ilmb_cntlr_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2561: Unconnected output port 'IP2INTC_Irpt' of component 'leds_displays_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2561: Unconnected output port 'GPIO_IO_T' of component 'leds_displays_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2561: Unconnected output port 'GPIO2_IO_O' of component 'leds_displays_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2561: Unconnected output port 'GPIO2_IO_T' of component 'leds_displays_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2614: Unconnected output port 'IP2INTC_Irpt' of component 'switches_buttons_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2614: Unconnected output port 'GPIO_IO_O' of component 'switches_buttons_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2614: Unconnected output port 'GPIO_IO_T' of component 'switches_buttons_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2614: Unconnected output port 'GPIO2_IO_O' of component 'switches_buttons_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2614: Unconnected output port 'GPIO2_IO_T' of component 'switches_buttons_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2667: Unconnected output port 'CLKOUT1' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2667: Unconnected output port 'CLKOUT2' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2667: Unconnected output port 'CLKOUT3' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2667: Unconnected output port 'CLKOUT4' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2667: Unconnected output port 'CLKOUT5' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2667: Unconnected output port 'CLKOUT6' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2667: Unconnected output port 'CLKOUT7' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2667: Unconnected output port 'CLKOUT8' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2667: Unconnected output port 'CLKOUT9' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2667: Unconnected output port 'CLKOUT10' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2667: Unconnected output port 'CLKOUT11' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2667: Unconnected output port 'CLKOUT12' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2667: Unconnected output port 'CLKOUT13' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2667: Unconnected output port 'CLKOUT14' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2667: Unconnected output port 'CLKOUT15' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2667: Unconnected output port 'CLKFBOUT' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2667: Unconnected output port 'PSDONE' of component 'clock_generator_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Interrupt' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'S_AXI_AWREADY' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'S_AXI_WREADY' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'S_AXI_BRESP' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'S_AXI_BVALID' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'S_AXI_ARREADY' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'S_AXI_RDATA' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'S_AXI_RRESP' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'S_AXI_RVALID' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Clk_1' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_TDI_1' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Reg_En_1' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Capture_1' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Shift_1' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Update_1' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Rst_1' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Clk_2' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_TDI_2' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Reg_En_2' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Capture_2' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Shift_2' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Update_2' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Rst_2' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Clk_3' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_TDI_3' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Reg_En_3' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Capture_3' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Shift_3' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Update_3' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Rst_3' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Clk_4' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_TDI_4' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Reg_En_4' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Capture_4' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Shift_4' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Update_4' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Rst_4' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Clk_5' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_TDI_5' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Reg_En_5' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Capture_5' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Shift_5' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Update_5' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Rst_5' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Clk_6' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_TDI_6' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Reg_En_6' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Capture_6' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Shift_6' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Update_6' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Rst_6' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Clk_7' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_TDI_7' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Reg_En_7' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Capture_7' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Shift_7' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Update_7' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Dbg_Rst_7' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'bscan_tdi' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'bscan_reset' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'bscan_shift' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'bscan_update' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'bscan_capture' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'bscan_sel1' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'bscan_drck1' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Ext_JTAG_DRCK' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Ext_JTAG_RESET' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Ext_JTAG_SEL' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Ext_JTAG_CAPTURE' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Ext_JTAG_SHIFT' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Ext_JTAG_UPDATE' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2696: Unconnected output port 'Ext_JTAG_TDI' of component 'mdm_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2845: Unconnected output port 'RstcPPCresetcore_0' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2845: Unconnected output port 'RstcPPCresetchip_0' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2845: Unconnected output port 'RstcPPCresetsys_0' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2845: Unconnected output port 'RstcPPCresetcore_1' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2845: Unconnected output port 'RstcPPCresetchip_1' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2845: Unconnected output port 'RstcPPCresetsys_1' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2845: Unconnected output port 'Peripheral_Reset' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2845: Unconnected output port 'Interconnect_aresetn' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2845: Unconnected output port 'Peripheral_aresetn' of component 'proc_sys_reset_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2871: Unconnected output port 'IP2INTC_Irpt_1' of component 'xps_ps2_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2871: Unconnected output port 'IP2INTC_Irpt_2' of component 'xps_ps2_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2871: Unconnected output port 'PS2_2_DATA_O' of component 'xps_ps2_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2871: Unconnected output port 'PS2_2_DATA_T' of component 'xps_ps2_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2871: Unconnected output port 'PS2_2_CLK_O' of component 'xps_ps2_0_wrapper'.
+WARNING:Xst:753 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2871: Unconnected output port 'PS2_2_CLK_T' of component 'xps_ps2_0_wrapper'.
+WARNING:Xst:2211 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2980: Instantiating black box module <IOBUF>.
+WARNING:Xst:2211 - "G:/Sandboxes/Xilinx/calculator/hdl/system.vhd" line 2988: Instantiating black box module <IOBUF>.
 Entity <system> analyzed. Unit <system> generated.
 
 
@@ -673,60 +672,60 @@ Optimization Goal                  : speed
 Keep Hierarchy                     : no
 
 Design Statistics
-# IOs                              : 49
+# IOs                              : 50
 
 Cell Usage :
-# BELS                             : 3525
+# BELS                             : 3620
 #      GND                         : 16
-#      INV                         : 38
-#      LUT1                        : 99
-#      LUT2                        : 299
+#      INV                         : 41
+#      LUT1                        : 117
+#      LUT2                        : 301
 #      LUT2_D                      : 14
 #      LUT2_L                      : 13
-#      LUT3                        : 633
-#      LUT3_D                      : 56
+#      LUT3                        : 641
+#      LUT3_D                      : 58
 #      LUT3_L                      : 24
-#      LUT4                        : 1352
-#      LUT4_D                      : 25
-#      LUT4_L                      : 60
+#      LUT4                        : 1368
+#      LUT4_D                      : 26
+#      LUT4_L                      : 66
 #      MULT_AND                    : 34
-#      MUXCY                       : 200
+#      MUXCY                       : 218
 #      MUXCY_L                     : 126
-#      MUXF5                       : 345
+#      MUXF5                       : 346
 #      MUXF6                       : 5
 #      MUXF7                       : 2
 #      MUXF8                       : 1
 #      VCC                         : 9
-#      XORCY                       : 174
-# FlipFlops/Latches                : 2510
+#      XORCY                       : 194
+# FlipFlops/Latches                : 2541
 #      FD                          : 322
 #      FDC                         : 20
 #      FDC_1                       : 5
 #      FDCE                        : 14
-#      FDE                         : 281
+#      FDE                         : 285
 #      FDE_1                       : 8
 #      FDP                         : 9
-#      FDR                         : 1153
-#      FDRE                        : 444
+#      FDR                         : 1166
+#      FDRE                        : 454
 #      FDRE_1                      : 1
 #      FDRS                        : 38
 #      FDRSE                       : 48
-#      FDS                         : 75
+#      FDS                         : 79
 #      FDSE                        : 92
 # RAMS                             : 132
 #      RAM16X1D                    : 128
 #      RAMB16_S9_S9                : 4
-# Shift Registers                  : 148
+# Shift Registers                  : 150
 #      SRL16                       : 44
-#      SRL16E                      : 96
+#      SRL16E                      : 98
 #      SRLC16E                     : 8
 # Clock Buffers                    : 5
 #      BUFG                        : 5
-# IO Buffers                       : 49
+# IO Buffers                       : 50
 #      IBUF                        : 13
 #      IBUFG                       : 1
 #      IOBUF                       : 2
-#      OBUF                        : 33
+#      OBUF                        : 34
 # DCMs                             : 1
 #      DCM_SP                      : 1
 # MULTs                            : 3
@@ -740,14 +739,14 @@ Device utilization summary:
 
 Selected Device : 3s250etq144-4 
 
- Number of Slices:                     2021  out of   2448    82%  
- Number of Slice Flip Flops:           2510  out of   4896    51%  
- Number of 4 input LUTs:               3017  out of   4896    61%  
-    Number used as logic:              2613
-    Number used as Shift registers:     148
+ Number of Slices:                     2047  out of   2448    83%  
+ Number of Slice Flip Flops:           2541  out of   4896    51%  
+ Number of 4 input LUTs:               3075  out of   4896    62%  
+    Number used as logic:              2669
+    Number used as Shift registers:     150
     Number used as RAMs:                256
- Number of IOs:                          49
- Number of bonded IOBs:                  49  out of    108    45%  
+ Number of IOs:                          50
+ Number of bonded IOBs:                  50  out of    108    46%  
  Number of BRAMs:                         4  out of     12    33%  
  Number of MULT18X18SIOs:                 3  out of     12    25%  
  Number of GCLKs:                         5  out of     24    20%  
@@ -774,7 +773,7 @@ Clock Information:
 -----------------------------------+--------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                  | Load  |
 -----------------------------------+--------------------------------------------------------+-------+
-fpga_0_clk_1_sys_clk_pin           | clock_generator_0/DCM0_INST/Using_Virtex.DCM_INST:CLKFX| 2539  |
+fpga_0_clk_1_sys_clk_pin           | clock_generator_0/DCM0_INST/Using_Virtex.DCM_INST:CLKFX| 2572  |
 mdm_0/mdm_0/drck_i                 | BUFG                                                   | 208   |
 mdm_0/bscan_update1                | BUFG                                                   | 42    |
 fpga_0_clk_1_sys_clk_pin           | IBUFG                                                  | 4     |
@@ -814,7 +813,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'fpga_0_clk_1_sys_clk_pin'
   Clock period: 18.972ns (frequency: 52.708MHz)
-  Total number of paths / destination ports: 139604 / 6767
+  Total number of paths / destination ports: 140247 / 6842
 -------------------------------------------------------------------------
 Delay:               12.142ns (Levels of Logic = 39)
   Source:            microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[1].FDS_I (FF)
@@ -998,23 +997,23 @@ Offset:              4.085ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'fpga_0_clk_1_sys_clk_pin'
-  Total number of paths / destination ports: 29 / 27
+  Total number of paths / destination ports: 34 / 32
 -------------------------------------------------------------------------
-Offset:              4.283ns (Levels of Logic = 2)
-  Source:            xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/PS2_CLK_O (FF)
-  Destination:       xps_ps2_0_PS2_1_CLK (PAD)
+Offset:              4.394ns (Levels of Logic = 2)
+  Source:            vga_0/vga_0/USER_LOGIC_I/video_4 (FF)
+  Destination:       vga_0_video_pin<1> (PAD)
   Source Clock:      fpga_0_clk_1_sys_clk_pin rising 1.6X
 
-  Data Path: xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/PS2_CLK_O to xps_ps2_0_PS2_1_CLK
+  Data Path: vga_0/vga_0/USER_LOGIC_I/video_4 to vga_0_video_pin<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDS:C->Q              1   0.591   0.420  xps_ps2_0/PS2_1_I/PS2_SIE_I/PS2_CLK_O (PS2_1_CLK_O)
-     end scope: 'xps_ps2_0'
-     IOBUF:I->IO               3.272          iobuf_1 (xps_ps2_0_PS2_1_CLK)
+     FDR:C->Q              3   0.591   0.531  vga_0/USER_LOGIC_I/video_4 (video_port<5>)
+     end scope: 'vga_0'
+     OBUF:I->O                 3.272          vga_0_video_pin_1_OBUF (vga_0_video_pin<1>)
     ----------------------------------------
-    Total                      4.283ns (3.863ns logic, 0.420ns route)
-                                       (90.2% logic, 9.8% route)
+    Total                      4.394ns (3.863ns logic, 0.531ns route)
+                                       (87.9% logic, 12.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'mdm_0/mdm_0/drck_i'
@@ -1083,14 +1082,14 @@ Offset:              9.076ns (Levels of Logic = 11)
 =========================================================================
 
 
-Total REAL time to Xst completion: 188.00 secs
-Total CPU time to Xst completion: 187.29 secs
+Total REAL time to Xst completion: 195.00 secs
+Total CPU time to Xst completion: 195.34 secs
  
 --> 
 
-Total memory usage is 308864 kilobytes
+Total memory usage is 310160 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  502 (   0 filtered)
+Number of warnings :  501 (   0 filtered)
 Number of infos    :    8 (   0 filtered)
 

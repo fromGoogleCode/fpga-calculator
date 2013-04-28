@@ -328,29 +328,33 @@ WARNING:Xst:38 - Value "{ BLOCK }" of property "RAM_STYLE" not applicable.
 =========================================================================
 
 Performing bidirectional port resolution...
-INFO:Xst:2679 - Register <video> in unit <user_logic> has a constant value of 0101010 during circuit operation. The register is replaced by logic.
 
 Synthesizing Unit <user_logic>.
     Related source file is "../../hdl/verilog/user_logic.v".
 WARNING:Xst:647 - Input <Bus2IP_RNW> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <Bus2IP_Addr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <Bus2IP_BE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <video_out> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <video_mem<0><-1:32>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <vga_read_address> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <vga_output_data> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <pos_read_address> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <pos_output_data> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <pos_mem<0><-1:32>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <pos_mem<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:1780 - Signal <char_mem<0><-1:32>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found 1-bit register for signal <h_sync>.
     Found 1-bit register for signal <v_sync>.
+    Found 7-bit register for signal <video>.
+    Found 1-bit register for signal <blank_x_str>.
+    Found 1-bit register for signal <blank_y_str>.
     Found 1-bit register for signal <hsync_phase1>.
+    Found 1-bit register for signal <hsync_phase2>.
+    Found 2-bit register for signal <shf_blank_x>.
+    Found 2-bit register for signal <shf_blank_y>.
     Found 1-bit register for signal <vsync_phase1>.
+    Found 1-bit register for signal <vsync_phase2>.
     Found 10-bit up counter for signal <x>.
     Found 10-bit up counter for signal <y>.
     Summary:
 	inferred   2 Counter(s).
-	inferred   4 D-type flip-flop(s).
+	inferred  19 D-type flip-flop(s).
 Unit <user_logic> synthesized.
 
 
@@ -498,11 +502,13 @@ Macro Statistics
  9-bit subtractor                                      : 1
 # Counters                                             : 2
  10-bit up counter                                     : 2
-# Registers                                            : 60
- 1-bit register                                        : 49
+# Registers                                            : 67
+ 1-bit register                                        : 53
+ 2-bit register                                        : 2
  3-bit register                                        : 3
  32-bit register                                       : 4
  4-bit register                                        : 3
+ 7-bit register                                        : 1
  9-bit register                                        : 1
 # Multiplexers                                         : 2
  32-bit 4-to-1 multiplexer                             : 1
@@ -514,22 +520,26 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_1> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_0> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_2> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_3> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_4> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_5> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_7> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_6> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_1> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_0> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_2> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_3> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_4> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_5> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_6> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <video_6> in Unit <USER_LOGIC_I> is equivalent to the following 3 FFs/Latches, which will be removed : <video_4> <video_3> <video_0> 
+INFO:Xst:2261 - The FF/Latch <video_5> in Unit <USER_LOGIC_I> is equivalent to the following 2 FFs/Latches, which will be removed : <video_2> <video_1> 
+WARNING:Xst:1710 - FF/Latch <video_6> (without init value) has a constant value of 0 in block <USER_LOGIC_I>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_7> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_6> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_5> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_4> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_3> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_2> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_0> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_1> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_6> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_7> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_5> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_4> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_3> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_2> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_0> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_1> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2404 -  FFs/Latches <video<0:5>> (without init value) have a constant value of 0 in block <user_logic>.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -539,8 +549,8 @@ Macro Statistics
  9-bit subtractor                                      : 1
 # Counters                                             : 2
  10-bit up counter                                     : 2
-# Registers                                            : 207
- Flip-Flops                                            : 207
+# Registers                                            : 221
+ Flip-Flops                                            : 221
 # Multiplexers                                         : 2
  32-bit 4-to-1 multiplexer                             : 1
  4-bit 4-to-1 multiplexer                              : 1
@@ -551,6 +561,10 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 WARNING:Xst:1989 - Unit <plb_address_decoder>: instances <MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I>, <MEM_DECODE_GEN[1].GEN_PLB_SHARED.MEM_SELECT_I> of unit <pselect_f> are equivalent, second instance is removed
+WARNING:Xst:1710 - FF/Latch <video_5> (without init value) has a constant value of 0 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <video_3> (without init value) has a constant value of 0 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <video_2> (without init value) has a constant value of 0 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <video_4> in Unit <user_logic> is equivalent to the following 2 FFs/Latches, which will be removed : <video_1> <video_0> 
 INFO:Xst:2261 - The FF/Latch <wrce_out_i_1> in Unit <plb_address_decoder> is equivalent to the following FF/Latch, which will be removed : <wrce_out_i_0> 
 INFO:Xst:2261 - The FF/Latch <cs_out_s_h0_1> in Unit <plb_address_decoder> is equivalent to the following FF/Latch, which will be removed : <cs_out_s_h_0> 
 INFO:Xst:2261 - The FF/Latch <rdce_out_i_1> in Unit <plb_address_decoder> is equivalent to the following FF/Latch, which will be removed : <rdce_out_i_0> 
@@ -728,12 +742,19 @@ Found area constraint ratio of 100 (+ 5) on block vga, actual ratio is 2.
 
 Final Macro Processing ...
 
+Processing Unit <vga> :
+	Found 2-bit shift register for signal <USER_LOGIC_I/shf_blank_y_0>.
+	Found 2-bit shift register for signal <USER_LOGIC_I/shf_blank_x_0>.
+Unit <vga> processed.
+
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 67
- Flip-Flops                                            : 67
+# Registers                                            : 72
+ Flip-Flops                                            : 72
+# Shift Registers                                      : 2
+ 2-bit shift register                                  : 2
 
 =========================================================================
 
@@ -762,25 +783,31 @@ Design Statistics
 # IOs                              : 440
 
 Cell Usage :
-# BELS                             : 112
+# BELS                             : 130
 #      GND                         : 1
 #      INV                         : 3
 #      LUT1                        : 18
-#      LUT2                        : 9
-#      LUT3                        : 11
-#      LUT4                        : 23
-#      LUT4_D                      : 3
-#      LUT4_L                      : 5
+#      LUT2                        : 8
+#      LUT2_L                      : 1
+#      LUT3                        : 17
+#      LUT3_D                      : 2
+#      LUT3_L                      : 1
+#      LUT4                        : 31
+#      LUT4_D                      : 4
+#      LUT4_L                      : 4
 #      MUXCY                       : 18
+#      MUXF5                       : 1
 #      VCC                         : 1
 #      XORCY                       : 20
-# FlipFlops/Latches                : 67
+# FlipFlops/Latches                : 74
 #      FD                          : 1
-#      FDE                         : 10
-#      FDR                         : 21
-#      FDRE                        : 26
+#      FDE                         : 4
+#      FDR                         : 31
+#      FDRE                        : 25
 #      FDRS                        : 2
-#      FDS                         : 7
+#      FDS                         : 11
+# Shift Registers                  : 2
+#      SRL16E                      : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 197
@@ -793,9 +820,11 @@ Device utilization summary:
 
 Selected Device : 3s250etq144-4 
 
- Number of Slices:                       51  out of   2448     2%  
- Number of Slice Flip Flops:             67  out of   4896     1%  
- Number of 4 input LUTs:                 72  out of   4896     1%  
+ Number of Slices:                       59  out of   2448     2%  
+ Number of Slice Flip Flops:             74  out of   4896     1%  
+ Number of 4 input LUTs:                 91  out of   4896     1%  
+    Number used as logic:                89
+    Number used as Shift registers:       2
  Number of IOs:                         440
  Number of bonded IOBs:                 198  out of    108   183% (*) 
  Number of GCLKs:                         1  out of     24     4%  
@@ -823,7 +852,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-SPLB_Clk                           | BUFGP                  | 67    |
+SPLB_Clk                           | BUFGP                  | 76    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -834,8 +863,8 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 6.619ns (Maximum Frequency: 151.080MHz)
-   Minimum input arrival time before clock: 5.151ns
+   Minimum period: 6.275ns (Maximum Frequency: 159.363MHz)
+   Minimum input arrival time before clock: 5.153ns
    Maximum output required time after clock: 4.824ns
    Maximum combinational path delay: No path found
 
@@ -845,33 +874,33 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'SPLB_Clk'
-  Clock period: 6.619ns (frequency: 151.080MHz)
-  Total number of paths / destination ports: 650 / 106
+  Clock period: 6.275ns (frequency: 159.363MHz)
+  Total number of paths / destination ports: 817 / 124
 -------------------------------------------------------------------------
-Delay:               6.619ns (Levels of Logic = 3)
-  Source:            USER_LOGIC_I/x_7 (FF)
+Delay:               6.275ns (Levels of Logic = 3)
+  Source:            USER_LOGIC_I/x_2 (FF)
   Destination:       USER_LOGIC_I/y_9 (FF)
   Source Clock:      SPLB_Clk rising
   Destination Clock: SPLB_Clk rising
 
-  Data Path: USER_LOGIC_I/x_7 to USER_LOGIC_I/y_9
+  Data Path: USER_LOGIC_I/x_2 to USER_LOGIC_I/y_9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              4   0.591   0.762  USER_LOGIC_I/x_7 (USER_LOGIC_I/x_7)
-     LUT4:I0->O            1   0.704   0.424  USER_LOGIC_I/y_cmp_eq0000_SW0_SW0 (N9)
-     LUT4:I3->O           11   0.704   0.937  USER_LOGIC_I/y_cmp_eq0000 (USER_LOGIC_I/y_cmp_eq0000)
-     LUT4:I3->O           10   0.704   0.882  USER_LOGIC_I/y_or000066 (USER_LOGIC_I/y_or0000)
+     FDR:C->Q              2   0.591   0.622  USER_LOGIC_I/x_2 (USER_LOGIC_I/x_2)
+     LUT3_D:I0->O          4   0.704   0.622  USER_LOGIC_I/blank_y_str_cmp_eq0001111 (USER_LOGIC_I/N7)
+     LUT4:I2->O            3   0.704   0.535  USER_LOGIC_I/blank_y_str_cmp_eq00011 (USER_LOGIC_I/N11)
+     LUT4:I3->O           10   0.704   0.882  USER_LOGIC_I/y_or00001 (USER_LOGIC_I/y_or0000)
      FDRE:R                    0.911          USER_LOGIC_I/y_0
     ----------------------------------------
-    Total                      6.619ns (3.614ns logic, 3.005ns route)
-                                       (54.6% logic, 45.4% route)
+    Total                      6.275ns (3.614ns logic, 2.661ns route)
+                                       (57.6% logic, 42.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'SPLB_Clk'
-  Total number of paths / destination ports: 70 / 70
+  Total number of paths / destination ports: 79 / 79
 -------------------------------------------------------------------------
-Offset:              5.151ns (Levels of Logic = 2)
+Offset:              5.153ns (Levels of Logic = 2)
   Source:            SPLB_Rst (PAD)
   Destination:       USER_LOGIC_I/y_9 (FF)
   Destination Clock: SPLB_Clk rising
@@ -880,16 +909,16 @@ Offset:              5.151ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            29   1.218   1.436  SPLB_Rst_IBUF (SPLB_Rst_IBUF)
+     IBUF:I->O            33   1.218   1.438  SPLB_Rst_IBUF (SPLB_Rst_IBUF)
      LUT3:I0->O           10   0.704   0.882  PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_0_or00001 (PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rnw_s_h_or0000)
      FDRE:R                    0.911          PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_s_h0_1
     ----------------------------------------
-    Total                      5.151ns (2.833ns logic, 2.318ns route)
+    Total                      5.153ns (2.833ns logic, 2.320ns route)
                                        (55.0% logic, 45.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'SPLB_Clk'
-  Total number of paths / destination ports: 16 / 16
+  Total number of paths / destination ports: 19 / 19
 -------------------------------------------------------------------------
 Offset:              4.824ns (Levels of Logic = 1)
   Source:            PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/set_sl_busy (FF)
@@ -910,13 +939,13 @@ Offset:              4.824ns (Levels of Logic = 1)
 
 
 Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 9.72 secs
+Total CPU time to Xst completion: 10.09 secs
  
 --> 
 
-Total memory usage is 328384 kilobytes
+Total memory usage is 331920 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  233 (   0 filtered)
-Number of infos    :    7 (   0 filtered)
+Number of warnings :  236 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
 

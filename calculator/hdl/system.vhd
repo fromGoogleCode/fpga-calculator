@@ -16,7 +16,8 @@ entity system is
     xps_ps2_0_PS2_1_DATA : inout std_logic;
     xps_ps2_0_PS2_1_CLK : inout std_logic;
     vga_0_v_sync_pin : out std_logic;
-    vga_0_video_pin : out std_logic_vector(0 to 6)
+    vga_0_video_pin : out std_logic_vector(0 to 6);
+    vga_0_h_sync_pin : out std_logic
   );
 end system;
 
@@ -1566,6 +1567,7 @@ architecture STRUCTURE of system is
   signal net_vcc0 : std_logic;
   signal sys_bus_reset : std_logic_vector(0 to 0);
   signal sys_rst_s : std_logic;
+  signal vga_0_h_sync : std_logic;
   signal vga_0_v_sync : std_logic;
   signal vga_0_video : std_logic_vector(0 to 6);
   signal xps_ps2_0_PS2_1_CLK_I : std_logic;
@@ -1599,6 +1601,7 @@ begin
   sys_rst_s <= fpga_0_rst_1_sys_rst_pin;
   vga_0_v_sync_pin <= vga_0_v_sync;
   vga_0_video_pin <= vga_0_video;
+  vga_0_h_sync_pin <= vga_0_h_sync;
   net_gnd0 <= '0';
   net_gnd1(0 downto 0) <= B"0";
   net_gnd10(0 to 9) <= B"0000000000";
@@ -2969,7 +2972,7 @@ begin
       Sl_MWrErr => mb_plb_Sl_MWrErr(8 to 9),
       Sl_MRdErr => mb_plb_Sl_MRdErr(8 to 9),
       Sl_MIRQ => mb_plb_Sl_MIRQ(8 to 9),
-      hsync_port => open,
+      hsync_port => vga_0_h_sync,
       vsync_port => vga_0_v_sync,
       video_port => vga_0_video
     );

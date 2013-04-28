@@ -9,43 +9,43 @@ Target Device  : xc3s250e
 Target Package : tq144
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Thu Apr 04 17:11:57 2013
+Mapped Date    : Fri Apr 26 19:24:50 2013
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    2
+Number of warnings:    3
 Logic Utilization:
-  Number of Slice Flip Flops:         1,624 out of   4,896   33%
-  Number of 4 input LUTs:             2,536 out of   4,896   51%
+  Number of Slice Flip Flops:         1,689 out of   4,896   34%
+  Number of 4 input LUTs:             2,621 out of   4,896   53%
 Logic Distribution:
-  Number of occupied Slices:          1,822 out of   2,448   74%
-    Number of Slices containing only related logic:   1,822 out of   1,822 100%
-    Number of Slices containing unrelated logic:          0 out of   1,822   0%
+  Number of occupied Slices:          1,855 out of   2,448   75%
+    Number of Slices containing only related logic:   1,855 out of   1,855 100%
+    Number of Slices containing unrelated logic:          0 out of   1,855   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       2,667 out of   4,896   54%
-    Number used as logic:             2,134
-    Number used as a route-thru:        131
+  Total Number of 4 input LUTs:       2,767 out of   4,896   56%
+    Number used as logic:             2,217
+    Number used as a route-thru:        146
     Number used for Dual Port RAMs:     256
       (Two LUTs used per Dual Port RAM)
-    Number used as Shift registers:     146
+    Number used as Shift registers:     148
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 41 out of     108   37%
-    IOB Flip Flops:                      31
+  Number of bonded IOBs:                 50 out of     108   46%
+    IOB Flip Flops:                      33
   Number of RAMB16s:                      4 out of      12   33%
   Number of BUFGMUXs:                     3 out of      24   12%
   Number of DCMs:                         1 out of       4   25%
   Number of BSCANs:                       1 out of       1  100%
   Number of MULT18X18SIOs:                3 out of      12   25%
 
-Average Fanout of Non-Clock Nets:                3.49
+Average Fanout of Non-Clock Nets:                3.48
 
-Peak Memory Usage:  323 MB
-Total REAL time to MAP completion:  41 secs 
-Total CPU time to MAP completion:   34 secs 
+Peak Memory Usage:  328 MB
+Total REAL time to MAP completion:  43 secs 
+Total CPU time to MAP completion:   41 secs 
 
 Table of Contents
 -----------------
@@ -71,6 +71,10 @@ Section 2 - Warnings
 WARNING:Security:42 - Your software subscription period has lapsed. Your current
 version of Xilinx tools will continue to function, but you no longer qualify for
 Xilinx software updates or new releases.
+WARNING:Place:837 - Partially locked IO Bus is found. 
+    Following components of the bus are not locked: 
+   	 Comp: vga_0_video_pin<6>
+
 WARNING:PhysDesignRules:367 - The signal <dlmb_LMB_ABus<31>> is incomplete. The
    signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <dlmb_LMB_ABus<30>> is incomplete. The
@@ -1283,7 +1287,7 @@ INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
    -40.000 to 100.000 Celsius)
 INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
    1.320 Volts)
-INFO:Place:834 - Only a subset of IOs are locked. Out of 27 IOs, 26 are locked
+INFO:Place:834 - Only a subset of IOs are locked. Out of 36 IOs, 35 are locked
    and 1 are not locked. If you would like to print the names of these IOs,
    please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
 INFO:Pack:1650 - Map created a placed design.
@@ -1294,10 +1298,10 @@ INFO:PhysDesignRules:772 - To achieve optimal frequency synthesis performance
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-1051 block(s) removed
- 166 block(s) optimized away
-1120 signal(s) removed
- 496 Block(s) redundant
+1073 block(s) removed
+ 186 block(s) optimized away
+1148 signal(s) removed
+ 533 Block(s) redundant
 
 Section 5 - Removed Logic
 -------------------------
@@ -1349,220 +1353,302 @@ DPLB_Interface_I1/DPLB_M_ABus_31" (SFF) removed.
 "microblaze_0/microblaze_0/MicroBlaze_Core_I/Instr_Addr_Stored_31" (FF) removed.
       The signal "ilmb_LMB_ABus<31>" is loadless and has been removed.
 The signal "mb_plb_PLB_MBusy<0>" is loadless and has been removed.
- Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MBUSY_OR/Y_0_or00001"
+ Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MBUSY_OR/Y_0_or0000_f5"
+(MUX) removed.
+  The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MBUSY_OR/Y_0_or0000" is
+loadless and has been removed.
+   Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MBUSY_OR/Y_0_or00001"
 (ROM) removed.
-  The signal "mb_plb_Sl_MBusy<6>" is loadless and has been removed.
-   Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_0"
+    The signal "mb_plb_Sl_MBusy<6>" is loadless and has been removed.
+     Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_0"
 (SFF) removed.
-    The signal
+      The signal
 "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_0_and0000" is
 loadless and has been removed.
-     Loadless block
+       Loadless block
 "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_0_and00001" (ROM)
 removed.
-      The signal "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/master_id<0>" is
+        The signal "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/master_id<0>" is
 loadless and has been removed.
-       Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/master_id_0"
+         Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/master_id_0"
 (SFF) removed.
-        The signal "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/plb_masterid_reg<0>"
+          The signal "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/plb_masterid_reg<0>"
 is loadless and has been removed.
-         Loadless block
+           Loadless block
 "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/plb_masterid_reg_0" (SFF)
 removed.
-          The signal "mb_plb_PLB_masterID" is loadless and has been removed.
-           Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/PLB_masterID_0"
+            The signal "mb_plb_PLB_masterID" is loadless and has been removed.
+             Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/PLB_masterID_0"
 (SFF) removed.
-  The signal "mb_plb_Sl_MBusy<2>" is loadless and has been removed.
-   Loadless block
+    The signal "mb_plb_Sl_MBusy<2>" is loadless and has been removed.
+     Loadless block
 "Switches_Buttons/Switches_Buttons/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_0"
 (SFF) removed.
-    The signal
+      The signal
 "Switches_Buttons/Switches_Buttons/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_0_and0
 000" is loadless and has been removed.
-     Loadless block
+       Loadless block
 "Switches_Buttons/Switches_Buttons/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_0_and0
 0001" (ROM) removed.
-      The signal
+        The signal
 "Switches_Buttons/Switches_Buttons/PLBV46_I/I_SLAVE_ATTACHMENT/master_id<0>" is
 loadless and has been removed.
-       Loadless block
+         Loadless block
 "Switches_Buttons/Switches_Buttons/PLBV46_I/I_SLAVE_ATTACHMENT/master_id_0"
 (SFF) removed.
-        The signal
+          The signal
 "Switches_Buttons/Switches_Buttons/PLBV46_I/I_SLAVE_ATTACHMENT/plb_masterid_reg<
 0>" is loadless and has been removed.
-         Loadless block
+           Loadless block
 "Switches_Buttons/Switches_Buttons/PLBV46_I/I_SLAVE_ATTACHMENT/plb_masterid_reg_
 0" (SFF) removed.
-  The signal "mb_plb_Sl_MBusy<0>" is loadless and has been removed.
-   Loadless block
+    The signal "mb_plb_Sl_MBusy<0>" is loadless and has been removed.
+     Loadless block
 "LEDs_Displays/LEDs_Displays/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_0" (SFF)
 removed.
-    The signal
+      The signal
 "LEDs_Displays/LEDs_Displays/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_0_and0000"
 is loadless and has been removed.
-     Loadless block
+       Loadless block
 "LEDs_Displays/LEDs_Displays/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_0_and00001"
 (ROM) removed.
-      The signal
+        The signal
 "LEDs_Displays/LEDs_Displays/PLBV46_I/I_SLAVE_ATTACHMENT/master_id<0>" is
 loadless and has been removed.
-       Loadless block
+         Loadless block
 "LEDs_Displays/LEDs_Displays/PLBV46_I/I_SLAVE_ATTACHMENT/master_id_0" (SFF)
 removed.
-        The signal
+          The signal
 "LEDs_Displays/LEDs_Displays/PLBV46_I/I_SLAVE_ATTACHMENT/plb_masterid_reg<0>" is
 loadless and has been removed.
-         Loadless block
+           Loadless block
 "LEDs_Displays/LEDs_Displays/PLBV46_I/I_SLAVE_ATTACHMENT/plb_masterid_reg_0"
 (SFF) removed.
-The signal "mb_plb_PLB_MBusy<1>" is loadless and has been removed.
- Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MBUSY_OR/Y_1_or00001"
-(ROM) removed.
-  The signal "mb_plb_Sl_MBusy<7>" is loadless and has been removed.
-   Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_1"
-(SFF) removed.
+  The signal "mb_plb_Sl_MBusy<8>" is loadless and has been removed.
+   Loadless block
+"vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_0" (SFF)
+removed.
     The signal
-"xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_1_and0000" is
+"vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_0_and0000" is
 loadless and has been removed.
      Loadless block
+"vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_0_and00001"
+(ROM) removed.
+      The signal "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id<0>"
+is loadless and has been removed.
+       Loadless block
+"vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/master_id_0" (SFF)
+removed.
+        The signal
+"vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_masterid_reg<0>" is
+loadless and has been removed.
+         Loadless block
+"vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_masterid_reg_0" (SFF)
+removed.
+The signal "mb_plb_PLB_MBusy<1>" is loadless and has been removed.
+ Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MBUSY_OR/Y_1_or0000_f5"
+(MUX) removed.
+  The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MBUSY_OR/Y_1_or0000" is
+loadless and has been removed.
+   Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MBUSY_OR/Y_1_or00001"
+(ROM) removed.
+    The signal "mb_plb_Sl_MBusy<7>" is loadless and has been removed.
+     Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_1"
+(SFF) removed.
+      The signal
+"xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_1_and0000" is
+loadless and has been removed.
+       Loadless block
 "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_1_and00001" (ROM)
 removed.
-  The signal "mb_plb_Sl_MBusy<3>" is loadless and has been removed.
-   Loadless block
+    The signal "mb_plb_Sl_MBusy<3>" is loadless and has been removed.
+     Loadless block
 "Switches_Buttons/Switches_Buttons/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_1"
 (SFF) removed.
-    The signal
+      The signal
 "Switches_Buttons/Switches_Buttons/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_1_and0
 000" is loadless and has been removed.
-     Loadless block
+       Loadless block
 "Switches_Buttons/Switches_Buttons/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_1_and0
 0001" (ROM) removed.
-  The signal "mb_plb_Sl_MBusy<1>" is loadless and has been removed.
-   Loadless block
+    The signal "mb_plb_Sl_MBusy<1>" is loadless and has been removed.
+     Loadless block
 "LEDs_Displays/LEDs_Displays/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_1" (SFF)
 removed.
-    The signal
+      The signal
 "LEDs_Displays/LEDs_Displays/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_1_and0000"
 is loadless and has been removed.
-     Loadless block
+       Loadless block
 "LEDs_Displays/LEDs_Displays/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_1_and00001"
 (ROM) removed.
+  The signal "mb_plb_Sl_MBusy<9>" is loadless and has been removed.
+   Loadless block
+"vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_1" (SFF)
+removed.
+    The signal
+"vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_1_and0000" is
+loadless and has been removed.
+     Loadless block
+"vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_1_and00001"
+(ROM) removed.
 The signal "mb_plb_PLB_MIRQ<0>" is loadless and has been removed.
- Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MIRQ_OR/Y_0_or00001"
+ Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MIRQ_OR/Y_0_or0000_f5"
+(MUX) removed.
+  The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MIRQ_OR/Y_0_or0000" is
+loadless and has been removed.
+   Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MIRQ_OR/Y_0_or00001"
 (ROM) removed.
 The signal "mb_plb_PLB_MIRQ<1>" is loadless and has been removed.
- Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MIRQ_OR/Y_1_or00001"
+ Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MIRQ_OR/Y_1_or0000_f5"
+(MUX) removed.
+  The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MIRQ_OR/Y_1_or0000" is
+loadless and has been removed.
+   Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MIRQ_OR/Y_1_or00001"
 (ROM) removed.
 The signal "mb_plb_PLB_MRdBTerm<0>" is loadless and has been removed.
  Loadless block
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/PLB_MRdBTerm_0_and0
 0001" (ROM) removed.
   The signal "mb_plb/PLB_SrdBTerm" is loadless and has been removed.
-   Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBTERM_OR/Y_0_or00001"
+   Loadless block
+"mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBTERM_OR/Y_0_or0000_f5" (MUX)
+removed.
+    The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBTERM_OR/Y_0_or0000" is
+loadless and has been removed.
+     Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBTERM_OR/Y_0_or00001"
 (ROM) removed.
 The signal "mb_plb_PLB_MRdBTerm<1>" is loadless and has been removed.
  Loadless block
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/PLB_MRdBTerm_1_and0
 0001" (ROM) removed.
 The signal "mb_plb_PLB_MRdErr<0>" is loadless and has been removed.
- Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MRDERR_OR/Y_0_or00001"
-(ROM) removed.
-  The signal "mb_plb_Sl_MRdErr<6>" is loadless and has been removed.
-   Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_0"
-(SFF) removed.
-    The signal "xps_ps2_0/xps_ps2_0/ip2bus_error25" is loadless and has been
+ Loadless block
+"mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MRDERR_OR/Y_0_or0000_f5" (MUX)
 removed.
-     Loadless block "xps_ps2_0/xps_ps2_0/ip2bus_error251" (ROM) removed.
-      The signal
+  The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MRDERR_OR/Y_0_or0000" is
+loadless and has been removed.
+   Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MRDERR_OR/Y_0_or00001"
+(ROM) removed.
+    The signal "mb_plb_Sl_MRdErr<6>" is loadless and has been removed.
+     Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_0"
+(SFF) removed.
+      The signal "xps_ps2_0/xps_ps2_0/ip2bus_error25" is loadless and has been
+removed.
+       Loadless block "xps_ps2_0/xps_ps2_0/ip2bus_error251" (ROM) removed.
+        The signal
 "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i<0>" is
 loadless and has been removed.
-       Loadless block
+         Loadless block
 "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0" (SFF)
 removed.
-        The signal
+          The signal
 "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_s_h<0>" is
 loadless and has been removed.
-         Loadless block
+           Loadless block
 "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_s_h_0" (SFF)
 removed.
-      The signal "xps_ps2_0/xps_ps2_0/ip2bus_error17" is loadless and has been
+        The signal "xps_ps2_0/xps_ps2_0/ip2bus_error17" is loadless and has been
 removed.
-       Loadless block "xps_ps2_0/xps_ps2_0/ip2bus_error17" (ROM) removed.
-        The signal "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_be_i<1>" is
+         Loadless block "xps_ps2_0/xps_ps2_0/ip2bus_error17" (ROM) removed.
+          The signal "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_be_i<1>" is
 loadless and has been removed.
-         Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_be_i_1"
+           Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_be_i_1"
 (SFF) removed.
-          The signal "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/plb_be_reg<1>" is
+            The signal "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/plb_be_reg<1>" is
 loadless and has been removed.
-           Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/plb_be_reg_1"
+             Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/plb_be_reg_1"
 (SFF) removed.
-        The signal "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_be_i<3>" is
+          The signal "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_be_i<3>" is
 loadless and has been removed.
-         Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_be_i_3"
+           Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_be_i_3"
 (SFF) removed.
-          The signal "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/plb_be_reg<3>" is
+            The signal "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/plb_be_reg<3>" is
 loadless and has been removed.
-           Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/plb_be_reg_3"
+             Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/plb_be_reg_3"
 (SFF) removed.
-        The signal "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_be_i<2>" is
+          The signal "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_be_i<2>" is
 loadless and has been removed.
-         Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_be_i_2"
+           Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/bus2ip_be_i_2"
 (SFF) removed.
-          The signal "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/plb_be_reg<2>" is
+            The signal "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/plb_be_reg<2>" is
 loadless and has been removed.
-           Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/plb_be_reg_2"
+             Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/plb_be_reg_2"
 (SFF) removed.
-    The signal
+      The signal
 "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_0_or0000" is
 loadless and has been removed.
-     Loadless block
+       Loadless block
 "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_0_or00001" (ROM)
 removed.
-      The signal "xps_ps2_0/N138" is loadless and has been removed.
-       Loadless block
+        The signal "xps_ps2_0/N134" is loadless and has been removed.
+         Loadless block
 "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_0_or000021_SW1"
 (ROM) removed.
-    The signal "xps_ps2_0/xps_ps2_0/ip2bus_error4" is loadless and has been removed.
-     Loadless block "xps_ps2_0/xps_ps2_0/ip2bus_error4" (ROM) removed.
-      The signal "xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_REG_I/ip2bus_err_i<0>" is loadless
+      The signal "xps_ps2_0/xps_ps2_0/ip2bus_error4" is loadless and has been removed.
+       Loadless block "xps_ps2_0/xps_ps2_0/ip2bus_error4" (ROM) removed.
+        The signal "xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_REG_I/ip2bus_err_i<0>" is loadless
 and has been removed.
-       Loadless block "xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_REG_I/ip2bus_err_i_0" (SFF)
+         Loadless block "xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_REG_I/ip2bus_err_i_0" (SFF)
 removed.
-        The signal "xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_REG_I/ip2bus_err_i_0_or0000" is
+          The signal "xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_REG_I/ip2bus_err_i_0_or0000" is
 loadless and has been removed.
-         Loadless block "xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_REG_I/ip2bus_err_i_0_or00001"
+           Loadless block "xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_REG_I/ip2bus_err_i_0_or00001"
 (ROM) removed.
 The signal "mb_plb_PLB_MRdErr<1>" is loadless and has been removed.
- Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MRDERR_OR/Y_1_or00001"
+ Loadless block
+"mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MRDERR_OR/Y_1_or0000_f5" (MUX)
+removed.
+  The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MRDERR_OR/Y_1_or0000" is
+loadless and has been removed.
+   Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MRDERR_OR/Y_1_or00001"
 (ROM) removed.
-  The signal "mb_plb_Sl_MRdErr<7>" is loadless and has been removed.
-   Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_1"
+    The signal "mb_plb_Sl_MRdErr<7>" is loadless and has been removed.
+     Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_1"
 (SFF) removed.
-    The signal
+      The signal
 "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_1_or0000" is
 loadless and has been removed.
-     Loadless block
+       Loadless block
 "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_1_or00001" (ROM)
 removed.
-      The signal "xps_ps2_0/N136" is loadless and has been removed.
-       Loadless block
+        The signal "xps_ps2_0/N132" is loadless and has been removed.
+         Loadless block
 "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_0_or000021_SW0"
 (ROM) removed.
 The signal "mb_plb_PLB_MRdWdAddr<0>" is loadless and has been removed.
  Loadless block
+"mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDWDADDR_OR/Y_0_or0000_f5" (MUX)
+removed.
+  The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDWDADDR_OR/Y_0_or0000" is
+loadless and has been removed.
+   Loadless block
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDWDADDR_OR/Y_0_or00001" (ROM)
 removed.
 The signal "mb_plb_PLB_MRdWdAddr<1>" is loadless and has been removed.
  Loadless block
+"mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDWDADDR_OR/Y_1_or0000_f5" (MUX)
+removed.
+  The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDWDADDR_OR/Y_1_or0000" is
+loadless and has been removed.
+   Loadless block
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDWDADDR_OR/Y_1_or00001" (ROM)
 removed.
 The signal "mb_plb_PLB_MRdWdAddr<2>" is loadless and has been removed.
  Loadless block
+"mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDWDADDR_OR/Y_2_or0000_f5" (MUX)
+removed.
+  The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDWDADDR_OR/Y_2_or0000" is
+loadless and has been removed.
+   Loadless block
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDWDADDR_OR/Y_2_or00001" (ROM)
 removed.
 The signal "mb_plb_PLB_MRdWdAddr<3>" is loadless and has been removed.
  Loadless block
+"mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDWDADDR_OR/Y_3_or0000_f5" (MUX)
+removed.
+  The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDWDADDR_OR/Y_3_or0000" is
+loadless and has been removed.
+   Loadless block
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDWDADDR_OR/Y_3_or00001" (ROM)
 removed.
 The signal "mb_plb_PLB_MRearbitrate<0>" is loadless and has been removed.
@@ -1578,14 +1664,22 @@ The signal "mb_plb_PLB_MSSize<0>" is loadless and has been removed.
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/PLB_MSSize_0_mux000
 01" (ROM) removed.
   The signal "mb_plb/PLB_Sssize<0>" is loadless and has been removed.
-   Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/SSIZE_OR/Y_0_or00001"
+   Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/SSIZE_OR/Y_0_or0000_f5"
+(MUX) removed.
+    The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/SSIZE_OR/Y_0_or0000" is
+loadless and has been removed.
+     Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/SSIZE_OR/Y_0_or00001"
 (ROM) removed.
 The signal "mb_plb_PLB_MSSize<1>" is loadless and has been removed.
  Loadless block
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/PLB_MSSize_1_mux000
 01" (ROM) removed.
   The signal "mb_plb/PLB_Sssize<1>" is loadless and has been removed.
-   Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/SSIZE_OR/Y_1_or00001"
+   Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/SSIZE_OR/Y_1_or0000_f5"
+(MUX) removed.
+    The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/SSIZE_OR/Y_1_or0000" is
+loadless and has been removed.
+     Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/SSIZE_OR/Y_1_or00001"
 (ROM) removed.
 The signal "mb_plb_PLB_MSSize<2>" is loadless and has been removed.
  Loadless block
@@ -1616,34 +1710,49 @@ The signal "mb_plb_PLB_MWrBTerm<0>" is loadless and has been removed.
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/PLB_MWrBTerm_0_and0
 0001" (ROM) removed.
   The signal "mb_plb/PLB_SwrBTerm" is loadless and has been removed.
-   Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/WRBTERM_OR/Y_0_or00001"
+   Loadless block
+"mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/WRBTERM_OR/Y_0_or0000_f5" (MUX)
+removed.
+    The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/WRBTERM_OR/Y_0_or0000" is
+loadless and has been removed.
+     Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/WRBTERM_OR/Y_0_or00001"
 (ROM) removed.
 The signal "mb_plb_PLB_MWrBTerm<1>" is loadless and has been removed.
  Loadless block
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/PLB_MWrBTerm_1_and0
 0001" (ROM) removed.
 The signal "mb_plb_PLB_MWrErr<0>" is loadless and has been removed.
- Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MWRERR_OR/Y_0_or00001"
+ Loadless block
+"mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MWRERR_OR/Y_0_or0000_f5" (MUX)
+removed.
+  The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MWRERR_OR/Y_0_or0000" is
+loadless and has been removed.
+   Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MWRERR_OR/Y_0_or00001"
 (ROM) removed.
-  The signal "mb_plb_Sl_MWrErr<6>" is loadless and has been removed.
-   Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_0"
+    The signal "mb_plb_Sl_MWrErr<6>" is loadless and has been removed.
+     Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_0"
 (SFF) removed.
-    The signal
+      The signal
 "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_0_or0000" is
 loadless and has been removed.
-     Loadless block
+       Loadless block
 "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_0_or00001" (ROM)
 removed.
 The signal "mb_plb_PLB_MWrErr<1>" is loadless and has been removed.
- Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MWRERR_OR/Y_1_or00001"
+ Loadless block
+"mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MWRERR_OR/Y_1_or0000_f5" (MUX)
+removed.
+  The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MWRERR_OR/Y_1_or0000" is
+loadless and has been removed.
+   Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/MWRERR_OR/Y_1_or00001"
 (ROM) removed.
-  The signal "mb_plb_Sl_MWrErr<7>" is loadless and has been removed.
-   Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_1"
+    The signal "mb_plb_Sl_MWrErr<7>" is loadless and has been removed.
+     Loadless block "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_1"
 (SFF) removed.
-    The signal
+      The signal
 "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_1_or0000" is
 loadless and has been removed.
-     Loadless block
+       Loadless block
 "xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_1_or00001" (ROM)
 removed.
 The signal "mb_plb_PLB_TAttribute<0>" is loadless and has been removed.
@@ -2046,7 +2155,7 @@ d0000" is loadless and has been removed.
      Loadless block
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/plb_buslock_reg_an
 d0000" (ROM) removed.
-      The signal "mb_plb/N16" is loadless and has been removed.
+      The signal "mb_plb/N114" is loadless and has been removed.
        Loadless block
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/plb_buslock_reg_an
 d0000_SW0" (ROM) removed.
@@ -2062,7 +2171,7 @@ The signal "mb_plb_PLB_rdBurst" is loadless and has been removed.
  Loadless block
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/PLB_rdBurst_and0000
 " (ROM) removed.
-  The signal "mb_plb/N2" is loadless and has been removed.
+  The signal "mb_plb/N90" is loadless and has been removed.
    Loadless block
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/PLB_rdBurst_and0000
 _SW0" (ROM) removed.
@@ -2093,7 +2202,7 @@ loadless and has been removed.
 and has been removed.
      Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/rdPrimIn" (ROM)
 removed.
-      The signal "mb_plb/N4" is loadless and has been removed.
+      The signal "mb_plb/N104" is loadless and has been removed.
        Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/rdPrimIn_SW0" (ROM)
 removed.
 The signal "mb_plb_PLB_rdPendPri<0>" is loadless and has been removed.
@@ -2249,7 +2358,7 @@ x<0>" is loadless and has been removed.
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/I_PEND_REQ/I_RD_REQ_
 MUX1" (MUX) removed.
       The signal
-"mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/priRdBurstEn1" is
+"mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/pavalid_cmb0" is
 loadless and has been removed.
        Loadless block
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/I_PEND_REQ/arbSecRdI
@@ -2297,7 +2406,7 @@ removed.
        Loadless block
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/wrburst_rst_and0000
 " (ROM) removed.
-        The signal "mb_plb/N81" is loadless and has been removed.
+        The signal "mb_plb/N181" is loadless and has been removed.
          Loadless block
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/PLB_wrBurst_and0001
 10/LUT4_D_BUF" (BUF) removed.
@@ -2458,8 +2567,8 @@ x<0>" is loadless and has been removed.
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/I_PEND_REQ/I_WR_REQ_
 MUX0" (MUX) removed.
       The signal
-"mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/I_PEND_REQ/arbSecWrI
-nProgReg_n" is loadless and has been removed.
+"mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/WrBurst_Mux_Idle_r
+eg_mux0001101" is loadless and has been removed.
        Loadless block
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/I_PEND_REQ/arbSecWrI
 nProgReg_n1_INV_0" (BUF) removed.
@@ -2478,7 +2587,7 @@ is loadless and has been removed.
 The signal "mb_plb_PLB_wrPrim<0>" is loadless and has been removed.
  Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/wrPrim" (ROM)
 removed.
-  The signal "mb_plb/N10" is loadless and has been removed.
+  The signal "mb_plb/N112" is loadless and has been removed.
    Loadless block "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/wrPrim_SW0" (ROM)
 removed.
 The signal
@@ -5622,7 +5731,7 @@ The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_ADDRPATH/plb_type_i<1>" is unused and
 has been removed.
 The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_ADDRPATH/plb_type_i<0>" is unused and
 has been removed.
-The signal "mb_plb/N26" is unused and has been removed.
+The signal "mb_plb/N128" is unused and has been removed.
 The signal
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_1_1"
 is unused and has been removed.
@@ -5635,11 +5744,23 @@ is unused and has been removed.
  Unused block
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/arbAddrSelReg_i_0_1"
 (SFF) removed.
-The signal "mb_plb/N49" is unused and has been removed.
+The signal "mb_plb/N155" is unused and has been removed.
  Unused block
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/LoadDisReg64_SW1"
 (ROM) removed.
-The signal "mb_plb/N71" is unused and has been removed.
+The signal "mb_plb/N171" is unused and has been removed.
+The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_6_or0000" is
+unused and has been removed.
+The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_5_or0000" is
+unused and has been removed.
+The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_4_or0000" is
+unused and has been removed.
+The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_3_or0000" is
+unused and has been removed.
+The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_2_or0000" is
+unused and has been removed.
+The signal "mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_1_or0000" is
+unused and has been removed.
 The signal
 "mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/LoadDisReg78" is
 unused and has been removed.
@@ -5817,13 +5938,24 @@ LUT4
 		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/BUSLOCK_MUX/lutout
 _0_or00001
 LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_WDT/wdtTimeOutCntrEnable1
+LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_0_or00001
 LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_1_or00001
+MUXF5 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_1_or0000_f5
 LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_2_or00001
+MUXF5 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_2_or0000_f5
 LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_3_or00001
+MUXF5 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_3_or0000_f5
 LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_4_or00001
+MUXF5 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_4_or0000_f5
 LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_5_or00001
+MUXF5 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_5_or0000_f5
 LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_6_or00001
-LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/WAIT_OR/Y_0_or00001
+MUXF5 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_6_or0000_f5
+LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_7_or00001
+LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_8_or00001
+LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_9_or00001
+LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/WAIT_OR/Y_0_or0000
+LUT2 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/WAIT_OR/Y_0_or0000_SW0
 GND 		mdm_0/mdm_0/MDM_Core_I1/XST_GND
 VCC 		mdm_0/mdm_0/MDM_Core_I1/XST_VCC
 GND 		microblaze_0/XST_GND
@@ -5925,6 +6057,22 @@ FDS 		proc_sys_reset_0/proc_sys_reset_0/SEQ/system_Reset_Req_d1
 FD 		proc_sys_reset_0/proc_sys_reset_0/SEQ/system_Reset_Req_d2
    optimized to 0
 FD 		proc_sys_reset_0/proc_sys_reset_0/SEQ/system_Reset_Req_d3
+   optimized to 0
+GND 		vga_0/XST_GND
+VCC 		vga_0/XST_VCC
+FDR 		vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_size_reg_0
+   optimized to 0
+FDR 		vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_size_reg_1
+   optimized to 0
+FDR 		vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_size_reg_2
+   optimized to 0
+FDR 		vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_size_reg_3
+   optimized to 0
+FDR 		vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_type_reg_0
+   optimized to 0
+FDR 		vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_type_reg_1
+   optimized to 0
+FDR 		vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_type_reg_2
    optimized to 0
 GND 		xps_ps2_0/XST_GND
 VCC 		xps_ps2_0/XST_VCC
@@ -6576,23 +6724,17 @@ LOCALBUF
 		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/LoadSecWr11/LUT4_
 L_BUF
 LOCALBUF
-		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbRdDBusBusyReg_
-cmb1_SW0/LUT4_L_BUF
+		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/priRdBurstEn36/LU
+T4_L_BUF
 LOCALBUF
 		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/WrBurst_Mux_Idle_
-reg_mux00011261_SW0/LUT3_L_BUF
-LOCALBUF
-		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/WrBurst_Mux_Idle_
-reg_mux0001116_SW0/LUT4_L_BUF
+reg_mux000144_SW0/LUT3_L_BUF
 LOCALBUF
 		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbctrl_sm_cs_FSM
 _FFd1-In18/LUT4_L_BUF
 LOCALBUF
-		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbctrl_sm_cs_FSM
-_FFd3-In23_SW0/LUT4_L_BUF
-LOCALBUF
-		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/priRdBurstEn36/LU
-T4_L_BUF
+		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/PrevTrnsReArb_set
+11/LUT4_D_BUF
 LOCALBUF
 		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/priRdBurstEn11/LU
 T4_D_BUF
@@ -6601,15 +6743,15 @@ LOCALBUF
 4_L_BUF
 LOCALBUF
 		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbctrl_sm_cs_FSM
+_FFd3-In23_SW0/LUT4_L_BUF
+LOCALBUF
+		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbctrl_sm_cs_FSM
 _FFd2-In10/LUT4_L_BUF
 LOCALBUF
 		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbctrl_sm_cs_FSM
 _FFd2-In56/LUT4_L_BUF
 LOCALBUF
-		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/WrBurst_Mux_Idle_
-reg_mux000110/LUT4_L_BUF
-LOCALBUF
-		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/savalid_cmb47/LUT
+		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/savalid_cmb53/LUT
 4_L_BUF
 LOCALBUF
 		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/WrBurst_Mux_Idle_
@@ -6619,7 +6761,7 @@ LOCALBUF
 UT2_D_BUF
 LOCALBUF
 		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/priRdBurstEn221/L
-UT2_D_BUF
+UT2_L_BUF
 LOCALBUF
 		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/arbctrl_sm_cs_FSM
 _FFd2-In28/LUT2_L_BUF
@@ -6691,6 +6833,9 @@ LOCALBUF
 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/tx_state_machine_cs_mux0002<2>1_SW1/LUT4
 _L_BUF
 LOCALBUF
+		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_WDT_I/Count_Done_mux000191_SW0/L
+UT4_L_BUF
+LOCALBUF
 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/tx_state_machine_cs_mux0002<12>1_SW2/LUT
 4_L_BUF
 LOCALBUF
@@ -6706,8 +6851,8 @@ LOCALBUF
 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/tx_state_machine_cs_mux0002<12>131/LUT3_
 D_BUF
 LOCALBUF
-		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_WDT_I/Count_Done_mux000143/LUT4_
-L_BUF
+		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_100us_I/Count_Almost_Done_and000
+028/LUT4_D_BUF
 LOCALBUF
 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/start_15ms_cntr_cs_mux0002_SW0_SW0/LUT3_
 L_BUF
@@ -6726,16 +6871,15 @@ LOCALBUF
 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/rx_ns_1_mux0004111_SW0/LUT3_D_BUF
 LOCALBUF
 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/rx_ns_1_mux000421122_SW3/LUT4_L_BUF
+LOCALBUF 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/rx_ns_1_mux0004_SW0/LUT3_L_BUF
 LOCALBUF 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/rx_ns_2_mux0004_SW0/LUT3_L_BUF
 LOCALBUF 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/rx_ns_3_mux0004_SW0/LUT3_L_BUF
 LOCALBUF 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/rx_ns_4_mux0004_SW0/LUT3_L_BUF
 LOCALBUF 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/rx_ns_7_mux00040/LUT3_L_BUF
 LOCALBUF 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/rx_ns_8_mux00040/LUT3_L_BUF
 LOCALBUF 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/rx_ns_5_mux0004_SW0/LUT3_L_BUF
-LOCALBUF 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/rx_ns_6_mux0004_SW0/LUT3_L_BUF
-LOCALBUF 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/rx_ns_9_mux0004_SW0/LUT3_L_BUF
-LOCALBUF
-		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/rx_ns_1_mux0004_SW1_SW0/LUT4_L_BUF
+LOCALBUF 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/rx_ns_6_mux0004_SW1/LUT4_L_BUF
+LOCALBUF 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/rx_ns_9_mux0004_SW1/LUT4_L_BUF
 LOCALBUF 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/rx_ns_1_mux00042114/LUT4_D_BUF
 LOCALBUF 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/rx_full_ns_SW0/LUT4_L_BUF
 LOCALBUF
@@ -6796,23 +6940,8 @@ LOCALBUF
 		xps_ps2_0/xps_ps2_0/PS2_1_I/INTERRUPT_CONTROL_I/irpt_read_data_0_mux000121/LUT
 2_D_BUF
 LOCALBUF
-		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_WDT_I/Count_Done_mux000170/LUT2_
+		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_WDT_I/Count_Done_mux000135/LUT3_
 L_BUF
-LOCALBUF
-		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_WDT_I/Count_Done_mux000133/LUT3_
-L_BUF
-LOCALBUF
-		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_50us_I/Count_Done_mux00013/LUT2_
-L_BUF
-LOCALBUF
-		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_100us_I/Count_Almost_Done_and000
-021/LUT2_D_BUF
-LOCALBUF
-		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_100us_I/Count_Almost_Done_cmp_eq
-0000_SW0/LUT3_L_BUF
-LOCALBUF
-		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_100us_I/Count_Almost_Done_cmp_eq
-0001/LUT4_D_BUF
 LOCALBUF
 		xps_ps2_0/xps_ps2_0/PS2_1_I/INTERRUPT_CONTROL_I/ip_irpt_status_reg_0_mux000211
 /LUT3_D_BUF
@@ -6820,6 +6949,28 @@ LOCALBUF
 		xps_ps2_0/xps_ps2_0/PS2_1_I/INTERRUPT_CONTROL_I/ip_irpt_status_reg_0_mux000221
 1/LUT3_D_BUF
 LOCALBUF 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/clr_50us_cntr_SW0/LUT2_L_BUF
+LOCALBUF
+		vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_ns147_SW1/
+LUT4_L_BUF
+LOCALBUF
+		vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_ns147_SW2/
+LUT4_L_BUF
+LOCALBUF 		vga_0/vga_0/USER_LOGIC_I/vsync_phase1_mux0000108/LUT4_L_BUF
+LOCALBUF 		vga_0/vga_0/USER_LOGIC_I/blank_y_str_cmp_eq00011_SW1/LUT4_L_BUF
+LOCALBUF 		vga_0/vga_0/USER_LOGIC_I/hsync_phase1_and00001/LUT4_L_BUF
+LOCALBUF 		vga_0/vga_0/USER_LOGIC_I/blank_y_str_cmp_eq00011_SW0/LUT3_L_BUF
+LOCALBUF 		vga_0/vga_0/USER_LOGIC_I/y_cmp_eq000137/LUT4_D_BUF
+LOCALBUF 		vga_0/vga_0/USER_LOGIC_I/blank_y_str_cmp_eq00011_SW0_SW0/LUT3_D_BUF
+LOCALBUF 		vga_0/vga_0/USER_LOGIC_I/blank_y_str_cmp_eq0001111/LUT3_D_BUF
+LOCALBUF
+		vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_
+DPTO_COUNTER/icount_out_sub0000<3>11/LUT4_D_BUF
+LOCALBUF
+		vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[
+0].GEN_PLB_SHARED.MEM_SELECT_I/CS17/LUT4_L_BUF
+LOCALBUF 		vga_0/vga_0/USER_LOGIC_I/vsync_phase1_mux000011/LUT4_L_BUF
+LOCALBUF 		vga_0/vga_0/USER_LOGIC_I/blank_x_str_mux00008/LUT2_L_BUF
+LOCALBUF 		vga_0/vga_0/USER_LOGIC_I/vsync_phase1_mux00002_SW0/LUT4_D_BUF
 INV
 		microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Decode_I/dready_Valid_0_not00
 001_INV_0
@@ -6959,13 +7110,17 @@ LUT2 		proc_sys_reset_0/proc_sys_reset_0/SEQ/from_sys_not00011
 INV
 		proc_sys_reset_0/proc_sys_reset_0/SEQ/SEQ_COUNTER/Mcount_q_int_xor<0>11_INV_0
 INV 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_REG_I/ip2bus_rdack_i_0_not00011_INV_0
-LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_WDT_I/Mcount_tmp_xor<14>_rt
+LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_WDT_I/Mcount_tmp_xor<13>_rt
 LUT1
-		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_15ms_I/Mcount_tmp_xor<20>_rt
+		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_15ms_I/Mcount_tmp_xor<19>_rt
 LUT1
-		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_50us_I/Mcount_tmp_xor<12>_rt
+		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_50us_I/Mcount_tmp_xor<11>_rt
 LUT1
-		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_100us_I/Mcount_tmp_xor<13>_rt
+		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_100us_I/Mcount_tmp_xor<12>_rt
+LUT1
+		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_15ms_I/Count_Done_mux0001_wg_cy<
+0>_rt
+LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_15ms_I/Mcount_tmp_cy<15>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_WDT_I/Mcount_tmp_cy<1>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_WDT_I/Mcount_tmp_cy<2>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_WDT_I/Mcount_tmp_cy<3>_rt
@@ -6978,7 +7133,6 @@ LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_WDT_I/Mcount_tmp_cy<9>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_WDT_I/Mcount_tmp_cy<10>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_WDT_I/Mcount_tmp_cy<11>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_WDT_I/Mcount_tmp_cy<12>_rt
-LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_WDT_I/Mcount_tmp_cy<13>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_15ms_I/Mcount_tmp_cy<1>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_15ms_I/Mcount_tmp_cy<2>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_15ms_I/Mcount_tmp_cy<3>_rt
@@ -6993,11 +7147,9 @@ LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_15ms_I/Mcount_tmp_cy<11>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_15ms_I/Mcount_tmp_cy<12>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_15ms_I/Mcount_tmp_cy<13>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_15ms_I/Mcount_tmp_cy<14>_rt
-LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_15ms_I/Mcount_tmp_cy<15>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_15ms_I/Mcount_tmp_cy<16>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_15ms_I/Mcount_tmp_cy<17>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_15ms_I/Mcount_tmp_cy<18>_rt
-LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_15ms_I/Mcount_tmp_cy<19>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_50us_I/Mcount_tmp_cy<1>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_50us_I/Mcount_tmp_cy<2>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_50us_I/Mcount_tmp_cy<3>_rt
@@ -7008,7 +7160,6 @@ LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_50us_I/Mcount_tmp_cy<7>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_50us_I/Mcount_tmp_cy<8>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_50us_I/Mcount_tmp_cy<9>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_50us_I/Mcount_tmp_cy<10>_rt
-LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_50us_I/Mcount_tmp_cy<11>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_100us_I/Mcount_tmp_cy<1>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_100us_I/Mcount_tmp_cy<2>_rt
 LUT1 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_100us_I/Mcount_tmp_cy<3>_rt
@@ -7022,8 +7173,25 @@ LUT1
 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_100us_I/Mcount_tmp_cy<10>_rt
 LUT1
 		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_100us_I/Mcount_tmp_cy<11>_rt
-LUT1
-		xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_100us_I/Mcount_tmp_cy<12>_rt
+INV 		vga_0/vga_0/USER_LOGIC_I/Bus2IP_Reset_inv1_INV_0
+LUT1 		vga_0/vga_0/USER_LOGIC_I/Mcount_x_xor<9>_rt
+LUT1 		vga_0/vga_0/USER_LOGIC_I/Mcount_y_xor<9>_rt
+LUT1 		vga_0/vga_0/USER_LOGIC_I/Mcount_x_cy<1>_rt
+LUT1 		vga_0/vga_0/USER_LOGIC_I/Mcount_x_cy<2>_rt
+LUT1 		vga_0/vga_0/USER_LOGIC_I/Mcount_x_cy<3>_rt
+LUT1 		vga_0/vga_0/USER_LOGIC_I/Mcount_x_cy<4>_rt
+LUT1 		vga_0/vga_0/USER_LOGIC_I/Mcount_x_cy<5>_rt
+LUT1 		vga_0/vga_0/USER_LOGIC_I/Mcount_x_cy<6>_rt
+LUT1 		vga_0/vga_0/USER_LOGIC_I/Mcount_x_cy<7>_rt
+LUT1 		vga_0/vga_0/USER_LOGIC_I/Mcount_x_cy<8>_rt
+LUT1 		vga_0/vga_0/USER_LOGIC_I/Mcount_y_cy<1>_rt
+LUT1 		vga_0/vga_0/USER_LOGIC_I/Mcount_y_cy<2>_rt
+LUT1 		vga_0/vga_0/USER_LOGIC_I/Mcount_y_cy<3>_rt
+LUT1 		vga_0/vga_0/USER_LOGIC_I/Mcount_y_cy<4>_rt
+LUT1 		vga_0/vga_0/USER_LOGIC_I/Mcount_y_cy<5>_rt
+LUT1 		vga_0/vga_0/USER_LOGIC_I/Mcount_y_cy<6>_rt
+LUT1 		vga_0/vga_0/USER_LOGIC_I/Mcount_y_cy<7>_rt
+LUT1 		vga_0/vga_0/USER_LOGIC_I/Mcount_y_cy<8>_rt
 LUT4
 		microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using
 _FPGA.PC_GEN[28].PC_Bit_I/SUM_I
@@ -7128,27 +7296,38 @@ LUT3
 D_ARB_GEN.I_PRIOR_ENC/_not00008
 MUXF5
 		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/LoadDisReg78_f5
+MUXF5 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_20_or0000_f5
+MUXF5 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_21_or0000_f5
+MUXF5 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_22_or0000_f5
+MUXF5 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_23_or0000_f5
 LUT4 		mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Insert_Delays[0].LUT_Delay
-LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_0_or00001
 LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_10_or00001
+MUXF5 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_10_or0000_f5
 LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_11_or00001
+MUXF5 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_11_or0000_f5
 LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_12_or00001
+MUXF5 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_12_or0000_f5
 LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_13_or00001
+MUXF5 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_13_or0000_f5
 LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_14_or00001
+MUXF5 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_14_or0000_f5
 LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_15_or00001
+MUXF5 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_15_or0000_f5
 LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_16_or00001
+MUXF5 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_16_or0000_f5
 LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_17_or00001
+MUXF5 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_17_or0000_f5
 LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_18_or00001
+MUXF5 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_18_or0000_f5
 LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_19_or00001
-LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_7_or00001
-LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_8_or00001
-LUT4 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_9_or00001
+MUXF5 		mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR/Y_19_or0000_f5
 LUT3
 		LEDs_Displays/LEDs_Displays/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_ns17
 LUT3
 		Switches_Buttons/Switches_Buttons/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_n
 s17
 LUT3 		xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_ns17
+LUT3 		vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_ns17
 LUT4 		mdm_0/mdm_0/MDM_Core_I1/valid_access1
 MUXF5 		mdm_0/mdm_0/MDM_Core_I1/valid_access_f5
 LUT3
@@ -7158,6 +7337,8 @@ LUT3
 		Switches_Buttons/Switches_Buttons/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_n
 s147_SW0
 LUT3 		xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_ns147_SW0
+LUT3
+		vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_ns147_SW0
 LUT4_D
 		LEDs_Displays/LEDs_Displays/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_ns131
 LOCALBUF
@@ -7170,6 +7351,7 @@ LOCALBUF
 		Switches_Buttons/Switches_Buttons/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_n
 s131/LUT4_D_BUF
 LUT4 		xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_ns131
+LUT4 		vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_ns131
 LUT4
 		mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM/WrBurst_Mux_Idle_
 reg_mux000131
@@ -7294,6 +7476,15 @@ Section 6 - IOB Properties
 | pin<11>                            |                  |           |                      |       |          |      |              |          |          |
 | fpga_0_clk_1_sys_clk_pin           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
 | fpga_0_rst_1_sys_rst_pin           | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| vga_0_h_sync_pin                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| vga_0_v_sync_pin                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | OFF1         |          | 0 / 0    |
+| vga_0_video_pin<0>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| vga_0_video_pin<1>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| vga_0_video_pin<2>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| vga_0_video_pin<3>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| vga_0_video_pin<4>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| vga_0_video_pin<5>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| vga_0_video_pin<6>                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
 | xps_ps2_0_PS2_1_CLK                | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW | IFF1         |          | 0 / 3    |
 |                                    |                  |           |                      |       |          |      | OFF1         |          |          |
 |                                    |                  |           |                      |       |          |      | TFF1         |          |          |
@@ -7360,7 +7551,7 @@ DLL_FREQUENCY_MODE:LOW
 DUTY_CYCLE_CORRECTION:TRUE
 FACTORY_JF1:0XC0
 FACTORY_JF2:0X80
-CLKFX_DIVIDE = 8
+CLKFX_DIVIDE = 16
 CLKFX_MULTIPLY = 25
 PHASE_SHIFT = 0
 X_CLKIN_PERIOD = 62.5000000000000000
@@ -7713,26 +7904,26 @@ Section 13 - Utilization by Hierarchy
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Module                                                               | Partition | Slices        | Slice Reg     | LUTs          | LUTRAM        | BRAM      | MULT18X18 | BUFG  | DCM   | Full Hierarchical Name                                                                                                                                  |
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| system/                                                              |           | 0/2514        | 0/1624        | 0/2647        | 0/402         | 0/4       | 0/0       | 0/3   | 0/1   | system                                                                                                                                                  |
-| +LEDs_Displays                                                       |           | 0/204         | 0/196         | 0/121         | 0/25          | 0/0       | 0/0       | 0/0   | 0/0   | system/LEDs_Displays                                                                                                                                    |
-| ++LEDs_Displays                                                      |           | 22/204        | 0/196         | 27/121        | 0/25          | 0/0       | 0/0       | 0/0   | 0/0   | system/LEDs_Displays/LEDs_Displays                                                                                                                      |
-| +++PLBV46_I                                                          |           | 0/108         | 0/119         | 0/33          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/LEDs_Displays/LEDs_Displays/PLBV46_I                                                                                                             |
-| ++++I_SLAVE_ATTACHMENT                                               |           | 93/108        | 107/119       | 13/33         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/LEDs_Displays/LEDs_Displays/PLBV46_I/I_SLAVE_ATTACHMENT                                                                                          |
+| system/                                                              |           | 0/2579        | 0/1689        | 0/2726        | 0/404         | 0/4       | 0/0       | 0/3   | 0/1   | system                                                                                                                                                  |
+| +LEDs_Displays                                                       |           | 0/205         | 0/196         | 0/121         | 0/25          | 0/0       | 0/0       | 0/0   | 0/0   | system/LEDs_Displays                                                                                                                                    |
+| ++LEDs_Displays                                                      |           | 25/205        | 0/196         | 27/121        | 0/25          | 0/0       | 0/0       | 0/0   | 0/0   | system/LEDs_Displays/LEDs_Displays                                                                                                                      |
+| +++PLBV46_I                                                          |           | 0/99          | 0/119         | 0/33          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/LEDs_Displays/LEDs_Displays/PLBV46_I                                                                                                             |
+| ++++I_SLAVE_ATTACHMENT                                               |           | 84/99         | 107/119       | 13/33         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/LEDs_Displays/LEDs_Displays/PLBV46_I/I_SLAVE_ATTACHMENT                                                                                          |
 | +++++INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER                           |           | 8/8           | 9/9           | 12/12         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/LEDs_Displays/LEDs_Displays/PLBV46_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER                                                    |
 | +++++I_DECODER                                                       |           | 3/7           | 3/3           | 0/8           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/LEDs_Displays/LEDs_Displays/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER                                                                                |
 | ++++++MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I                  |           | 4/4           | 0/0           | 8/8           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/LEDs_Displays/LEDs_Displays/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I                                  |
-| +++gpio_core_1                                                       |           | 74/74         | 77/77         | 61/61         | 25/25         | 0/0       | 0/0       | 0/0   | 0/0   | system/LEDs_Displays/LEDs_Displays/gpio_core_1                                                                                                          |
-| +Switches_Buttons                                                    |           | 0/134         | 0/132         | 0/76          | 0/12          | 0/0       | 0/0       | 0/0   | 0/0   | system/Switches_Buttons                                                                                                                                 |
-| ++Switches_Buttons                                                   |           | 13/134        | 0/132         | 14/76         | 0/12          | 0/0       | 0/0       | 0/0   | 0/0   | system/Switches_Buttons/Switches_Buttons                                                                                                                |
-| +++PLBV46_I                                                          |           | 0/82          | 0/94          | 0/33          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/Switches_Buttons/Switches_Buttons/PLBV46_I                                                                                                       |
-| ++++I_SLAVE_ATTACHMENT                                               |           | 67/82         | 82/94         | 13/33         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/Switches_Buttons/Switches_Buttons/PLBV46_I/I_SLAVE_ATTACHMENT                                                                                    |
-| +++++INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER                           |           | 8/8           | 9/9           | 12/12         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/Switches_Buttons/Switches_Buttons/PLBV46_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER                                              |
+| +++gpio_core_1                                                       |           | 81/81         | 77/77         | 61/61         | 25/25         | 0/0       | 0/0       | 0/0   | 0/0   | system/LEDs_Displays/LEDs_Displays/gpio_core_1                                                                                                          |
+| +Switches_Buttons                                                    |           | 0/135         | 0/132         | 0/76          | 0/12          | 0/0       | 0/0       | 0/0   | 0/0   | system/Switches_Buttons                                                                                                                                 |
+| ++Switches_Buttons                                                   |           | 13/135        | 0/132         | 14/76         | 0/12          | 0/0       | 0/0       | 0/0   | 0/0   | system/Switches_Buttons/Switches_Buttons                                                                                                                |
+| +++PLBV46_I                                                          |           | 0/83          | 0/94          | 0/33          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/Switches_Buttons/Switches_Buttons/PLBV46_I                                                                                                       |
+| ++++I_SLAVE_ATTACHMENT                                               |           | 69/83         | 82/94         | 13/33         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/Switches_Buttons/Switches_Buttons/PLBV46_I/I_SLAVE_ATTACHMENT                                                                                    |
+| +++++INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER                           |           | 7/7           | 9/9           | 12/12         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/Switches_Buttons/Switches_Buttons/PLBV46_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER                                              |
 | +++++I_DECODER                                                       |           | 3/7           | 3/3           | 0/8           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/Switches_Buttons/Switches_Buttons/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER                                                                          |
 | ++++++MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I                  |           | 4/4           | 0/0           | 8/8           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/Switches_Buttons/Switches_Buttons/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I                            |
 | +++gpio_core_1                                                       |           | 39/39         | 38/38         | 29/29         | 12/12         | 0/0       | 0/0       | 0/0   | 0/0   | system/Switches_Buttons/Switches_Buttons/gpio_core_1                                                                                                    |
-| +clock_generator_0                                                   |           | 0/2           | 0/4           | 0/0           | 0/0           | 0/0       | 0/0       | 0/2   | 0/1   | system/clock_generator_0                                                                                                                                |
-| ++clock_generator_0                                                  |           | 0/2           | 0/4           | 0/0           | 0/0           | 0/0       | 0/0       | 2/2   | 0/1   | system/clock_generator_0/clock_generator_0                                                                                                              |
-| +++DCM0_INST                                                         |           | 2/2           | 4/4           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 1/1   | system/clock_generator_0/clock_generator_0/DCM0_INST                                                                                                    |
+| +clock_generator_0                                                   |           | 0/3           | 0/4           | 0/0           | 0/0           | 0/0       | 0/0       | 0/2   | 0/1   | system/clock_generator_0                                                                                                                                |
+| ++clock_generator_0                                                  |           | 0/3           | 0/4           | 0/0           | 0/0           | 0/0       | 0/0       | 2/2   | 0/1   | system/clock_generator_0/clock_generator_0                                                                                                              |
+| +++DCM0_INST                                                         |           | 3/3           | 4/4           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 1/1   | system/clock_generator_0/clock_generator_0/DCM0_INST                                                                                                    |
 | +dlmb                                                                |           | 0/1           | 0/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/dlmb                                                                                                                                             |
 | ++dlmb                                                               |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/dlmb/dlmb                                                                                                                                        |
 | +dlmb_cntlr                                                          |           | 0/6           | 0/2           | 0/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/dlmb_cntlr                                                                                                                                       |
@@ -7743,45 +7934,45 @@ Section 13 - Utilization by Hierarchy
 | ++ilmb_cntlr                                                         |           | 3/3           | 2/2           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/ilmb_cntlr/ilmb_cntlr                                                                                                                            |
 | +lmb_bram                                                            |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/4       | 0/0       | 0/0   | 0/0   | system/lmb_bram                                                                                                                                         |
 | ++lmb_bram                                                           |           | 0/0           | 0/0           | 0/0           | 0/0           | 4/4       | 0/0       | 0/0   | 0/0   | system/lmb_bram/lmb_bram                                                                                                                                |
-| +mb_plb                                                              |           | 0/184         | 0/77          | 0/190         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb                                                                                                                                           |
-| ++mb_plb                                                             |           | 5/184         | 5/77          | 0/190         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb                                                                                                                                    |
+| +mb_plb                                                              |           | 0/190         | 0/77          | 0/189         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb                                                                                                                                           |
+| ++mb_plb                                                             |           | 6/190         | 6/77          | 0/189         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb                                                                                                                                    |
 | +++GEN_SHARED.I_PLB_ADDRPATH                                         |           | 26/52         | 34/34         | 0/34          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_ADDRPATH                                                                                                          |
 | ++++I_PLBADDR_MUX                                                    |           | 22/22         | 0/0           | 30/30         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_ADDRPATH/I_PLBADDR_MUX                                                                                            |
 | ++++I_PLBBE_MUX                                                      |           | 4/4           | 0/0           | 4/4           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_ADDRPATH/I_PLBBE_MUX                                                                                              |
-| +++GEN_SHARED.I_PLB_ARBITER_LOGIC                                    |           | 2/80          | 2/38          | 0/103         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC                                                                                                     |
-| ++++I_ARBCONTROL_SM                                                  |           | 54/54         | 25/25         | 83/83         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM                                                                                     |
-| ++++I_ARB_ENCODER                                                    |           | 5/10          | 6/6           | 0/6           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER                                                                                       |
-| +++++GTR_ONE_MASTER.FIXED_ARB_GEN.I_PRIOR_ENC                        |           | 4/5           | 0/0           | 5/6           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/GTR_ONE_MASTER.FIXED_ARB_GEN.I_PRIOR_ENC                                              |
+| +++GEN_SHARED.I_PLB_ARBITER_LOGIC                                    |           | 2/79          | 2/37          | 0/102         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC                                                                                                     |
+| ++++I_ARBCONTROL_SM                                                  |           | 53/53         | 24/24         | 83/83         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARBCONTROL_SM                                                                                     |
+| ++++I_ARB_ENCODER                                                    |           | 6/12          | 6/6           | 0/6           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER                                                                                       |
+| +++++GTR_ONE_MASTER.FIXED_ARB_GEN.I_PRIOR_ENC                        |           | 5/6           | 0/0           | 5/6           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/GTR_ONE_MASTER.FIXED_ARB_GEN.I_PRIOR_ENC                                              |
 | ++++++MASTER_LVLS[0].I_QUAL_MASTERS_REQUEST                          |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_ARB_ENCODER/GTR_ONE_MASTER.FIXED_ARB_GEN.I_PRIOR_ENC/MASTER_LVLS[0].I_QUAL_MASTERS_REQUEST        |
 | ++++I_GENQUALREQ                                                     |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_GENQUALREQ                                                                                        |
-| ++++I_MUXEDSIGNALS                                                   |           | 4/6           | 0/0           | 4/6           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS                                                                                      |
-| +++++RNW_MUX                                                         |           | 2/2           | 0/0           | 2/2           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/RNW_MUX                                                                              |
+| ++++I_MUXEDSIGNALS                                                   |           | 3/4           | 0/0           | 4/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS                                                                                      |
+| +++++RNW_MUX                                                         |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_MUXEDSIGNALS/RNW_MUX                                                                              |
 | ++++I_WDT                                                            |           | 3/6           | 1/5           | 3/6           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_WDT                                                                                               |
 | +++++WDT_TIMEOUT_CNTR_I                                              |           | 3/3           | 4/4           | 3/3           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/I_WDT/WDT_TIMEOUT_CNTR_I                                                                            |
 | ++++MSTR_REQ_MUX                                                     |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_ARBITER_LOGIC/MSTR_REQ_MUX                                                                                        |
 | +++GEN_SHARED.I_PLB_RD_DATAPATH                                      |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_RD_DATAPATH                                                                                                       |
-| +++GEN_SHARED.I_PLB_SLAVE_ORS                                        |           | 0/17          | 0/0           | 0/18          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS                                                                                                         |
+| +++GEN_SHARED.I_PLB_SLAVE_ORS                                        |           | 0/22          | 0/0           | 0/18          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS                                                                                                         |
 | ++++ADDRACK_OR                                                       |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/ADDRACK_OR                                                                                              |
-| ++++RDBUS_OR                                                         |           | 11/11         | 0/0           | 12/12         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR                                                                                                |
+| ++++RDBUS_OR                                                         |           | 16/16         | 0/0           | 12/12         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDBUS_OR                                                                                                |
 | ++++RDCOMP_OR                                                        |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDCOMP_OR                                                                                               |
 | ++++RDDACK_OR                                                        |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/RDDACK_OR                                                                                               |
 | ++++REARB_OR                                                         |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/REARB_OR                                                                                                |
 | ++++WRCOMP_OR                                                        |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/WRCOMP_OR                                                                                               |
 | ++++WRDACK_OR                                                        |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_SLAVE_ORS/WRDACK_OR                                                                                               |
-| +++GEN_SHARED.I_PLB_WR_DATAPATH                                      |           | 2/29          | 0/0           | 2/34          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_WR_DATAPATH                                                                                                       |
-| ++++I_WRDBUS_MUX                                                     |           | 27/27         | 0/0           | 32/32         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_WR_DATAPATH/I_WRDBUS_MUX                                                                                          |
-| +mdm_0                                                               |           | 0/152         | 0/125         | 0/139         | 0/23          | 0/0       | 0/0       | 0/1   | 0/0   | system/mdm_0                                                                                                                                            |
-| ++mdm_0                                                              |           | 0/152         | 0/125         | 0/139         | 0/23          | 0/0       | 0/0       | 1/1   | 0/0   | system/mdm_0/mdm_0                                                                                                                                      |
-| +++MDM_Core_I1                                                       |           | 51/152        | 57/125        | 39/139        | 3/23          | 0/0       | 0/0       | 0/0   | 0/0   | system/mdm_0/mdm_0/MDM_Core_I1                                                                                                                          |
-| ++++JTAG_CONTROL_I                                                   |           | 74/99         | 58/68         | 55/96         | 4/20          | 0/0       | 0/0       | 0/0   | 0/0   | system/mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I                                                                                                           |
-| +++++Have_UARTs.RX_FIFO_I                                            |           | 13/13         | 5/5           | 21/21         | 8/8           | 0/0       | 0/0       | 0/0   | 0/0   | system/mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Have_UARTs.RX_FIFO_I                                                                                      |
-| +++++Have_UARTs.TX_FIFO_I                                            |           | 12/12         | 5/5           | 20/20         | 8/8           | 0/0       | 0/0       | 0/0   | 0/0   | system/mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Have_UARTs.TX_FIFO_I                                                                                      |
+| +++GEN_SHARED.I_PLB_WR_DATAPATH                                      |           | 2/30          | 0/0           | 2/34          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_WR_DATAPATH                                                                                                       |
+| ++++I_WRDBUS_MUX                                                     |           | 28/28         | 0/0           | 32/32         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mb_plb/mb_plb/GEN_SHARED.I_PLB_WR_DATAPATH/I_WRDBUS_MUX                                                                                          |
+| +mdm_0                                                               |           | 0/143         | 0/125         | 0/139         | 0/23          | 0/0       | 0/0       | 0/1   | 0/0   | system/mdm_0                                                                                                                                            |
+| ++mdm_0                                                              |           | 0/143         | 0/125         | 0/139         | 0/23          | 0/0       | 0/0       | 1/1   | 0/0   | system/mdm_0/mdm_0                                                                                                                                      |
+| +++MDM_Core_I1                                                       |           | 52/143        | 57/125        | 39/139        | 3/23          | 0/0       | 0/0       | 0/0   | 0/0   | system/mdm_0/mdm_0/MDM_Core_I1                                                                                                                          |
+| ++++JTAG_CONTROL_I                                                   |           | 66/89         | 58/68         | 55/96         | 4/20          | 0/0       | 0/0       | 0/0   | 0/0   | system/mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I                                                                                                           |
+| +++++Have_UARTs.RX_FIFO_I                                            |           | 12/12         | 5/5           | 21/21         | 8/8           | 0/0       | 0/0       | 0/0   | 0/0   | system/mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Have_UARTs.RX_FIFO_I                                                                                      |
+| +++++Have_UARTs.TX_FIFO_I                                            |           | 11/11         | 5/5           | 20/20         | 8/8           | 0/0       | 0/0       | 0/0   | 0/0   | system/mdm_0/mdm_0/MDM_Core_I1/JTAG_CONTROL_I/Have_UARTs.TX_FIFO_I                                                                                      |
 | ++++PLB_Interconnect.pselect_I                                       |           | 2/2           | 0/0           | 4/4           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/mdm_0/mdm_0/MDM_Core_I1/PLB_Interconnect.pselect_I                                                                                               |
-| +microblaze_0                                                        |           | 0/1402        | 0/722         | 0/1690        | 0/340         | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0                                                                                                                                     |
-| ++microblaze_0                                                       |           | 0/1402        | 0/722         | 0/1690        | 0/340         | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0                                                                                                                        |
-| +++MicroBlaze_Core_I                                                 |           | 52/1402       | 33/722        | 35/1690       | 0/340         | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I                                                                                                      |
-| ++++Area.Byte_Doublet_Handle_I                                       |           | 69/69         | 0/0           | 116/116       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Byte_Doublet_Handle_I                                                                           |
-| ++++Area.Data_Flow_I                                                 |           | 7/774         | 0/276         | 7/1106        | 0/288         | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I                                                                                     |
+| +microblaze_0                                                        |           | 0/1406        | 0/722         | 0/1690        | 0/340         | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0                                                                                                                                     |
+| ++microblaze_0                                                       |           | 0/1406        | 0/722         | 0/1690        | 0/340         | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0                                                                                                                        |
+| +++MicroBlaze_Core_I                                                 |           | 54/1406       | 33/722        | 35/1690       | 0/340         | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I                                                                                                      |
+| ++++Area.Byte_Doublet_Handle_I                                       |           | 71/71         | 0/0           | 116/116       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Byte_Doublet_Handle_I                                                                           |
+| ++++Area.Data_Flow_I                                                 |           | 7/772         | 0/276         | 7/1107        | 0/288         | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I                                                                                     |
 | +++++ALU_I                                                           |           | 1/34          | 0/0           | 0/34          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I                                                                               |
 | ++++++FPGA_Target.ALL_Bits[0].ALU_Bit_I1                             |           | 2/2           | 0/0           | 3/3           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[0].ALU_Bit_I1                                            |
 | ++++++FPGA_Target.ALL_Bits[10].ALU_Bit_I1                            |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.ALL_Bits[10].ALU_Bit_I1                                           |
@@ -7819,7 +8010,7 @@ Section 13 - Utilization by Hierarchy
 | ++++++Using_FPGA.MSR_Bits[28].Using_MSR_Reg_Bit.MSR_Reg_Bit_I        |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/MSR_Reg_I/Using_FPGA.MSR_Bits[28].Using_MSR_Reg_Bit.MSR_Reg_Bit_I                   |
 | ++++++Using_FPGA.MSR_Bits[29].Using_MSR_Reg_Bit.MSR_Reg_Bit_I        |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/MSR_Reg_I/Using_FPGA.MSR_Bits[29].Using_MSR_Reg_Bit.MSR_Reg_Bit_I                   |
 | ++++++Using_FPGA.MSR_Bits[30].Using_MSR_Reg_Bit.MSR_Reg_Bit_I        |           | 1/1           | 1/1           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/MSR_Reg_I/Using_FPGA.MSR_Bits[30].Using_MSR_Reg_Bit.MSR_Reg_Bit_I                   |
-| +++++Operand_Select_I                                                |           | 15/79         | 16/112        | 0/128         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I                                                                    |
+| +++++Operand_Select_I                                                |           | 14/78         | 16/112        | 0/128         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I                                                                    |
 | ++++++Using_FPGA.OpSelect_Bits[0].Operand_Select_Bit_I               |           | 2/2           | 3/3           | 4/4           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[0].Operand_Select_Bit_I                   |
 | ++++++Using_FPGA.OpSelect_Bits[10].Operand_Select_Bit_I              |           | 2/2           | 3/3           | 4/4           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[10].Operand_Select_Bit_I                  |
 | ++++++Using_FPGA.OpSelect_Bits[11].Operand_Select_Bit_I              |           | 2/2           | 3/3           | 4/4           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[11].Operand_Select_Bit_I                  |
@@ -7852,8 +8043,8 @@ Section 13 - Utilization by Hierarchy
 | ++++++Using_FPGA.OpSelect_Bits[7].Operand_Select_Bit_I               |           | 2/2           | 3/3           | 4/4           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[7].Operand_Select_Bit_I                   |
 | ++++++Using_FPGA.OpSelect_Bits[8].Operand_Select_Bit_I               |           | 2/2           | 3/3           | 4/4           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[8].Operand_Select_Bit_I                   |
 | ++++++Using_FPGA.OpSelect_Bits[9].Operand_Select_Bit_I               |           | 2/2           | 3/3           | 4/4           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Operand_Select_I/Using_FPGA.OpSelect_Bits[9].Operand_Select_Bit_I                   |
-| +++++PC_Module_I                                                     |           | 1/141         | 0/64          | 1/95          | 0/32          | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I                                                                         |
-| ++++++Using_FPGA.PC_GEN[0].PC_Bit_I                                  |           | 4/5           | 2/2           | 1/2           | 0/1           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.PC_GEN[0].PC_Bit_I                                           |
+| +++++PC_Module_I                                                     |           | 1/141         | 0/64          | 1/96          | 0/32          | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I                                                                         |
+| ++++++Using_FPGA.PC_GEN[0].PC_Bit_I                                  |           | 4/5           | 2/2           | 2/3           | 0/1           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.PC_GEN[0].PC_Bit_I                                           |
 | +++++++PC_OF_Buffer                                                  |           | 1/1           | 0/0           | 1/1           | 1/1           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.PC_GEN[0].PC_Bit_I/PC_OF_Buffer                              |
 | ++++++Using_FPGA.PC_GEN[10].PC_Bit_I                                 |           | 3/4           | 2/2           | 3/4           | 0/1           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.PC_GEN[10].PC_Bit_I                                          |
 | +++++++PC_OF_Buffer                                                  |           | 1/1           | 0/0           | 1/1           | 1/1           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.PC_GEN[10].PC_Bit_I/PC_OF_Buffer                             |
@@ -7917,10 +8108,10 @@ Section 13 - Utilization by Hierarchy
 | +++++++PC_OF_Buffer                                                  |           | 1/1           | 0/0           | 1/1           | 1/1           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.PC_GEN[8].PC_Bit_I/PC_OF_Buffer                              |
 | ++++++Using_FPGA.PC_GEN[9].PC_Bit_I                                  |           | 4/5           | 2/2           | 1/2           | 0/1           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.PC_GEN[9].PC_Bit_I                                           |
 | +++++++PC_OF_Buffer                                                  |           | 1/1           | 0/0           | 1/1           | 1/1           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA.PC_GEN[9].PC_Bit_I/PC_OF_Buffer                              |
-| +++++Register_File_I                                                 |           | 0/224         | 0/0           | 0/352         | 0/256         | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I                                                                     |
+| +++++Register_File_I                                                 |           | 0/223         | 0/0           | 0/352         | 0/256         | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I                                                                     |
 | ++++++Using_FPGA.Gen_RegFile[0].Register_File_Bit_I                  |           | 7/7           | 0/0           | 11/11         | 8/8           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[0].Register_File_Bit_I                       |
 | ++++++Using_FPGA.Gen_RegFile[10].Register_File_Bit_I                 |           | 7/7           | 0/0           | 11/11         | 8/8           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[10].Register_File_Bit_I                      |
-| ++++++Using_FPGA.Gen_RegFile[11].Register_File_Bit_I                 |           | 7/7           | 0/0           | 11/11         | 8/8           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[11].Register_File_Bit_I                      |
+| ++++++Using_FPGA.Gen_RegFile[11].Register_File_Bit_I                 |           | 6/6           | 0/0           | 11/11         | 8/8           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[11].Register_File_Bit_I                      |
 | ++++++Using_FPGA.Gen_RegFile[12].Register_File_Bit_I                 |           | 7/7           | 0/0           | 11/11         | 8/8           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[12].Register_File_Bit_I                      |
 | ++++++Using_FPGA.Gen_RegFile[13].Register_File_Bit_I                 |           | 7/7           | 0/0           | 11/11         | 8/8           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[13].Register_File_Bit_I                      |
 | ++++++Using_FPGA.Gen_RegFile[14].Register_File_Bit_I                 |           | 7/7           | 0/0           | 11/11         | 8/8           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Register_File_I/Using_FPGA.Gen_RegFile[14].Register_File_Bit_I                      |
@@ -7983,7 +8174,7 @@ Section 13 - Utilization by Hierarchy
 | ++++++Using_FPGA.Result_Mux_Bits[7].Result_Mux_Bit_I                 |           | 1/1           | 1/1           | 2/2           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA.Result_Mux_Bits[7].Result_Mux_Bit_I                         |
 | ++++++Using_FPGA.Result_Mux_Bits[8].Result_Mux_Bit_I                 |           | 1/1           | 1/1           | 2/2           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA.Result_Mux_Bits[8].Result_Mux_Bit_I                         |
 | ++++++Using_FPGA.Result_Mux_Bits[9].Result_Mux_Bit_I                 |           | 1/1           | 1/1           | 2/2           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPGA.Result_Mux_Bits[9].Result_Mux_Bit_I                         |
-| +++++Shift_Logic_Module_I                                            |           | 42/89         | 0/0           | 62/145        | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Shift_Logic_Module_I                                                                |
+| +++++Shift_Logic_Module_I                                            |           | 40/87         | 0/0           | 62/145        | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Shift_Logic_Module_I                                                                |
 | ++++++Use_PCMP_instr.Using_FPGA.carry_equal_byte1                    |           | 3/3           | 0/0           | 4/4           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Shift_Logic_Module_I/Use_PCMP_instr.Using_FPGA.carry_equal_byte1                    |
 | ++++++Use_PCMP_instr.Using_FPGA.carry_equal_byte2                    |           | 3/3           | 0/0           | 4/4           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Shift_Logic_Module_I/Use_PCMP_instr.Using_FPGA.carry_equal_byte2                    |
 | ++++++Use_PCMP_instr.Using_FPGA.carry_equal_byte3                    |           | 3/3           | 0/0           | 4/4           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Shift_Logic_Module_I/Use_PCMP_instr.Using_FPGA.carry_equal_byte3                    |
@@ -8021,10 +8212,10 @@ Section 13 - Utilization by Hierarchy
 | ++++++Using_FPGA.Shift_Logic_Bits[7].Shift_Logic_Bit_I               |           | 1/1           | 0/0           | 2/2           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Shift_Logic_Module_I/Using_FPGA.Shift_Logic_Bits[7].Shift_Logic_Bit_I               |
 | ++++++Using_FPGA.Shift_Logic_Bits[8].Shift_Logic_Bit_I               |           | 1/1           | 0/0           | 2/2           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Shift_Logic_Module_I/Using_FPGA.Shift_Logic_Bits[8].Shift_Logic_Bit_I               |
 | ++++++Using_FPGA.Shift_Logic_Bits[9].Shift_Logic_Bit_I               |           | 1/1           | 0/0           | 2/2           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Shift_Logic_Module_I/Using_FPGA.Shift_Logic_Bits[9].Shift_Logic_Bit_I               |
-| +++++Using_Barrel_Shifter.barrel_shift_I                             |           | 120/120       | 33/33         | 224/224       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Using_Barrel_Shifter.barrel_shift_I                                                 |
+| +++++Using_Barrel_Shifter.barrel_shift_I                             |           | 121/121       | 33/33         | 224/224       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Using_Barrel_Shifter.barrel_shift_I                                                 |
 | +++++Zero_Detect_I                                                   |           | 5/5           | 0/0           | 9/9           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/Zero_Detect_I                                                                       |
-| +++++mul_unit_I                                                      |           | 30/30         | 32/32         | 32/32         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/mul_unit_I                                                                          |
-| ++++Area.Decode_I                                                    |           | 127/164       | 76/80         | 176/214       | 0/32          | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Decode_I                                                                                        |
+| +++++mul_unit_I                                                      |           | 31/31         | 32/32         | 32/32         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Data_Flow_I/mul_unit_I                                                                          |
+| ++++Area.Decode_I                                                    |           | 123/160       | 76/80         | 175/213       | 0/32          | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Decode_I                                                                                        |
 | +++++PreFetch_Buffer_I                                               |           | 5/37          | 4/4           | 6/38          | 0/32          | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I                                                                      |
 | ++++++Using_FPGA.PreFetch_Buffers[0].SRL16E_I                        |           | 1/1           | 0/0           | 1/1           | 1/1           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[0].SRL16E_I                              |
 | ++++++Using_FPGA.PreFetch_Buffers[10].SRL16E_I                       |           | 1/1           | 0/0           | 1/1           | 1/1           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[10].SRL16E_I                             |
@@ -8058,23 +8249,32 @@ Section 13 - Utilization by Hierarchy
 | ++++++Using_FPGA.PreFetch_Buffers[7].SRL16E_I                        |           | 1/1           | 0/0           | 1/1           | 1/1           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[7].SRL16E_I                              |
 | ++++++Using_FPGA.PreFetch_Buffers[8].SRL16E_I                        |           | 1/1           | 0/0           | 1/1           | 1/1           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[8].SRL16E_I                              |
 | ++++++Using_FPGA.PreFetch_Buffers[9].SRL16E_I                        |           | 1/1           | 0/0           | 1/1           | 1/1           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.PreFetch_Buffers[9].SRL16E_I                              |
-| ++++Area.Implement_Debug_Logic.Master_Core.Debug_Area                |           | 199/204       | 207/207       | 144/153       | 12/20         | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area                                                    |
+| ++++Area.Implement_Debug_Logic.Master_Core.Debug_Area                |           | 205/210       | 207/207       | 144/153       | 12/20         | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area                                                    |
 | +++++Using_PC_Breakpoints.All_PC_Brks[0].address_hit_I               |           | 5/5           | 0/0           | 9/9           | 8/8           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Implement_Debug_Logic.Master_Core.Debug_Area/Using_PC_Breakpoints.All_PC_Brks[0].address_hit_I  |
-| ++++Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1             |           | 77/77         | 97/97         | 4/4           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1                                                 |
-| ++++Area.Using_I_PLB.IPLB_Interface_I1                               |           | 29/29         | 29/29         | 3/3           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Using_I_PLB.IPLB_Interface_I1                                                                   |
+| ++++Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1             |           | 75/75         | 97/97         | 4/4           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Using_Ext_Databus.Using_D_PLB.DPLB_Interface_I1                                                 |
+| ++++Area.Using_I_PLB.IPLB_Interface_I1                               |           | 31/31         | 29/29         | 3/3           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Using_I_PLB.IPLB_Interface_I1                                                                   |
 | ++++Area.instr_mux_I1                                                |           | 33/33         | 0/0           | 59/59         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.instr_mux_I1                                                                                    |
-| +proc_sys_reset_0                                                    |           | 0/34          | 0/31          | 0/20          | 0/2           | 0/0       | 0/0       | 0/0   | 0/0   | system/proc_sys_reset_0                                                                                                                                 |
-| ++proc_sys_reset_0                                                   |           | 2/34          | 2/31          | 0/20          | 0/2           | 0/0       | 0/0       | 0/0   | 0/0   | system/proc_sys_reset_0/proc_sys_reset_0                                                                                                                |
-| +++EXT_LPF                                                           |           | 14/14         | 12/12         | 7/7           | 2/2           | 0/0       | 0/0       | 0/0   | 0/0   | system/proc_sys_reset_0/proc_sys_reset_0/EXT_LPF                                                                                                        |
-| +++SEQ                                                               |           | 14/18         | 11/17         | 7/13          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/proc_sys_reset_0/proc_sys_reset_0/SEQ                                                                                                            |
+| +proc_sys_reset_0                                                    |           | 0/29          | 0/31          | 0/20          | 0/2           | 0/0       | 0/0       | 0/0   | 0/0   | system/proc_sys_reset_0                                                                                                                                 |
+| ++proc_sys_reset_0                                                   |           | 2/29          | 2/31          | 0/20          | 0/2           | 0/0       | 0/0       | 0/0   | 0/0   | system/proc_sys_reset_0/proc_sys_reset_0                                                                                                                |
+| +++EXT_LPF                                                           |           | 11/11         | 12/12         | 7/7           | 2/2           | 0/0       | 0/0       | 0/0   | 0/0   | system/proc_sys_reset_0/proc_sys_reset_0/EXT_LPF                                                                                                        |
+| +++SEQ                                                               |           | 12/16         | 11/17         | 7/13          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/proc_sys_reset_0/proc_sys_reset_0/SEQ                                                                                                            |
 | ++++SEQ_COUNTER                                                      |           | 4/4           | 6/6           | 6/6           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/proc_sys_reset_0/proc_sys_reset_0/SEQ/SEQ_COUNTER                                                                                                |
 | +system                                                              |           | 0/0           | 0/0           | 0/0           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/system                                                                                                                                           |
-| +xps_ps2_0                                                           |           | 0/391         | 0/331         | 0/405         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0                                                                                                                                        |
-| ++xps_ps2_0                                                          |           | 0/391         | 0/331         | 0/405         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0                                                                                                                              |
-| +++PLBV46_I                                                          |           | 0/145         | 0/126         | 0/64          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PLBV46_I                                                                                                                     |
-| ++++I_SLAVE_ATTACHMENT                                               |           | 76/145        | 83/126        | 16/64         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT                                                                                                  |
+| +vga_0                                                               |           | 0/71          | 0/69          | 0/88          | 0/2           | 0/0       | 0/0       | 0/0   | 0/0   | system/vga_0                                                                                                                                            |
+| ++vga_0                                                              |           | 0/71          | 0/69          | 0/88          | 0/2           | 0/0       | 0/0       | 0/0   | 0/0   | system/vga_0/vga_0                                                                                                                                      |
+| +++PLBV46_SLAVE_SINGLE_I                                             |           | 0/36          | 0/40          | 0/31          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/vga_0/vga_0/PLBV46_SLAVE_SINGLE_I                                                                                                                |
+| ++++I_SLAVE_ATTACHMENT                                               |           | 20/36         | 26/40         | 12/31         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT                                                                                             |
+| +++++INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER                           |           | 7/7           | 9/9           | 12/12         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER                                                       |
+| +++++I_DECODER                                                       |           | 3/9           | 5/5           | 0/7           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER                                                                                   |
+| ++++++MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I                  |           | 5/5           | 0/0           | 6/6           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I                                     |
+| ++++++MEM_DECODE_GEN[1].GEN_PLB_SHARED.MEM_SELECT_I                  |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].GEN_PLB_SHARED.MEM_SELECT_I                                     |
+| +++USER_LOGIC_I                                                      |           | 35/35         | 29/29         | 57/57         | 2/2           | 0/0       | 0/0       | 0/0   | 0/0   | system/vga_0/vga_0/USER_LOGIC_I                                                                                                                         |
+| +xps_ps2_0                                                           |           | 0/386         | 0/327         | 0/397         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0                                                                                                                                        |
+| ++xps_ps2_0                                                          |           | 0/386         | 0/327         | 0/397         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0                                                                                                                              |
+| +++PLBV46_I                                                          |           | 0/138         | 0/126         | 0/64          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PLBV46_I                                                                                                                     |
+| ++++I_SLAVE_ATTACHMENT                                               |           | 71/138        | 83/126        | 16/64         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT                                                                                                  |
 | +++++INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER                           |           | 8/8           | 9/9           | 11/11         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER                                                            |
-| +++++I_DECODER                                                       |           | 30/61         | 34/34         | 2/37          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER                                                                                        |
+| +++++I_DECODER                                                       |           | 28/59         | 34/34         | 2/37          | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER                                                                                        |
 | ++++++MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I                  |           | 4/4           | 0/0           | 7/7           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I                                          |
 | ++++++MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I  |           | 5/5           | 0/0           | 5/5           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I                          |
 | ++++++MEM_DECODE_GEN[0].PER_CE_GEN[10].MULTIPLE_CES_THIS_CS_GEN.CE_I |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[10].MULTIPLE_CES_THIS_CS_GEN.CE_I                         |
@@ -8096,14 +8296,14 @@ Section 13 - Utilization by Hierarchy
 | ++++++MEM_DECODE_GEN[0].PER_CE_GEN[7].MULTIPLE_CES_THIS_CS_GEN.CE_I  |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[7].MULTIPLE_CES_THIS_CS_GEN.CE_I                          |
 | ++++++MEM_DECODE_GEN[0].PER_CE_GEN[8].MULTIPLE_CES_THIS_CS_GEN.CE_I  |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[8].MULTIPLE_CES_THIS_CS_GEN.CE_I                          |
 | ++++++MEM_DECODE_GEN[0].PER_CE_GEN[9].MULTIPLE_CES_THIS_CS_GEN.CE_I  |           | 1/1           | 0/0           | 1/1           | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PLBV46_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[0].PER_CE_GEN[9].MULTIPLE_CES_THIS_CS_GEN.CE_I                          |
-| +++PS2_1_I                                                           |           | 18/246        | 0/205         | 25/341        | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PS2_1_I                                                                                                                      |
-| ++++INTERRUPT_CONTROL_I                                              |           | 31/31         | 29/29         | 23/23         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PS2_1_I/INTERRUPT_CONTROL_I                                                                                                  |
-| ++++PS2_REG_I                                                        |           | 40/40         | 43/43         | 35/35         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_REG_I                                                                                                            |
-| ++++PS2_SIE_I                                                        |           | 105/157       | 65/133        | 166/258       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I                                                                                                            |
-| +++++COUNTER_100us_I                                                 |           | 13/13         | 16/16         | 23/23         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_100us_I                                                                                            |
-| +++++COUNTER_15ms_I                                                  |           | 15/15         | 22/22         | 27/27         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_15ms_I                                                                                             |
-| +++++COUNTER_50us_I                                                  |           | 11/11         | 14/14         | 19/19         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_50us_I                                                                                             |
-| +++++COUNTER_WDT_I                                                   |           | 13/13         | 16/16         | 23/23         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_WDT_I                                                                                              |
+| +++PS2_1_I                                                           |           | 18/248        | 0/201         | 25/333        | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PS2_1_I                                                                                                                      |
+| ++++INTERRUPT_CONTROL_I                                              |           | 34/34         | 29/29         | 23/23         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PS2_1_I/INTERRUPT_CONTROL_I                                                                                                  |
+| ++++PS2_REG_I                                                        |           | 48/48         | 43/43         | 35/35         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_REG_I                                                                                                            |
+| ++++PS2_SIE_I                                                        |           | 103/148       | 65/129        | 166/250       | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I                                                                                                            |
+| +++++COUNTER_100us_I                                                 |           | 10/10         | 15/15         | 20/20         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_100us_I                                                                                            |
+| +++++COUNTER_15ms_I                                                  |           | 14/14         | 21/21         | 26/26         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_15ms_I                                                                                             |
+| +++++COUNTER_50us_I                                                  |           | 9/9           | 13/13         | 17/17         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_50us_I                                                                                             |
+| +++++COUNTER_WDT_I                                                   |           | 12/12         | 15/15         | 21/21         | 0/0           | 0/0       | 0/0       | 0/0   | 0/0   | system/xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/COUNTER_WDT_I                                                                                              |
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 * Slices can be packed with basic elements from multiple hierarchies.

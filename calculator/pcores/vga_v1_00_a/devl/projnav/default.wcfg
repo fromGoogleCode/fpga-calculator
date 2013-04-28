@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/vga_test_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="vga_test" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="16" />
+   <wvobject fp_name="/vga_test/h_sync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">h_sync</obj_property>
+      <obj_property name="ObjectShortName">h_sync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_test/v_sync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">v_sync</obj_property>
+      <obj_property name="ObjectShortName">v_sync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_test/video" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">video[0:6]</obj_property>
+      <obj_property name="ObjectShortName">video[0:6]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_test/IP2Bus_Data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">IP2Bus_Data[0:31]</obj_property>
+      <obj_property name="ObjectShortName">IP2Bus_Data[0:31]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_test/IP2Bus_RdAck" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">IP2Bus_RdAck</obj_property>
+      <obj_property name="ObjectShortName">IP2Bus_RdAck</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_test/IP2Bus_WrAck" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">IP2Bus_WrAck</obj_property>
+      <obj_property name="ObjectShortName">IP2Bus_WrAck</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_test/IP2Bus_Error" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">IP2Bus_Error</obj_property>
+      <obj_property name="ObjectShortName">IP2Bus_Error</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_test/Bus2IP_Clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Bus2IP_Clk</obj_property>
+      <obj_property name="ObjectShortName">Bus2IP_Clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_test/Bus2IP_Reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Bus2IP_Reset</obj_property>
+      <obj_property name="ObjectShortName">Bus2IP_Reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_test/Bus2IP_Addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Bus2IP_Addr[0:31]</obj_property>
+      <obj_property name="ObjectShortName">Bus2IP_Addr[0:31]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_test/Bus2IP_CS" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Bus2IP_CS[0:1]</obj_property>
+      <obj_property name="ObjectShortName">Bus2IP_CS[0:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_test/Bus2IP_RNW" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Bus2IP_RNW</obj_property>
+      <obj_property name="ObjectShortName">Bus2IP_RNW</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_test/Bus2IP_Data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Bus2IP_Data[0:31]</obj_property>
+      <obj_property name="ObjectShortName">Bus2IP_Data[0:31]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_test/Bus2IP_BE" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Bus2IP_BE[0:3]</obj_property>
+      <obj_property name="ObjectShortName">Bus2IP_BE[0:3]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_test/uut/x" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">x[9:0]</obj_property>
+      <obj_property name="ObjectShortName">x[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_test/uut/y" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">y[9:0]</obj_property>
+      <obj_property name="ObjectShortName">y[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

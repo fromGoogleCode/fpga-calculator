@@ -43,4 +43,13 @@ Net fpga_0_rst_1_sys_rst_pin TIG;
 Net fpga_0_rst_1_sys_rst_pin LOC=P41;
 
 Net xps_ps2_0_PS2_1_CLK LOC=P2;
-Net xps_ps2_0_PS2_1_CLK LOC=P142;
+Net xps_ps2_0_PS2_1_DATA LOC=P142;
+
+Net vga_0_v_sync_pin LOC=P3;
+Net vga_0_h_sync_pin LOC=P140;
+Net vga_0_video_pin<0> LOC=P7;
+Net vga_0_video_pin<1> LOC=P134;
+Net vga_0_video_pin<2> LOC=P5;
+Net vga_0_video_pin<3> LOC=P135;
+Net vga_0_video_pin<4> LOC=P4;
+Net vga_0_video_pin<5> LOC=P139;

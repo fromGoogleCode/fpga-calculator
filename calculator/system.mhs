@@ -23,6 +23,7 @@
  PORT xps_ps2_0_PS2_1_CLK = xps_ps2_0_PS2_1_CLK, DIR = IO
  PORT vga_0_v_sync_pin = vga_0_v_sync, DIR = O
  PORT vga_0_video_pin = vga_0_video, DIR = O, VEC = [0:6]
+ PORT vga_0_h_sync_pin = vga_0_h_sync, DIR = O
 
 
 BEGIN microblaze

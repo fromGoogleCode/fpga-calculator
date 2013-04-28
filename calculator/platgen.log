@@ -138,9 +138,7 @@ WARNING:EDK:4181 - PORT: bscan_drck1, CONNECTOR: bscan_drck1 - floating
    G:\Xilinx\13.2\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\mdm_v2_00_b\data\mdm
    _v2_1_0.mpd line 238 
 WARNING:EDK:4181 - PORT: Peripheral_Reset, CONNECTOR: sys_periph_reset -
-   floating connection - G:\Sandboxes\Xilinx\calculator\system.mhs line 151 
-WARNING:EDK:4181 - PORT: hsync_port, CONNECTOR: vga_0_h_sync - floating
-   connection - G:\Sandboxes\Xilinx\calculator\system.mhs line 172 
+   floating connection - G:\Sandboxes\Xilinx\calculator\system.mhs line 152 
 
 Performing Clock DRCs...
 
@@ -217,48 +215,50 @@ Managing hardware (BBD-specified) netlist files ...
 
 Managing cache ...
 IPNAME:microblaze INSTANCE:microblaze_0 -
-G:\Sandboxes\Xilinx\calculator\system.mhs line 28 - Copying cache implementation
+G:\Sandboxes\Xilinx\calculator\system.mhs line 29 - Copying cache implementation
 netlist
 IPNAME:plb_v46 INSTANCE:mb_plb - G:\Sandboxes\Xilinx\calculator\system.mhs line
-42 - Copying cache implementation netlist
-IPNAME:lmb_v10 INSTANCE:ilmb - G:\Sandboxes\Xilinx\calculator\system.mhs line 49
+43 - Copying cache implementation netlist
+IPNAME:lmb_v10 INSTANCE:ilmb - G:\Sandboxes\Xilinx\calculator\system.mhs line 50
 - Copying cache implementation netlist
-IPNAME:lmb_v10 INSTANCE:dlmb - G:\Sandboxes\Xilinx\calculator\system.mhs line 56
+IPNAME:lmb_v10 INSTANCE:dlmb - G:\Sandboxes\Xilinx\calculator\system.mhs line 57
 - Copying cache implementation netlist
 IPNAME:lmb_bram_if_cntlr INSTANCE:dlmb_cntlr -
-G:\Sandboxes\Xilinx\calculator\system.mhs line 63 - Copying cache implementation
+G:\Sandboxes\Xilinx\calculator\system.mhs line 64 - Copying cache implementation
 netlist
 IPNAME:lmb_bram_if_cntlr INSTANCE:ilmb_cntlr -
-G:\Sandboxes\Xilinx\calculator\system.mhs line 72 - Copying cache implementation
+G:\Sandboxes\Xilinx\calculator\system.mhs line 73 - Copying cache implementation
 netlist
 IPNAME:bram_block INSTANCE:lmb_bram - G:\Sandboxes\Xilinx\calculator\system.mhs
-line 81 - Copying cache implementation netlist
+line 82 - Copying cache implementation netlist
 IPNAME:xps_gpio INSTANCE:leds_displays -
-G:\Sandboxes\Xilinx\calculator\system.mhs line 88 - Copying cache implementation
+G:\Sandboxes\Xilinx\calculator\system.mhs line 89 - Copying cache implementation
 netlist
 IPNAME:xps_gpio INSTANCE:switches_buttons -
-G:\Sandboxes\Xilinx\calculator\system.mhs line 101 - Copying cache
+G:\Sandboxes\Xilinx\calculator\system.mhs line 102 - Copying cache
 implementation netlist
-IPNAME:mdm INSTANCE:mdm_0 - G:\Sandboxes\Xilinx\calculator\system.mhs line 129 -
+IPNAME:mdm INSTANCE:mdm_0 - G:\Sandboxes\Xilinx\calculator\system.mhs line 130 -
 Copying cache implementation netlist
 IPNAME:proc_sys_reset INSTANCE:proc_sys_reset_0 -
-G:\Sandboxes\Xilinx\calculator\system.mhs line 141 - Copying cache
+G:\Sandboxes\Xilinx\calculator\system.mhs line 142 - Copying cache
 implementation netlist
 IPNAME:xps_ps2 INSTANCE:xps_ps2_0 - G:\Sandboxes\Xilinx\calculator\system.mhs
-line 154 - Copying cache implementation netlist
+line 155 - Copying cache implementation netlist
+IPNAME:vga INSTANCE:vga_0 - G:\Sandboxes\Xilinx\calculator\system.mhs line 165 -
+Copying cache implementation netlist
 
 Elaborating instances ...
 IPNAME:bram_block INSTANCE:lmb_bram - G:\Sandboxes\Xilinx\calculator\system.mhs
-line 81 - elaborating IP
+line 82 - elaborating IP
 IPNAME:clock_generator INSTANCE:clock_generator_0 -
-G:\Sandboxes\Xilinx\calculator\system.mhs line 114 - elaborating IP
+G:\Sandboxes\Xilinx\calculator\system.mhs line 115 - elaborating IP
 ClkGen elaborate status: PASSED
 ----------------------------------------
 
 Writing HDL for elaborated instances ...
 
 Inserting wrapper level ...
-Completion time: 1.00 seconds
+Completion time: 0.00 seconds
 
 Constructing platform-level connectivity ...
 Completion time: 0.00 seconds
@@ -274,18 +274,18 @@ Running XST synthesis ...
 INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
-INSTANCE:clock_generator_0 - G:\Sandboxes\Xilinx\calculator\system.mhs line 114
+INSTANCE:clock_generator_0 - G:\Sandboxes\Xilinx\calculator\system.mhs line 115
 - Running XST synthesis
-INSTANCE:vga_0 - G:\Sandboxes\Xilinx\calculator\system.mhs line 164 - Running
+INSTANCE:vga_0 - G:\Sandboxes\Xilinx\calculator\system.mhs line 165 - Running
 XST synthesis
 
 Running NGCBUILD ...
 IPNAME:clock_generator_0_wrapper INSTANCE:clock_generator_0 -
-G:\Sandboxes\Xilinx\calculator\system.mhs line 114 - Running NGCBUILD
+G:\Sandboxes\Xilinx\calculator\system.mhs line 115 - Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
    the data/system.ucf file.
 
 Rebuilding cache ...
 
-Total run time: 30.00 seconds
+Total run time: 31.00 seconds

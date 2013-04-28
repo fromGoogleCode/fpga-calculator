@@ -5,8 +5,6 @@ xflow.exe -wd implementation -p xc3s250etq144-4 -implement xflow.opt system.ngc
 PMSPEC -- Overriding Xilinx file
 <G:/Xilinx/13.2/ISE_DS/EDK/spartan3/data/spartan3.acd> with local file
 <G:/Xilinx/13.2/ISE_DS/ISE/spartan3/data/spartan3.acd>
-.... Copying flowfile G:/Xilinx/13.2/ISE_DS/ISE/xilinx/data/fpga.flw into
-working directory G:/Sandboxes/Xilinx/calculator/implementation 
 
 Using Flow File: G:/Sandboxes/Xilinx/calculator/implementation/fpga.flw 
 Using Option File(s): 
@@ -58,6 +56,8 @@ Loading design module
 "G:/Sandboxes/Xilinx/calculator/implementation/proc_sys_reset_0_wrapper.ngc"...
 Loading design module
 "G:/Sandboxes/Xilinx/calculator/implementation/xps_ps2_0_wrapper.ngc"...
+Loading design module
+"G:/Sandboxes/Xilinx/calculator/implementation/vga_0_wrapper.ngc"...
 Gathering constraint information from source properties...
 Done.
 
@@ -70,7 +70,7 @@ INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
    groups and period specifications were generated at the DCM_SP output(s): 
    CLKFX: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_DCM0_CLKFX =
    PERIOD "clock_generator_0_clock_generator_0_SIG_DCM0_CLKFX" TS_sys_clk_pin *
-   3.125 HIGH 50%>
+   1.5625 HIGH 50%>
 
 Done...
 
@@ -123,92 +123,96 @@ Running directed packing...
 Running delay-based LUT packing...
 Updating timing models...
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 13 secs 
-Total CPU  time at the beginning of Placer: 9 secs 
+Total REAL time at the beginning of Placer: 11 secs 
+Total CPU  time at the beginning of Placer: 10 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:4d24d54b) REAL time: 16 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:b270b227) REAL time: 12 secs 
 
 Phase 2.7  Design Feasibility Check
-INFO:Place:834 - Only a subset of IOs are locked. Out of 27 IOs, 26 are locked
+WARNING:Place:837 - Partially locked IO Bus is found. 
+    Following components of the bus are not locked: 
+   	 Comp: vga_0_video_pin<6>
+
+INFO:Place:834 - Only a subset of IOs are locked. Out of 36 IOs, 35 are locked
    and 1 are not locked. If you would like to print the names of these IOs,
    please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7  Design Feasibility Check (Checksum:4d24d54b) REAL time: 16 secs 
+Phase 2.7  Design Feasibility Check (Checksum:b270b227) REAL time: 12 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:b2bd2336) REAL time: 16 secs 
+Phase 3.31  Local Placement Optimization (Checksum:6e9e8fe9) REAL time: 12 secs 
 
 Phase 4.2  Initial Clock and IO Placement
-.......
-Phase 4.2  Initial Clock and IO Placement (Checksum:1b80a242) REAL time: 17 secs 
+..........
+Phase 4.2  Initial Clock and IO Placement (Checksum:4398d2de) REAL time: 13 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:1b80a242) REAL time: 17 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:4398d2de) REAL time: 13 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:1b80a242) REAL time: 17 secs 
+Phase 6.36  Local Placement Optimization (Checksum:4398d2de) REAL time: 13 secs 
 
 Phase 7.3  Local Placement Optimization
-.......
-Phase 7.3  Local Placement Optimization (Checksum:34093e4b) REAL time: 17 secs 
+.........
+Phase 7.3  Local Placement Optimization (Checksum:c780e93e) REAL time: 13 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:34093e4b) REAL time: 17 secs 
+Phase 8.5  Local Placement Optimization (Checksum:c780e93e) REAL time: 13 secs 
 
 Phase 9.8  Global Placement
 .........................
-........................................................................
+..........................................................
 ...
-...........................
-Phase 9.8  Global Placement (Checksum:982542e7) REAL time: 29 secs 
+.............................................
+Phase 9.8  Global Placement (Checksum:2a165388) REAL time: 28 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:982542e7) REAL time: 29 secs 
+Phase 10.5  Local Placement Optimization (Checksum:2a165388) REAL time: 28 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:581e1729) REAL time: 38 secs 
+Phase 11.18  Placement Optimization (Checksum:10009cf0) REAL time: 39 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:581e1729) REAL time: 38 secs 
+Phase 12.5  Local Placement Optimization (Checksum:10009cf0) REAL time: 39 secs 
 
-Total REAL time to Placer completion: 39 secs 
-Total CPU  time to Placer completion: 32 secs 
+Total REAL time to Placer completion: 40 secs 
+Total CPU  time to Placer completion: 38 secs 
 Running post-placement packing...
 
 Design Summary:
 Number of errors:      0
-Number of warnings:    2
+Number of warnings:    3
 Logic Utilization:
-  Number of Slice Flip Flops:         1,624 out of   4,896   33%
-  Number of 4 input LUTs:             2,536 out of   4,896   51%
+  Number of Slice Flip Flops:         1,689 out of   4,896   34%
+  Number of 4 input LUTs:             2,621 out of   4,896   53%
 Logic Distribution:
-  Number of occupied Slices:          1,822 out of   2,448   74%
-    Number of Slices containing only related logic:   1,822 out of   1,822 100%
-    Number of Slices containing unrelated logic:          0 out of   1,822   0%
+  Number of occupied Slices:          1,855 out of   2,448   75%
+    Number of Slices containing only related logic:   1,855 out of   1,855 100%
+    Number of Slices containing unrelated logic:          0 out of   1,855   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       2,667 out of   4,896   54%
-    Number used as logic:             2,134
-    Number used as a route-thru:        131
+  Total Number of 4 input LUTs:       2,767 out of   4,896   56%
+    Number used as logic:             2,217
+    Number used as a route-thru:        146
     Number used for Dual Port RAMs:     256
       (Two LUTs used per Dual Port RAM)
-    Number used as Shift registers:     146
+    Number used as Shift registers:     148
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 41 out of     108   37%
-    IOB Flip Flops:                      31
+  Number of bonded IOBs:                 50 out of     108   46%
+    IOB Flip Flops:                      33
   Number of RAMB16s:                      4 out of      12   33%
   Number of BUFGMUXs:                     3 out of      24   12%
   Number of DCMs:                         1 out of       4   25%
   Number of BSCANs:                       1 out of       1  100%
   Number of MULT18X18SIOs:                3 out of      12   25%
 
-Average Fanout of Non-Clock Nets:                3.49
+Average Fanout of Non-Clock Nets:                3.48
 
-Peak Memory Usage:  323 MB
-Total REAL time to MAP completion:  41 secs 
-Total CPU time to MAP completion:   34 secs 
+Peak Memory Usage:  328 MB
+Total REAL time to MAP completion:  43 secs 
+Total CPU time to MAP completion:   41 secs 
 
 Mapping completed.
 See MAP report file "system_map.mrp" for details.
@@ -247,7 +251,7 @@ Device speed data version:  "PRODUCTION 1.27 2011-06-20".
 
 Design Summary Report:
 
- Number of External IOBs                          41 out of 108    37%
+ Number of External IOBs                          50 out of 108    46%
 
    Number of External Input IOBs                 14
 
@@ -255,16 +259,16 @@ Design Summary Report:
         Number of LOCed External Input IBUFs     14 out of 14    100%
 
 
-   Number of External Output IOBs                25
+   Number of External Output IOBs                34
 
-      Number of External Output IOBs             25
-        Number of LOCed External Output IOBs     25 out of 25    100%
+      Number of External Output IOBs             34
+        Number of LOCed External Output IOBs     33 out of 34     97%
 
 
    Number of External Bidir IOBs                  2
 
       Number of External Bidir IOBs               2
-        Number of LOCed External Bidir IOBs       1 out of 2      50%
+        Number of LOCed External Bidir IOBs       2 out of 2     100%
 
 
    Number of BSCANs                          1 out of 1     100%
@@ -272,46 +276,46 @@ Design Summary Report:
    Number of DCMs                            1 out of 4      25%
    Number of MULT18X18SIOs                   3 out of 12     25%
    Number of RAMB16s                         4 out of 12     33%
-   Number of Slices                       1822 out of 2448   74%
-      Number of SLICEMs                    222 out of 1224   18%
+   Number of Slices                       1855 out of 2448   75%
+      Number of SLICEMs                    226 out of 1224   18%
 
 
 
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 6 secs 
-Finished initial Timing Analysis.  REAL time: 6 secs 
+Starting initial Timing Analysis.  REAL time: 7 secs 
+Finished initial Timing Analysis.  REAL time: 8 secs 
 
 WARNING:Par:288 - The signal dlmb_LMB_ABus<31> has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal dlmb_LMB_ABus<30> has no load.  PAR will not attempt to route this signal.
 Starting Router
 
 
-Phase  1  : 13932 unrouted;      REAL time: 9 secs 
+Phase  1  : 14323 unrouted;      REAL time: 10 secs 
 
-Phase  2  : 12054 unrouted;      REAL time: 9 secs 
+Phase  2  : 12407 unrouted;      REAL time: 11 secs 
 
-Phase  3  : 4181 unrouted;      REAL time: 11 secs 
+Phase  3  : 4201 unrouted;      REAL time: 13 secs 
 
-Phase  4  : 4181 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 12 secs 
+Phase  4  : 4201 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 14 secs 
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 16 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 19 secs 
 
 Updating file: system.ncd with current fully routed design.
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 18 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 18 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 22 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 19 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 24 secs 
 WARNING:Route:455 - CLK Net:fpga_0_clk_1_sys_clk_pin_IBUFG may have excessive skew because 
       1 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
 WARNING:Route:455 - CLK Net:mdm_0/Dbg_Update_1 may have excessive skew because 
-      6 CLK pins and 0 NON_CLK pins failed to route using a CLK template.
+      14 CLK pins and 1 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 19 secs 
-Total CPU time to Router completion: 18 secs 
+Total REAL time to Router completion: 24 secs 
+Total CPU time to Router completion: 22 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -329,14 +333,14 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|      clk_50_0000MHz |  BUFGMUX_X1Y0| No   | 1295 |  0.052     |  0.121      |
+|      clk_50_0000MHz |  BUFGMUX_X1Y0| No   | 1344 |  0.052     |  0.121      |
 +---------------------+--------------+------+------+------------+-------------+
-|     mdm_0/Dbg_Clk_1 | BUFGMUX_X1Y10| No   |  153 |  0.050     |  0.119      |
+|     mdm_0/Dbg_Clk_1 | BUFGMUX_X1Y10| No   |  153 |  0.048     |  0.117      |
 +---------------------+--------------+------+------+------------+-------------+
 |fpga_0_clk_1_sys_clk |              |      |      |            |             |
-|          _pin_IBUFG |         Local|      |    3 |  0.002     |  1.548      |
+|          _pin_IBUFG |         Local|      |    4 |  0.000     |  1.557      |
 +---------------------+--------------+------+------+------------+-------------+
-|  mdm_0/Dbg_Update_1 |         Local|      |   37 |  1.361     |  3.107      |
+|  mdm_0/Dbg_Update_1 |         Local|      |   34 |  1.750     |  3.509      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -356,14 +360,14 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_clock_generator_0_clock_generator_0_SI | SETUP       |     4.995ns|    15.005ns|       0|           0
-  G_DCM0_CLKFX = PERIOD TIMEGRP         "cl | HOLD        |     0.809ns|            |       0|           0
+  TS_clock_generator_0_clock_generator_0_SI | SETUP       |    24.565ns|    15.435ns|       0|           0
+  G_DCM0_CLKFX = PERIOD TIMEGRP         "cl | HOLD        |     0.768ns|            |       0|           0
   ock_generator_0_clock_generator_0_SIG_DCM |             |            |            |        |            
-  0_CLKFX" TS_sys_clk_pin *         3.125 H |             |            |            |        |            
-  IGH 50%                                   |             |            |            |        |            
+  0_CLKFX" TS_sys_clk_pin *         1.5625  |             |            |            |        |            
+  HIGH 50%                                  |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | SETUP       |    60.824ns|     1.676ns|       0|           0
-  pin" 16 MHz HIGH 50%                      | HOLD        |     0.987ns|            |       0|           0
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | SETUP       |    60.751ns|     1.749ns|       0|           0
+  pin" 16 MHz HIGH 50%                      | HOLD        |     0.998ns|            |       0|           0
                                             | MINLOWPULSE |    42.500ns|    20.000ns|       0|           0
 ----------------------------------------------------------------------------------------------------------
 
@@ -378,8 +382,8 @@ Derived Constraints for TS_sys_clk_pin
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_sys_clk_pin                 |     62.500ns|     20.000ns|     46.891ns|            0|            0|            3|       149001|
-| TS_clock_generator_0_clock_gen|     20.000ns|     15.005ns|          N/A|            0|            0|       149001|            0|
+|TS_sys_clk_pin                 |     62.500ns|     20.000ns|     24.117ns|            0|            0|            3|       149878|
+| TS_clock_generator_0_clock_gen|     40.000ns|     15.435ns|          N/A|            0|            0|       149878|            0|
 | erator_0_SIG_DCM0_CLKFX       |             |             |             |             |             |             |             |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
@@ -392,10 +396,10 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 2 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 22 secs 
-Total CPU time to PAR completion: 19 secs 
+Total REAL time to PAR completion: 25 secs 
+Total CPU time to PAR completion: 24 secs 
 
-Peak Memory Usage:  299 MB
+Peak Memory Usage:  304 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
@@ -462,19 +466,19 @@ Timing summary:
 
 Timing errors: 0  Score: 0 (Setup/Max: 0, Hold: 0)
 
-Constraints cover 149004 paths, 0 nets, and 12364 connections
+Constraints cover 149881 paths, 0 nets, and 12736 connections
 
 Design statistics:
    Minimum period:  20.000ns (Maximum frequency:  50.000MHz)
 
 
-Analysis completed Thu Apr 04 17:13:09 2013
+Analysis completed Fri Apr 26 19:26:09 2013
 --------------------------------------------------------------------------------
 
 Generating Report ...
 
 Number of warnings: 0
 Number of info messages: 4
-Total time: 5 secs 
+Total time: 6 secs 
 
 

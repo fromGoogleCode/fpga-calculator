@@ -33,6 +33,8 @@ Loading design module
 "G:/Sandboxes/Xilinx/calculator/implementation/proc_sys_reset_0_wrapper.ngc"...
 Loading design module
 "G:/Sandboxes/Xilinx/calculator/implementation/xps_ps2_0_wrapper.ngc"...
+Loading design module
+"G:/Sandboxes/Xilinx/calculator/implementation/vga_0_wrapper.ngc"...
 Gathering constraint information from source properties...
 Done.
 
@@ -45,7 +47,7 @@ INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
    groups and period specifications were generated at the DCM_SP output(s): 
    CLKFX: <TIMESPEC TS_clock_generator_0_clock_generator_0_SIG_DCM0_CLKFX =
    PERIOD "clock_generator_0_clock_generator_0_SIG_DCM0_CLKFX" TS_sys_clk_pin *
-   3.125 HIGH 50%>
+   1.5625 HIGH 50%>
 
 Done...
 
@@ -66,7 +68,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   1
 
-Total memory usage is 174680 kilobytes
+Total memory usage is 179584 kilobytes
 
 Writing NGD file "system.ngd" ...
 Total REAL time to NGDBUILD completion:  31 sec
