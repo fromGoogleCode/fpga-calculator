@@ -1,0 +1,518 @@
+Release 13.2 - xst O.61xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: user_logic.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "user_logic.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "user_logic"
+Output Format                      : NGC
+Target Device                      : xc3s250e-4-tq144
+
+---- Source Options
+Top Module Name                    : user_logic
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "../../hdl/verilog/user_logic.v" in library work
+Module <user_logic> compiled
+No errors in compilation
+Analysis of file <"user_logic.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <user_logic> in library <work> with parameters.
+	C_NUM_MEM = "00000000000000000000000000000010"
+	C_SLV_AWIDTH = "00000000000000000000000000100000"
+	C_SLV_DWIDTH = "00000000000000000000000000100000"
+	RAM_ADDR_BITS_CHAR = "00000000000000000000000000001011"
+	RAM_ADDR_BITS_VID = "00000000000000000000000000001101"
+	RAM_WIDTH = "00000000000000000000000000001000"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <user_logic>.
+	C_NUM_MEM = 32'sb00000000000000000000000000000010
+	C_SLV_AWIDTH = 32'sb00000000000000000000000000100000
+	C_SLV_DWIDTH = 32'sb00000000000000000000000000100000
+	RAM_ADDR_BITS_CHAR = 32'sb00000000000000000000000000001011
+	RAM_ADDR_BITS_VID = 32'sb00000000000000000000000000001101
+	RAM_WIDTH = 32'sb00000000000000000000000000001000
+INFO:Xst:2546 - "../../hdl/verilog/user_logic.v" line 103: reading initialization file "mem_data_hex.txt".
+WARNING:Xst:2319 - "../../hdl/verilog/user_logic.v" line 103: Signal video_mem in initial block is partially initialized. The initialization will be ignored.
+INFO:Xst:2546 - "../../hdl/verilog/user_logic.v" line 125: reading initialization file "mem_data_hex.txt".
+WARNING:Xst:2319 - "../../hdl/verilog/user_logic.v" line 125: Signal char_mem in initial block is partially initialized. The initialization will be ignored.
+Module <user_logic> is correct for synthesis.
+ 
+    Set property "RAM_STYLE = BLOCK" for signal <video_mem>.
+    Set property "RAM_STYLE = BLOCK" for signal <char_mem>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <user_logic>.
+    Related source file is "../../hdl/verilog/user_logic.v".
+WARNING:Xst:647 - Input <Bus2IP_RNW> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Bus2IP_BE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <bus2ip_data_l<31:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <bus2ip_addr_l<31:15>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <bus2ip_addr_l<1:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 8192x8-bit dual-port RAM <Mram_video_mem> for signal <video_mem>.
+    Found 2048x8-bit dual-port RAM <Mram_char_mem> for signal <char_mem>.
+    Found 1-bit register for signal <h_sync>.
+    Found 1-bit register for signal <v_sync>.
+    Found 6-bit register for signal <video>.
+    Found 3-bit register for signal <bitsel>.
+    Found 3-bit register for signal <bitsel_1>.
+    Found 1-bit register for signal <blank_x_str>.
+    Found 1-bit register for signal <blank_y_str>.
+    Found 8-bit register for signal <char_output>.
+    Found 1-bit register for signal <hsync_phase1>.
+    Found 1-bit register for signal <hsync_phase2>.
+    Found 2-bit register for signal <shf_blank_x>.
+    Found 2-bit register for signal <shf_blank_y>.
+    Found 8-bit register for signal <video_out>.
+    Found 1-bit register for signal <vsync_phase1>.
+    Found 1-bit register for signal <vsync_phase2>.
+    Found 10-bit up counter for signal <x>.
+    Found 10-bit up counter for signal <y>.
+    Summary:
+	inferred   2 RAM(s).
+	inferred   2 Counter(s).
+	inferred  40 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <user_logic> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 2048x8-bit dual-port RAM                              : 1
+ 8192x8-bit dual-port RAM                              : 1
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Registers                                            : 15
+ 1-bit register                                        : 8
+ 2-bit register                                        : 2
+ 3-bit register                                        : 2
+ 6-bit register                                        : 1
+ 8-bit register                                        : 2
+# Multiplexers                                         : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <video_0> (without init value) has a constant value of 0 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <video_2> (without init value) has a constant value of 0 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <video_3> (without init value) has a constant value of 0 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <user_logic>.
+INFO:Xst:3226 - The RAM <Mram_char_mem> will be implemented as a BLOCK RAM, absorbing the following register(s): <char_output>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2048-word x 8-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <Bus2IP_Clk>    | rise     |
+    |     weA            | connected to signal <Bus2IP_CS<0>>  | high     |
+    |     addrA          | connected to signal <Bus2IP_Addr>   |          |
+    |     diA            | connected to signal <Bus2IP_Data>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 2048-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <Bus2IP_Clk>    | rise     |
+    |     addrB          | connected to signal <y>             |          |
+    |     doB            | connected to signal <char_output>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_video_mem> will be implemented as a BLOCK RAM, absorbing the following register(s): <video_out>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8192-word x 8-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <Bus2IP_Clk>    | rise     |
+    |     weA            | connected to signal <Bus2IP_CS<1>>  | high     |
+    |     addrA          | connected to signal <Bus2IP_Addr>   |          |
+    |     diA            | connected to signal <Bus2IP_Data>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8192-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <Bus2IP_Clk>    | rise     |
+    |     addrB          | connected to signal <x>             |          |
+    |     doB            | connected to signal <video_out>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <user_logic> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 2048x8-bit dual-port block RAM                        : 1
+ 8192x8-bit dual-port block RAM                        : 1
+# Counters                                             : 2
+ 10-bit up counter                                     : 2
+# Registers                                            : 24
+ Flip-Flops                                            : 24
+# Multiplexers                                         : 1
+ 1-bit 8-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <video_0> (without init value) has a constant value of 0 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <video_2> (without init value) has a constant value of 0 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <video_3> (without init value) has a constant value of 0 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <video_1> in Unit <user_logic> is equivalent to the following 2 FFs/Latches, which will be removed : <video_4> <video_5> 
+
+Optimizing unit <user_logic> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block user_logic, actual ratio is 1.
+
+Final Macro Processing ...
+
+Processing Unit <user_logic> :
+	Found 2-bit shift register for signal <shf_blank_x_0>.
+	Found 2-bit shift register for signal <shf_blank_y_0>.
+Unit <user_logic> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 35
+ Flip-Flops                                            : 35
+# Shift Registers                                      : 2
+ 2-bit shift register                                  : 2
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : user_logic.ngr
+Top Level Output File Name         : user_logic
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 116
+
+Cell Usage :
+# BELS                             : 100
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 18
+#      LUT2                        : 2
+#      LUT2_D                      : 2
+#      LUT3                        : 8
+#      LUT3_L                      : 1
+#      LUT4                        : 17
+#      LUT4_D                      : 1
+#      LUT4_L                      : 5
+#      MUXCY                       : 18
+#      MUXF5                       : 3
+#      VCC                         : 1
+#      XORCY                       : 20
+# FlipFlops/Latches                : 37
+#      FDE                         : 4
+#      FDR                         : 19
+#      FDRE                        : 10
+#      FDS                         : 4
+# RAMS                             : 5
+#      RAMB16_S2_S2                : 4
+#      RAMB16_S9_S9                : 1
+# Shift Registers                  : 2
+#      SRL16E                      : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 67
+#      IBUF                        : 24
+#      OBUF                        : 43
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s250etq144-4 
+
+ Number of Slices:                       31  out of   2448     1%  
+ Number of Slice Flip Flops:             37  out of   4896     0%  
+ Number of 4 input LUTs:                 59  out of   4896     1%  
+    Number used as logic:                57
+    Number used as Shift registers:       2
+ Number of IOs:                         116
+ Number of bonded IOBs:                  68  out of    108    62%  
+ Number of BRAMs:                         5  out of     12    41%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Bus2IP_Clk                         | BUFGP                  | 44    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.814ns (Maximum Frequency: 146.757MHz)
+   Minimum input arrival time before clock: 5.205ns
+   Maximum output required time after clock: 4.394ns
+   Maximum combinational path delay: 6.353ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Bus2IP_Clk'
+  Clock period: 6.814ns (frequency: 146.757MHz)
+  Total number of paths / destination ports: 691 / 132
+-------------------------------------------------------------------------
+Delay:               6.814ns (Levels of Logic = 3)
+  Source:            Mram_char_mem (RAM)
+  Destination:       video_1 (FF)
+  Source Clock:      Bus2IP_Clk rising
+  Destination Clock: Bus2IP_Clk rising
+
+  Data Path: Mram_char_mem to video_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S9_S9:CLKB->DOB0    1   2.800   0.499  Mram_char_mem (char_output<0>)
+     LUT3:I1->O            1   0.704   0.000  Mmux__COND_3_4_f5_F (N14)
+     MUXF5:I0->O           1   0.321   0.455  Mmux__COND_3_4_f5 (Mmux__COND_3_4_f5)
+     LUT4:I2->O            1   0.704   0.420  video_or00001 (video_or0000)
+     FDR:R                     0.911          video_1
+    ----------------------------------------
+    Total                      6.814ns (5.440ns logic, 1.374ns route)
+                                       (79.8% logic, 20.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Bus2IP_Clk'
+  Total number of paths / destination ports: 123 / 123
+-------------------------------------------------------------------------
+Offset:              5.205ns (Levels of Logic = 3)
+  Source:            Bus2IP_Reset (PAD)
+  Destination:       video_1 (FF)
+  Destination Clock: Bus2IP_Clk rising
+
+  Data Path: Bus2IP_Reset to video_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   1.218   1.069  Bus2IP_Reset_IBUF (Bus2IP_Reset_IBUF)
+     LUT3_L:I2->LO         1   0.704   0.179  Mmux__COND_3_2_f6_SW0 (N81)
+     LUT4:I1->O            1   0.704   0.420  video_or00001 (video_or0000)
+     FDR:R                     0.911          video_1
+    ----------------------------------------
+    Total                      5.205ns (3.537ns logic, 1.668ns route)
+                                       (68.0% logic, 32.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Bus2IP_Clk'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              4.394ns (Levels of Logic = 1)
+  Source:            video_1 (FF)
+  Destination:       video<5> (PAD)
+  Source Clock:      Bus2IP_Clk rising
+
+  Data Path: video_1 to video<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.591   0.531  video_1 (video_1)
+     OBUF:I->O                 3.272          video_5_OBUF (video<5>)
+    ----------------------------------------
+    Total                      4.394ns (3.863ns logic, 0.531ns route)
+                                       (87.9% logic, 12.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 4 / 2
+-------------------------------------------------------------------------
+Delay:               6.353ns (Levels of Logic = 3)
+  Source:            Bus2IP_CS<1> (PAD)
+  Destination:       IP2Bus_WrAck (PAD)
+
+  Data Path: Bus2IP_CS<1> to IP2Bus_WrAck
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.218   0.712  Bus2IP_CS_1_IBUF (Bus2IP_CS_1_IBUF)
+     LUT2:I1->O            2   0.704   0.447  IP2Bus_WrAck1 (IP2Bus_WrAck_OBUF)
+     OBUF:I->O                 3.272          IP2Bus_WrAck_OBUF (IP2Bus_WrAck)
+    ----------------------------------------
+    Total                      6.353ns (5.194ns logic, 1.159ns route)
+                                       (81.8% logic, 18.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.94 secs
+ 
+--> 
+
+Total memory usage is 255504 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   13 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

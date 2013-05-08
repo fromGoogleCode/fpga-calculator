@@ -1,0 +1,14 @@
+xst -intstyle ise -ifn "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/user_logic.xst" -ofn "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/user_logic.syr" 
+xst -intstyle ise -ifn "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/user_logic.xst" -ofn "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/user_logic.syr" 
+xst -intstyle ise -ifn "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/user_logic.xst" -ofn "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/user_logic.syr" 
+xst -intstyle ise -ifn "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/user_logic.xst" -ofn "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/user_logic.syr" 
+xst -intstyle ise -ifn "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/user_logic.xst" -ofn "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/user_logic.syr" 
+xst -intstyle ise -ifn "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/user_logic.xst" -ofn "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/user_logic.syr" 
+xst -intstyle ise -ifn "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/user_logic.xst" -ofn "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/user_logic.syr" 
+xst -intstyle ise -ifn "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/user_logic.xst" -ofn "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/user_logic.syr" 
+xst -intstyle ise -ifn "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/user_logic.xst" -ofn "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/user_logic.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s250e-tq144-4 user_logic.ngc user_logic.ngd  
+map -intstyle ise -p xc3s250e-tq144-4 -cm area -ir off -pr off -c 100 -o user_logic_map.ncd user_logic.ngd user_logic.pcf 
+par -w -intstyle ise -ol high -t 1 user_logic_map.ncd user_logic.ncd user_logic.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml user_logic.twx user_logic.ncd -o user_logic.twr user_logic.pcf 
+xst -intstyle ise -ifn "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/user_logic.xst" -ofn "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/user_logic.syr" 

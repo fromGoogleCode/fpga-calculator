@@ -8,7 +8,7 @@ G:\Xilinx\13.2\ISE_DS\ISE\;G:\Xilinx\13.2\ISE_DS\EDK.
    "system" is an NCD, version 3.2, device xc3s250e, package tq144, speed -4
 Opened constraints file system.pcf.
 
-Fri Apr 26 19:26:14 2013
+Wed May 08 17:11:16 2013
 
 G:\Xilinx\13.2\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -w -g CclkPin:PULLUP -g TdoPin:PULLNONE -g M1Pin:PULLDOWN -g DonePin:PULLUP -g StartUpClk:JTAGCLK -g M0Pin:PULLUP -g M2Pin:PULLUP -g ProgPin:PULLUP -g TckPin:PULLUP -g TdiPin:PULLUP -g TmsPin:PULLUP -g LCK_cycle:NoWait -g Security:NONE -g Persist:No system.ncd 
 

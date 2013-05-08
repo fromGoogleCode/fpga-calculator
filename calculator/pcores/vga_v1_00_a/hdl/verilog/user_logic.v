@@ -1,3 +1,5 @@
+`default_nettype none
+
 module user_logic
 (
   // -- ADD USER PORTS BELOW THIS LINE ---------------
@@ -36,7 +38,7 @@ parameter C_NUM_MEM                      = 2;
 // -- ADD USER PORTS BELOW THIS LINE -----------------
 output reg			h_sync;
 output reg			v_sync;
-output reg	[0:6] video; 
+output reg	[5:0] video; 
 // -- ADD USER PORTS ABOVE THIS LINE -----------------
 
 // -- DO NOT EDIT BELOW THIS LINE --------------------
@@ -58,11 +60,21 @@ output                                    IP2Bus_Error;
 // Implementation
 //----------------------------------------------------------------------------
 
+integer IB;
+reg [31:0] bus2ip_addr_l;
+reg [31:0] bus2ip_data_l;
+always @ ( * )
+for (IB=0; IB<32; IB=IB+1)
+begin
+	bus2ip_addr_l[IB] <= Bus2IP_Addr[31-IB];
+	bus2ip_data_l[IB] <= Bus2IP_Data[31-IB];
+end
   // --USER nets declarations added here, as needed for user logic
 
   // --USER logic implementation added here
-	parameter RAM_WIDTH = 32;
-   parameter RAM_ADDR_BITS = 32;
+	parameter RAM_WIDTH = 8;
+   parameter RAM_ADDR_BITS_CHAR = 11;
+	parameter RAM_ADDR_BITS_VID = 13;
 
 
   // ------------------------------------------------------------
@@ -74,49 +86,57 @@ wire  blank_x;
 wire  blank_y;
 // Block RAM for character table
 
-   (* RAM_STYLE="{ BLOCK }" *)
-   reg [RAM_WIDTH-1:0] char_mem [(2**RAM_ADDR_BITS)-1:0];
-   reg [RAM_WIDTH-1:0] vga_output_data;   
-   reg [RAM_ADDR_BITS-1:0] vga_read_address;   
 
-	//<reg_or_wire> [RAM_ADDR_BITS-1:0] <read_address>, <write_address>;
-   //<reg_or_wire> [RAM_WIDTH-1:0] <input_data>;
-
-   //  The following code is only necessary if you wish to initialize the RAM 
-   //  contents via an external file (use $readmemb for binary data)
-   //initial
-      //$readmemh("<data_file_name>", <rom_name>, <begin_address>, <end_address>);
-
-  always @(posedge Bus2IP_Clk) begin
-      if (Bus2IP_CS[0])
-         char_mem[Bus2IP_Addr] <= Bus2IP_Data;
-      vga_output_data <= char_mem[vga_read_address];
-   end
 // Block RAM for character codes in each position
 
-   (* RAM_STYLE="{ BLOCK }" *)
-   reg [RAM_WIDTH-1:0] video_mem [(2**RAM_ADDR_BITS)-1:0];
+   
+   (* RAM_STYLE="BLOCK" *) reg [RAM_WIDTH-1:0] video_mem [(2**RAM_ADDR_BITS_VID)-1:0];
    reg [RAM_WIDTH-1:0] video_out;   
-   //reg [RAM_ADDR_BITS-1:0] pos_read_address;   
+   wire [RAM_ADDR_BITS_VID-1:0] video_addr;   
 
 	//<reg_or_wire> [RAM_ADDR_BITS-1:0] <read_address>, <write_address>;
    //<reg_or_wire> [RAM_WIDTH-1:0] <input_data>;
 
    //  The following code is only necessary if you wish to initialize the RAM 
    //  contents via an external file (use $readmemb for binary data)
-   //initial
-      //$readmemh("<data_file_name>", <rom_name>, <begin_address>, <end_address>);
-
-  always @(posedge Bus2IP_Clk) begin
+  initial
+  $readmemh("mem_video_hex.txt", video_mem);
+	assign video_addr = {y[8:3],x[9:3]};
+	
+  always @(posedge Bus2IP_Clk) 
+  begin
       if (Bus2IP_CS[1])
-         video_mem[Bus2IP_Addr] <= Bus2IP_Data;
-         video_out <= video_mem[x + y];
+         video_mem[bus2ip_addr_l[14:2]] <= bus2ip_data_l[7:0];
+         
+		video_out <= video_mem[video_addr];
    end
 
+
+   
+   (* RAM_STYLE="BLOCK" *) reg [RAM_WIDTH-1:0] char_mem [(2**RAM_ADDR_BITS_CHAR)-1:0];
+   reg [RAM_WIDTH-1:0] char_output;   
+	wire [RAM_ADDR_BITS_CHAR-1:0] char_rd_addr;
+	//<reg_or_wire> [RAM_ADDR_BITS-1:0] <read_address>, <write_address>;
+   //<reg_or_wire> [RAM_WIDTH-1:0] <input_data>;
+
+   //  The following code is only necessary if you wish to initialize the RAM 
+   //  contents via an external file (use $readmemb for binary data)
+   initial
+      $readmemh("mem_data_hex.txt", char_mem);
+
+  assign char_rd_addr = {video_out,y[2:0]};
+  always @(posedge Bus2IP_Clk) begin
+      if (Bus2IP_CS[0])
+         char_mem[bus2ip_addr_l[12:2]] <= bus2ip_data_l[7:0];
+      char_output <= char_mem[char_rd_addr];
+      //char_output <= char_mem[36];
+		//char_output <= 36;
+   end
 //reg char_col [1:0];
 //reg char_row [1:0];
 
 // Increment x position
+
 always @(posedge Bus2IP_Clk)	
 	begin
 		if(Bus2IP_Reset || x == 799)
@@ -149,6 +169,24 @@ begin
 			end
 	end
 end
+// create x[2:0]
+reg [2:0] bitsel_1;
+reg [2:0] bitsel;
+always @(posedge Bus2IP_Clk)
+begin
+	if(Bus2IP_Reset)
+	begin
+		bitsel_1 <= 0;
+		bitsel <= 0;
+	end
+	else
+	begin
+		bitsel_1 <= x[2:0];
+		bitsel <= bitsel_1;
+	end
+end
+
+
 // video
 always @(posedge Bus2IP_Clk)
 begin
@@ -159,10 +197,14 @@ begin
 		if(blank_x || blank_y)
 			video <= 6'b000000;
 		else
-			video <= 6'b110010;
-			//video <= char_mem[pos_mem[]]
+			if(char_output[7-bitsel] == 1)
+				video <= 6'b111111;
+			else
+				video <= 6'b000000;
+		   //video <= char_out[];
 	end
 end
+
 // hsync
 reg hsync_phase1;
 reg hsync_phase2;

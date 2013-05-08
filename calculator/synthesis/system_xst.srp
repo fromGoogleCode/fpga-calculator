@@ -672,32 +672,32 @@ Optimization Goal                  : speed
 Keep Hierarchy                     : no
 
 Design Statistics
-# IOs                              : 50
+# IOs                              : 49
 
 Cell Usage :
 # BELS                             : 3620
 #      GND                         : 16
 #      INV                         : 41
 #      LUT1                        : 117
-#      LUT2                        : 301
+#      LUT2                        : 297
 #      LUT2_D                      : 14
-#      LUT2_L                      : 13
-#      LUT3                        : 641
+#      LUT2_L                      : 14
+#      LUT3                        : 649
 #      LUT3_D                      : 58
 #      LUT3_L                      : 24
-#      LUT4                        : 1368
+#      LUT4                        : 1365
 #      LUT4_D                      : 26
-#      LUT4_L                      : 66
+#      LUT4_L                      : 63
 #      MULT_AND                    : 34
 #      MUXCY                       : 218
 #      MUXCY_L                     : 126
-#      MUXF5                       : 346
+#      MUXF5                       : 347
 #      MUXF6                       : 5
 #      MUXF7                       : 2
 #      MUXF8                       : 1
 #      VCC                         : 9
 #      XORCY                       : 194
-# FlipFlops/Latches                : 2541
+# FlipFlops/Latches                : 2581
 #      FD                          : 322
 #      FDC                         : 20
 #      FDC_1                       : 5
@@ -705,27 +705,28 @@ Cell Usage :
 #      FDE                         : 285
 #      FDE_1                       : 8
 #      FDP                         : 9
-#      FDR                         : 1166
-#      FDRE                        : 454
+#      FDR                         : 1193
+#      FDRE                        : 467
 #      FDRE_1                      : 1
 #      FDRS                        : 38
 #      FDRSE                       : 48
 #      FDS                         : 79
 #      FDSE                        : 92
-# RAMS                             : 132
+# RAMS                             : 137
 #      RAM16X1D                    : 128
-#      RAMB16_S9_S9                : 4
+#      RAMB16_S2_S2                : 4
+#      RAMB16_S9_S9                : 5
 # Shift Registers                  : 150
 #      SRL16                       : 44
 #      SRL16E                      : 98
 #      SRLC16E                     : 8
 # Clock Buffers                    : 5
 #      BUFG                        : 5
-# IO Buffers                       : 50
+# IO Buffers                       : 49
 #      IBUF                        : 13
 #      IBUFG                       : 1
 #      IOBUF                       : 2
-#      OBUF                        : 34
+#      OBUF                        : 33
 # DCMs                             : 1
 #      DCM_SP                      : 1
 # MULTs                            : 3
@@ -739,15 +740,15 @@ Device utilization summary:
 
 Selected Device : 3s250etq144-4 
 
- Number of Slices:                     2047  out of   2448    83%  
- Number of Slice Flip Flops:           2541  out of   4896    51%  
- Number of 4 input LUTs:               3075  out of   4896    62%  
-    Number used as logic:              2669
+ Number of Slices:                     2070  out of   2448    84%  
+ Number of Slice Flip Flops:           2581  out of   4896    52%  
+ Number of 4 input LUTs:               3074  out of   4896    62%  
+    Number used as logic:              2668
     Number used as Shift registers:     150
     Number used as RAMs:                256
- Number of IOs:                          50
- Number of bonded IOBs:                  50  out of    108    46%  
- Number of BRAMs:                         4  out of     12    33%  
+ Number of IOs:                          49
+ Number of bonded IOBs:                  49  out of    108    45%  
+ Number of BRAMs:                         9  out of     12    75%  
  Number of MULT18X18SIOs:                 3  out of     12    25%  
  Number of GCLKs:                         5  out of     24    20%  
  Number of DCMs:                          1  out of      4    25%  
@@ -773,7 +774,7 @@ Clock Information:
 -----------------------------------+--------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                  | Load  |
 -----------------------------------+--------------------------------------------------------+-------+
-fpga_0_clk_1_sys_clk_pin           | clock_generator_0/DCM0_INST/Using_Virtex.DCM_INST:CLKFX| 2572  |
+fpga_0_clk_1_sys_clk_pin           | clock_generator_0/DCM0_INST/Using_Virtex.DCM_INST:CLKFX| 2617  |
 mdm_0/mdm_0/drck_i                 | BUFG                                                   | 208   |
 mdm_0/bscan_update1                | BUFG                                                   | 42    |
 fpga_0_clk_1_sys_clk_pin           | IBUFG                                                  | 4     |
@@ -813,7 +814,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'fpga_0_clk_1_sys_clk_pin'
   Clock period: 18.972ns (frequency: 52.708MHz)
-  Total number of paths / destination ports: 140247 / 6842
+  Total number of paths / destination ports: 140581 / 7082
 -------------------------------------------------------------------------
 Delay:               12.142ns (Levels of Logic = 39)
   Source:            microblaze_0/microblaze_0/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_FPGA.Buffer_DFFs[1].FDS_I (FF)
@@ -997,23 +998,23 @@ Offset:              4.085ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'fpga_0_clk_1_sys_clk_pin'
-  Total number of paths / destination ports: 34 / 32
+  Total number of paths / destination ports: 37 / 35
 -------------------------------------------------------------------------
-Offset:              4.394ns (Levels of Logic = 2)
-  Source:            vga_0/vga_0/USER_LOGIC_I/video_4 (FF)
-  Destination:       vga_0_video_pin<1> (PAD)
+Offset:              4.532ns (Levels of Logic = 2)
+  Source:            vga_0/vga_0/USER_LOGIC_I/video_0 (FF)
+  Destination:       vga_0_video_pin<5> (PAD)
   Source Clock:      fpga_0_clk_1_sys_clk_pin rising 1.6X
 
-  Data Path: vga_0/vga_0/USER_LOGIC_I/video_4 to vga_0_video_pin<1>
+  Data Path: vga_0/vga_0/USER_LOGIC_I/video_0 to vga_0_video_pin<5>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              3   0.591   0.531  vga_0/USER_LOGIC_I/video_4 (video_port<5>)
+     FDR:C->Q              6   0.591   0.669  vga_0/USER_LOGIC_I/video_0 (video_port<0>)
      end scope: 'vga_0'
-     OBUF:I->O                 3.272          vga_0_video_pin_1_OBUF (vga_0_video_pin<1>)
+     OBUF:I->O                 3.272          vga_0_video_pin_0_OBUF (vga_0_video_pin<0>)
     ----------------------------------------
-    Total                      4.394ns (3.863ns logic, 0.531ns route)
-                                       (87.9% logic, 12.1% route)
+    Total                      4.532ns (3.863ns logic, 0.669ns route)
+                                       (85.2% logic, 14.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'mdm_0/mdm_0/drck_i'
@@ -1082,12 +1083,12 @@ Offset:              9.076ns (Levels of Logic = 11)
 =========================================================================
 
 
-Total REAL time to Xst completion: 195.00 secs
-Total CPU time to Xst completion: 195.34 secs
+Total REAL time to Xst completion: 188.00 secs
+Total CPU time to Xst completion: 188.71 secs
  
 --> 
 
-Total memory usage is 310160 kilobytes
+Total memory usage is 310928 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  501 (   0 filtered)

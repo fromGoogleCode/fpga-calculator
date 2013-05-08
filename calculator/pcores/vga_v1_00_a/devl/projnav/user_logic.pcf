@@ -1,0 +1,9 @@
+//! **************************************************************************
+// Written by: Map O.61xd on Thu May 02 18:46:22 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+NET "Bus2IP_Clk_BUFGP/IBUFG" BEL "Bus2IP_Clk_BUFGP/BUFG.GCLKMUX"
+        USELOCALCONNECT;
+SCHEMATIC END;
+

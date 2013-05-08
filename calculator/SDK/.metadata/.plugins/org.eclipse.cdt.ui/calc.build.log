@@ -1,0 +1,12 @@
+
+**** Build of configuration Debug for project calc ****
+
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../calc_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o"src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'ggetchar':
+../src/helloworld.c:43: error: 'RxBuffer' undeclared (first use in this function)
+../src/helloworld.c:43: error: (Each undeclared identifier is reported only once
+../src/helloworld.c:43: error: for each function it appears in.)
+make: *** [src/helloworld.o] Error 1

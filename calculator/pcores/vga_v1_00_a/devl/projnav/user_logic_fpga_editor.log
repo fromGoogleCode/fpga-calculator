@@ -1,0 +1,77 @@
+#:C19    
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 O.61xd
+#Current Working Directory:
+#:D   G:\Sandboxes\Xilinx\calculator\pcores\vga_v1_00_a\devl\projnav
+#Date/Time:
+#:T   Thu May 02 18:46:45 2013
+#------------------------------
+	#Reading user_logic.ncd...
+	#Loading device for application Rf_Device from file '3s250e.nph' in environment G:\Xilinx\13.2\ISE_DS\ISE\.
+	#   "user_logic" is an NCD, version 3.2, device xc3s250e, package tq144, speed -4
+	#Design creation date: 2013.05.02.16.46.21
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+select -k comp 'Mram_video_mem1'
+	#3
+unselect -all
+	#4
+select net 'Bus2IP_Addr_29_IBUF'
+	#net "Bus2IP_Addr_29_IBUF"
+	#5
+unselect -all
+	#6
+select pin 'RAMB16_X1Y0.ADDRB1'
+	#site.pin = RAMB16_X1Y0.ADDRB1, comp.pin = Mram_video_mem1.ADDRB1, delay = 2.499ns on net "x<3>"
+	#7
+unselect -all
+	#8
+select pin 'RAMB16_X1Y0.ADDRB2'
+	#site.pin = RAMB16_X1Y0.ADDRB2, comp.pin = Mram_video_mem1.ADDRB2, delay = power driven on net "GLOBAL_LOGIC0"
+	#9
+unselect -all
+	#10
+select pin 'RAMB16_X1Y0.ADDRB1'
+	#site.pin = RAMB16_X1Y0.ADDRB1, comp.pin = Mram_video_mem1.ADDRB1, delay = 2.499ns on net "x<3>"
+	#11
+unselect -all
+	#12
+select pin 'RAMB16_X1Y0.ADDRB0'
+	#site.pin = RAMB16_X1Y0.ADDRB0
+	#13
+unselect -all
+	#14
+select pin 'RAMB16_X1Y0.ADDRB1'
+	#site.pin = RAMB16_X1Y0.ADDRB1, comp.pin = Mram_video_mem1.ADDRB1, delay = 2.499ns on net "x<3>"
+	#15
+unselect -all
+	#16
+select comp 'Mram_video_mem1'
+	#comp "Mram_video_mem1",  site "RAMB16_X1Y0",  type = RAMB16  (RPM grid X88Y13)
+	#17
+unselect -all
+	#18
+select comp 'Mram_video_mem1'
+	#comp "Mram_video_mem1",  site "RAMB16_X1Y0",  type = RAMB16  (RPM grid X88Y13)
+	#19
+unselect -all
+	#20
+select comp 'Mram_video_mem1'
+	#comp "Mram_video_mem1",  site "RAMB16_X1Y0",  type = RAMB16  (RPM grid X88Y13)
+	#21
+post block
+	#22
+unselect comp 'Mram_video_mem1'
+	#23
+select -k comp 'Mram_video_mem2'
+	#24
+unselect -all
+	#25
+select comp 'Mram_video_mem2'
+	#comp "Mram_video_mem2",  site "RAMB16_X1Y1",  type = RAMB16  (RPM grid X88Y21)
+	#26
+post block

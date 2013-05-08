@@ -165,7 +165,7 @@ entity vga is
     -- ADD USER PORTS BELOW THIS LINE ------------------
     hsync_port                       : out  std_logic;
 	 vsync_port                       : out  std_logic;
-	 video_port                       : out  std_logic_vector(0 to 6); --out  std_logic_vector(0 downto 6);
+	 video_port                       : out  std_logic_vector(5 downto 0); --out  std_logic_vector(0 downto 6);
 	 
     -- ADD USER PORTS ABOVE THIS LINE ------------------
 
@@ -327,7 +327,7 @@ architecture IMP of vga is
       -- ADD USER PORTS BELOW THIS LINE ------------------
     h_sync                       : out  std_logic;
 	 v_sync                       : out  std_logic;
-	 video                       : out  std_logic_vector(0 to 6);
+	 video                       : out  std_logic_vector(5 downto 0);
       -- ADD USER PORTS ABOVE THIS LINE ------------------
 
       -- DO NOT EDIT BELOW THIS LINE ---------------------

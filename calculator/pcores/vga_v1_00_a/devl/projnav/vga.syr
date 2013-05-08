@@ -4,13 +4,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.17 secs
  
 --> Reading design: vga.prj
 
@@ -172,8 +172,9 @@ Analyzing hierarchy for module <user_logic> in library <work> with parameters.
 	C_NUM_MEM = "00000000000000000000000000000010"
 	C_SLV_AWIDTH = "00000000000000000000000000100000"
 	C_SLV_DWIDTH = "00000000000000000000000000100000"
-	RAM_ADDR_BITS = "00000000000000000000000000100000"
-	RAM_WIDTH = "00000000000000000000000000100000"
+	RAM_ADDR_BITS_CHAR = "00000000000000000000000000001011"
+	RAM_ADDR_BITS_VID = "00000000000000000000000000001101"
+	RAM_WIDTH = "00000000000000000000000000001000"
 
 Analyzing hierarchy for entity <plb_slave_attachment> in library <plbv46_slave_single_v1_01_a> (architecture <implementation>) with generics.
 	C_ARD_ADDR_RANGE_ARRAY = ("0000000000000000000000000000000011111111111111111111111111111111",
@@ -316,12 +317,15 @@ Analyzing module <user_logic> in library <work>.
 	C_NUM_MEM = 32'sb00000000000000000000000000000010
 	C_SLV_AWIDTH = 32'sb00000000000000000000000000100000
 	C_SLV_DWIDTH = 32'sb00000000000000000000000000100000
-	RAM_ADDR_BITS = 32'sb00000000000000000000000000100000
-	RAM_WIDTH = 32'sb00000000000000000000000000100000
+	RAM_ADDR_BITS_CHAR = 32'sb00000000000000000000000000001011
+	RAM_ADDR_BITS_VID = 32'sb00000000000000000000000000001101
+	RAM_WIDTH = 32'sb00000000000000000000000000001000
+INFO:Xst:2546 - "../../hdl/verilog/user_logic.v" line 103: reading initialization file "mem_video_hex.txt".
+INFO:Xst:2546 - "../../hdl/verilog/user_logic.v" line 125: reading initialization file "mem_data_hex.txt".
 Module <user_logic> is correct for synthesis.
  
-WARNING:Xst:38 - Value "{ BLOCK }" of property "RAM_STYLE" not applicable.
-WARNING:Xst:38 - Value "{ BLOCK }" of property "RAM_STYLE" not applicable.
+    Set property "RAM_STYLE = BLOCK" for signal <video_mem>.
+    Set property "RAM_STYLE = BLOCK" for signal <char_mem>.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -332,29 +336,34 @@ Performing bidirectional port resolution...
 Synthesizing Unit <user_logic>.
     Related source file is "../../hdl/verilog/user_logic.v".
 WARNING:Xst:647 - Input <Bus2IP_RNW> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <Bus2IP_Addr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <Bus2IP_BE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:646 - Signal <video_out> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <video_mem<0><-1:32>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <vga_read_address> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <vga_output_data> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:1780 - Signal <char_mem<0><-1:32>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <bus2ip_data_l<31:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <bus2ip_addr_l<31:15>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <bus2ip_addr_l<1:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 8192x8-bit dual-port RAM <Mram_video_mem> for signal <video_mem>.
+    Found 2048x8-bit dual-port RAM <Mram_char_mem> for signal <char_mem>.
     Found 1-bit register for signal <h_sync>.
     Found 1-bit register for signal <v_sync>.
-    Found 7-bit register for signal <video>.
+    Found 6-bit register for signal <video>.
+    Found 3-bit register for signal <bitsel>.
+    Found 3-bit register for signal <bitsel_1>.
     Found 1-bit register for signal <blank_x_str>.
     Found 1-bit register for signal <blank_y_str>.
+    Found 8-bit register for signal <char_output>.
     Found 1-bit register for signal <hsync_phase1>.
     Found 1-bit register for signal <hsync_phase2>.
     Found 2-bit register for signal <shf_blank_x>.
     Found 2-bit register for signal <shf_blank_y>.
+    Found 8-bit register for signal <video_out>.
     Found 1-bit register for signal <vsync_phase1>.
     Found 1-bit register for signal <vsync_phase2>.
     Found 10-bit up counter for signal <x>.
     Found 10-bit up counter for signal <y>.
     Summary:
+	inferred   2 RAM(s).
 	inferred   2 Counter(s).
-	inferred  19 D-type flip-flop(s).
+	inferred  40 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
 Unit <user_logic> synthesized.
 
 
@@ -498,19 +507,24 @@ Unit <vga> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
+# RAMs                                                 : 2
+ 2048x8-bit dual-port RAM                              : 1
+ 8192x8-bit dual-port RAM                              : 1
 # Adders/Subtractors                                   : 1
  9-bit subtractor                                      : 1
 # Counters                                             : 2
  10-bit up counter                                     : 2
-# Registers                                            : 67
+# Registers                                            : 71
  1-bit register                                        : 53
  2-bit register                                        : 2
- 3-bit register                                        : 3
+ 3-bit register                                        : 5
  32-bit register                                       : 4
  4-bit register                                        : 3
- 7-bit register                                        : 1
+ 6-bit register                                        : 1
+ 8-bit register                                        : 2
  9-bit register                                        : 1
-# Multiplexers                                         : 2
+# Multiplexers                                         : 3
+ 1-bit 8-to-1 multiplexer                              : 1
  32-bit 4-to-1 multiplexer                             : 1
  4-bit 4-to-1 multiplexer                              : 1
 
@@ -520,40 +534,196 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-INFO:Xst:2261 - The FF/Latch <video_6> in Unit <USER_LOGIC_I> is equivalent to the following 3 FFs/Latches, which will be removed : <video_4> <video_3> <video_0> 
-INFO:Xst:2261 - The FF/Latch <video_5> in Unit <USER_LOGIC_I> is equivalent to the following 2 FFs/Latches, which will be removed : <video_2> <video_1> 
-WARNING:Xst:1710 - FF/Latch <video_6> (without init value) has a constant value of 0 in block <USER_LOGIC_I>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <video_0> in Unit <USER_LOGIC_I> is equivalent to the following 2 FFs/Latches, which will be removed : <video_2> <video_4> 
+INFO:Xst:2261 - The FF/Latch <video_1> in Unit <USER_LOGIC_I> is equivalent to the following 2 FFs/Latches, which will be removed : <video_3> <video_5> 
+WARNING:Xst:1710 - FF/Latch <video_0> (without init value) has a constant value of 0 in block <USER_LOGIC_I>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_7> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_6> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_5> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_6> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_4> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_3> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_1> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_2> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_0> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <sl_mrderr_i_1> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_6> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_7> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_5> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_4> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_3> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_1> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_2> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_0> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <sl_mwrerr_i_1> (without init value) has a constant value of 0 in block <I_SLAVE_ATTACHMENT>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2404 -  FFs/Latches <video<0:5>> (without init value) have a constant value of 0 in block <user_logic>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_23> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_22> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_21> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_20> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_19> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_18> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_17> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_16> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_15> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_14> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_13> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_12> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_11> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_10> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_9> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_8> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_7> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_6> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_5> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_4> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_3> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_2> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_1> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_wrdbus_reg_0> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_abus_reg_31> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_abus_reg_30> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_abus_reg_16> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_abus_reg_15> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_abus_reg_14> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_abus_reg_13> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_abus_reg_12> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_abus_reg_11> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_abus_reg_10> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_abus_reg_9> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_abus_reg_8> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_abus_reg_7> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_abus_reg_6> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_abus_reg_5> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_abus_reg_4> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_abus_reg_3> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_abus_reg_2> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_abus_reg_1> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <plb_abus_reg_0> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <bus2ip_addr_i_31> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <bus2ip_addr_i_30> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <bus2ip_addr_i_16> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <bus2ip_addr_i_15> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <bus2ip_addr_i_14> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <bus2ip_addr_i_13> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <bus2ip_addr_i_12> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <bus2ip_addr_i_11> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <bus2ip_addr_i_10> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <bus2ip_addr_i_9> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <bus2ip_addr_i_8> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <bus2ip_addr_i_7> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <bus2ip_addr_i_6> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <bus2ip_addr_i_5> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <bus2ip_addr_i_4> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <bus2ip_addr_i_3> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <bus2ip_addr_i_2> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <bus2ip_addr_i_1> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+WARNING:Xst:2677 - Node <bus2ip_addr_i_0> of sequential type is unconnected in block <I_SLAVE_ATTACHMENT>.
+
+Synthesizing (advanced) Unit <vga>.
+INFO:Xst:3226 - The RAM <USER_LOGIC_I/Mram_char_mem> will be implemented as a BLOCK RAM, absorbing the following register(s): <USER_LOGIC_I/char_output>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2048-word x 8-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <SPLB_Clk>      | rise     |
+    |     weA            | connected to signal <ipif_Bus2IP_CS<0>> | high     |
+    |     addrA          | connected to signal <ipif_Bus2IP_Addr> |          |
+    |     diA            | connected to signal <ipif_Bus2IP_Data> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 2048-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <SPLB_Clk>      | rise     |
+    |     addrB          | connected to signal <USER_LOGIC_I/y> |          |
+    |     doB            | connected to signal <USER_LOGIC_I/char_output> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <USER_LOGIC_I/Mram_video_mem> will be implemented as a BLOCK RAM, absorbing the following register(s): <USER_LOGIC_I/video_out>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8192-word x 8-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <SPLB_Clk>      | rise     |
+    |     weA            | connected to signal <ipif_Bus2IP_CS<1>> | high     |
+    |     addrA          | connected to signal <ipif_Bus2IP_Addr> |          |
+    |     diA            | connected to signal <ipif_Bus2IP_Data> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8192-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <SPLB_Clk>      | rise     |
+    |     addrB          | connected to signal <USER_LOGIC_I/x> |          |
+    |     doB            | connected to signal <USER_LOGIC_I/video_out> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <vga> synthesized (advanced).
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_23> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_22> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_21> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_20> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_19> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_18> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_17> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_16> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_15> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_14> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_13> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_12> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_11> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_10> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_9> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_8> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_7> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_6> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_5> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_4> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_3> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_2> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_1> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_0> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_31> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_30> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_16> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_15> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_14> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_13> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_12> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_11> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_10> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_9> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_8> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_7> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_6> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_5> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_4> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_3> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_2> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_1> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_0> of sequential type is unconnected in block <vga>.
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
+# RAMs                                                 : 2
+ 2048x8-bit dual-port block RAM                        : 1
+ 8192x8-bit dual-port block RAM                        : 1
 # Adders/Subtractors                                   : 1
  9-bit subtractor                                      : 1
 # Counters                                             : 2
  10-bit up counter                                     : 2
-# Registers                                            : 221
- Flip-Flops                                            : 221
+# Registers                                            : 176
+ Flip-Flops                                            : 176
 # Multiplexers                                         : 2
+ 1-bit 8-to-1 multiplexer                              : 1
  32-bit 4-to-1 multiplexer                             : 1
- 4-bit 4-to-1 multiplexer                              : 1
 
 =========================================================================
 
@@ -561,26 +731,45 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 WARNING:Xst:1989 - Unit <plb_address_decoder>: instances <MEM_DECODE_GEN[0].GEN_PLB_SHARED.MEM_SELECT_I>, <MEM_DECODE_GEN[1].GEN_PLB_SHARED.MEM_SELECT_I> of unit <pselect_f> are equivalent, second instance is removed
-WARNING:Xst:1710 - FF/Latch <video_5> (without init value) has a constant value of 0 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <video_3> (without init value) has a constant value of 0 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <video_2> (without init value) has a constant value of 0 in block <user_logic>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <video_4> in Unit <user_logic> is equivalent to the following 2 FFs/Latches, which will be removed : <video_1> <video_0> 
+WARNING:Xst:1710 - FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_7> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_6> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_5> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_4> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_3> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_2> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_1> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_0> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_7> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_6> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_5> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_4> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_3> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_2> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_1> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_0> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/video_4> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/video_2> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <USER_LOGIC_I/video_0> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <wrce_out_i_1> in Unit <plb_address_decoder> is equivalent to the following FF/Latch, which will be removed : <wrce_out_i_0> 
 INFO:Xst:2261 - The FF/Latch <cs_out_s_h0_1> in Unit <plb_address_decoder> is equivalent to the following FF/Latch, which will be removed : <cs_out_s_h_0> 
 INFO:Xst:2261 - The FF/Latch <rdce_out_i_1> in Unit <plb_address_decoder> is equivalent to the following FF/Latch, which will be removed : <rdce_out_i_0> 
 INFO:Xst:2261 - The FF/Latch <cs_out_i_1> in Unit <plb_address_decoder> is equivalent to the following FF/Latch, which will be removed : <cs_out_i_0> 
-INFO:Xst:2261 - The FF/Latch <addr_cntl_cs_0> in Unit <plb_slave_attachment> is equivalent to the following FF/Latch, which will be removed : <addr_cycle_flush> 
-
-Optimizing unit <vga> ...
-
-Optimizing unit <user_logic> ...
-
-Optimizing unit <counter_f> ...
-
-Optimizing unit <plb_address_decoder> ...
-
-Optimizing unit <plb_slave_attachment> ...
-WARNING:Xst:1710 - FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_13> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <USER_LOGIC_I/video_1> in Unit <vga> is equivalent to the following 2 FFs/Latches, which will be removed : <USER_LOGIC_I/video_3> <USER_LOGIC_I/video_5> 
+INFO:Xst:2261 - The FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/addr_cntl_cs_0> in Unit <vga> is equivalent to the following FF/Latch, which will be removed : <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/addr_cycle_flush> 
+WARNING:Xst:1710 - FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_0> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_1> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_2> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_3> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_4> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_5> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_6> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_7> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_8> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_9> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_10> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_11> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_12> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_13> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_14> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_15> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_16> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
@@ -599,146 +788,38 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_29> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_30> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_31> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_3> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_4> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_2> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_0> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_1> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_7> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_6> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_5> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_4> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_2> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_1> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_3> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mrderr_i_0> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_6> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_5> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mwrerr_i_7> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_0> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_1> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_2> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_3> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_4> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_5> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_6> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_7> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_8> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_9> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_10> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_11> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rddbus_i_12> (without init value) has a constant value of 0 in block <vga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rnw_s_h> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i_1> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_1> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_0> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_1> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_2> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_3> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_4> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_5> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_6> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_7> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_8> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_9> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_10> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_11> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_12> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_13> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_14> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_15> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_16> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_17> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_18> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_19> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_20> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_21> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_22> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_23> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_24> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_25> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_26> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_27> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_28> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_29> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_30> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_31> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_be_i_0> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_be_i_1> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_be_i_2> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_be_i_3> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_be_reg_0> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_be_reg_1> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_be_reg_2> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_be_reg_3> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_0> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_1> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_2> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_3> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_4> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_5> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_6> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_7> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_8> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_9> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_10> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_11> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_12> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_13> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_14> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_15> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_16> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_17> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_18> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_19> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_20> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_21> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_22> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_23> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_24> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_25> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_26> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_27> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_28> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_29> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_30> of sequential type is unconnected in block <vga>.
+
+Optimizing unit <vga> ...
+
+Optimizing unit <counter_f> ...
+
+Optimizing unit <plb_address_decoder> ...
 WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_31> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_0> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_1> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_2> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_3> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_4> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_5> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_6> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_7> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_8> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_9> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_10> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_11> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_12> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_13> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_14> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_15> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_16> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_17> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_18> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_19> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_20> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_21> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_22> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_23> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_24> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_25> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_26> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_27> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_28> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_29> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_30> of sequential type is unconnected in block <vga>.
-WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_31> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_30> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_16> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_15> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_14> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_13> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_12> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_11> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_10> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_9> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_8> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_7> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_6> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_5> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_4> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_3> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_2> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_1> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_0> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rdce_out_i_1> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/wrce_out_i_1> of sequential type is unconnected in block <vga>.
+WARNING:Xst:2677 - Node <PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rnw_s_h> of sequential type is unconnected in block <vga>.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block vga, actual ratio is 2.
+Found area constraint ratio of 100 (+ 5) on block vga, actual ratio is 3.
 
 Final Macro Processing ...
 
@@ -751,8 +832,8 @@ Unit <vga> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 72
- Flip-Flops                                            : 72
+# Registers                                            : 112
+ Flip-Flops                                            : 112
 # Shift Registers                                      : 2
  2-bit shift register                                  : 2
 
@@ -780,39 +861,42 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 440
+# IOs                              : 439
 
 Cell Usage :
-# BELS                             : 130
+# BELS                             : 133
 #      GND                         : 1
 #      INV                         : 3
 #      LUT1                        : 18
-#      LUT2                        : 8
+#      LUT2                        : 6
 #      LUT2_L                      : 1
-#      LUT3                        : 17
-#      LUT3_D                      : 2
-#      LUT3_L                      : 1
-#      LUT4                        : 31
-#      LUT4_D                      : 4
+#      LUT3                        : 21
+#      LUT3_D                      : 1
+#      LUT3_L                      : 2
+#      LUT4                        : 29
+#      LUT4_D                      : 5
 #      LUT4_L                      : 4
 #      MUXCY                       : 18
-#      MUXF5                       : 1
+#      MUXF5                       : 3
 #      VCC                         : 1
 #      XORCY                       : 20
-# FlipFlops/Latches                : 74
+# FlipFlops/Latches                : 114
 #      FD                          : 1
 #      FDE                         : 4
-#      FDR                         : 31
-#      FDRE                        : 25
+#      FDR                         : 58
+#      FDRE                        : 38
 #      FDRS                        : 2
 #      FDS                         : 11
+# RAMS                             : 5
+#      RAMB16_S2_S2                : 4
+#      RAMB16_S9_S9                : 1
 # Shift Registers                  : 2
 #      SRL16E                      : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 197
-#      IBUF                        : 13
-#      OBUF                        : 184
+# IO Buffers                       : 217
+#      IBUF                        : 34
+#      OBUF                        : 183
 =========================================================================
 
 Device utilization summary:
@@ -820,13 +904,14 @@ Device utilization summary:
 
 Selected Device : 3s250etq144-4 
 
- Number of Slices:                       59  out of   2448     2%  
- Number of Slice Flip Flops:             74  out of   4896     1%  
- Number of 4 input LUTs:                 91  out of   4896     1%  
-    Number used as logic:                89
+ Number of Slices:                       84  out of   2448     3%  
+ Number of Slice Flip Flops:            114  out of   4896     2%  
+ Number of 4 input LUTs:                 92  out of   4896     1%  
+    Number used as logic:                90
     Number used as Shift registers:       2
- Number of IOs:                         440
- Number of bonded IOBs:                 198  out of    108   183% (*) 
+ Number of IOs:                         439
+ Number of bonded IOBs:                 218  out of    108   201% (*) 
+ Number of BRAMs:                         5  out of     12    41%  
  Number of GCLKs:                         1  out of     24     4%  
 
 WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
@@ -852,7 +937,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-SPLB_Clk                           | BUFGP                  | 76    |
+SPLB_Clk                           | BUFGP                  | 121   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -863,9 +948,9 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 6.275ns (Maximum Frequency: 159.363MHz)
-   Minimum input arrival time before clock: 5.153ns
-   Maximum output required time after clock: 4.824ns
+   Minimum period: 6.814ns (Maximum Frequency: 146.757MHz)
+   Minimum input arrival time before clock: 5.442ns
+   Maximum output required time after clock: 5.123ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -874,53 +959,54 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'SPLB_Clk'
-  Clock period: 6.275ns (frequency: 159.363MHz)
-  Total number of paths / destination ports: 817 / 124
+  Clock period: 6.814ns (frequency: 146.757MHz)
+  Total number of paths / destination ports: 1037 / 316
 -------------------------------------------------------------------------
-Delay:               6.275ns (Levels of Logic = 3)
-  Source:            USER_LOGIC_I/x_2 (FF)
-  Destination:       USER_LOGIC_I/y_9 (FF)
+Delay:               6.814ns (Levels of Logic = 3)
+  Source:            USER_LOGIC_I/Mram_char_mem (RAM)
+  Destination:       USER_LOGIC_I/video_1 (FF)
   Source Clock:      SPLB_Clk rising
   Destination Clock: SPLB_Clk rising
 
-  Data Path: USER_LOGIC_I/x_2 to USER_LOGIC_I/y_9
+  Data Path: USER_LOGIC_I/Mram_char_mem to USER_LOGIC_I/video_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.591   0.622  USER_LOGIC_I/x_2 (USER_LOGIC_I/x_2)
-     LUT3_D:I0->O          4   0.704   0.622  USER_LOGIC_I/blank_y_str_cmp_eq0001111 (USER_LOGIC_I/N7)
-     LUT4:I2->O            3   0.704   0.535  USER_LOGIC_I/blank_y_str_cmp_eq00011 (USER_LOGIC_I/N11)
-     LUT4:I3->O           10   0.704   0.882  USER_LOGIC_I/y_or00001 (USER_LOGIC_I/y_or0000)
-     FDRE:R                    0.911          USER_LOGIC_I/y_0
+     RAMB16_S9_S9:CLKB->DOB0    1   2.800   0.499  USER_LOGIC_I/Mram_char_mem (USER_LOGIC_I/char_output<0>)
+     LUT3:I1->O            1   0.704   0.000  USER_LOGIC_I/Mmux__COND_87_4_f5_F (N16)
+     MUXF5:I0->O           1   0.321   0.455  USER_LOGIC_I/Mmux__COND_87_4_f5 (USER_LOGIC_I/Mmux__COND_87_4_f5)
+     LUT4:I2->O            1   0.704   0.420  USER_LOGIC_I/video_or00001 (USER_LOGIC_I/video_or0000)
+     FDR:R                     0.911          USER_LOGIC_I/video_1
     ----------------------------------------
-    Total                      6.275ns (3.614ns logic, 2.661ns route)
-                                       (57.6% logic, 42.4% route)
+    Total                      6.814ns (5.440ns logic, 1.374ns route)
+                                       (79.8% logic, 20.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'SPLB_Clk'
-  Total number of paths / destination ports: 79 / 79
+  Total number of paths / destination ports: 140 / 140
 -------------------------------------------------------------------------
-Offset:              5.153ns (Levels of Logic = 2)
+Offset:              5.442ns (Levels of Logic = 3)
   Source:            SPLB_Rst (PAD)
-  Destination:       USER_LOGIC_I/y_9 (FF)
+  Destination:       USER_LOGIC_I/video_1 (FF)
   Destination Clock: SPLB_Clk rising
 
-  Data Path: SPLB_Rst to USER_LOGIC_I/y_9
+  Data Path: SPLB_Rst to USER_LOGIC_I/video_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            33   1.218   1.438  SPLB_Rst_IBUF (SPLB_Rst_IBUF)
-     LUT3:I0->O           10   0.704   0.882  PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_mbusy_i_0_or00001 (PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/rnw_s_h_or0000)
-     FDRE:R                    0.911          PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_s_h0_1
+     IBUF:I->O            60   1.218   1.306  SPLB_Rst_IBUF (SPLB_Rst_IBUF)
+     LUT3_L:I2->LO         1   0.704   0.179  USER_LOGIC_I/Mmux__COND_87_2_f6_SW0 (N10)
+     LUT4:I1->O            1   0.704   0.420  USER_LOGIC_I/video_or00001 (USER_LOGIC_I/video_or0000)
+     FDR:R                     0.911          USER_LOGIC_I/video_1
     ----------------------------------------
-    Total                      5.153ns (2.833ns logic, 2.320ns route)
-                                       (55.0% logic, 45.0% route)
+    Total                      5.442ns (3.537ns logic, 1.905ns route)
+                                       (65.0% logic, 35.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'SPLB_Clk'
   Total number of paths / destination ports: 19 / 19
 -------------------------------------------------------------------------
-Offset:              4.824ns (Levels of Logic = 1)
+Offset:              5.123ns (Levels of Logic = 1)
   Source:            PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/set_sl_busy (FF)
   Destination:       Sl_addrAck (PAD)
   Source Clock:      SPLB_Clk rising
@@ -929,23 +1015,23 @@ Offset:              4.824ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             12   0.591   0.961  PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/set_sl_busy (PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/set_sl_busy)
+     FDR:C->Q             25   0.591   1.260  PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/set_sl_busy (PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/set_sl_busy)
      OBUF:I->O                 3.272          Sl_addrAck_OBUF (Sl_addrAck)
     ----------------------------------------
-    Total                      4.824ns (3.863ns logic, 0.961ns route)
-                                       (80.1% logic, 19.9% route)
+    Total                      5.123ns (3.863ns logic, 1.260ns route)
+                                       (75.4% logic, 24.6% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 10.09 secs
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.04 secs
  
 --> 
 
-Total memory usage is 331920 kilobytes
+Total memory usage is 344784 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  236 (   0 filtered)
-Number of infos    :    9 (   0 filtered)
+Number of warnings :  250 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
 

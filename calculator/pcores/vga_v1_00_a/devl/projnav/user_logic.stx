@@ -4,13 +4,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.27 secs
  
 --> Parameter xsthdpdir set to G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.17 secs
+Total CPU time to Xst completion: 0.27 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
@@ -25,11 +25,11 @@ Analysis of file <"user_logic.prj"> succeeded.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.32 secs
  
 --> 
 
-Total memory usage is 193688 kilobytes
+Total memory usage is 197608 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

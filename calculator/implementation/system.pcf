@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map O.61xd on Fri Apr 26 19:25:31 2013
+// Written by: Map O.61xd on Wed May 08 17:10:27 2013
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -71,6 +71,26 @@ PIN lmb_bram/lmb_bram/ramb16_s9_s9_3.A_pins<12> = BEL
         "lmb_bram/lmb_bram/ramb16_s9_s9_3.A" PINNAME CLKA;
 PIN lmb_bram/lmb_bram/ramb16_s9_s9_3.B_pins<12> = BEL
         "lmb_bram/lmb_bram/ramb16_s9_s9_3.B" PINNAME CLKB;
+PIN vga_0/vga_0/USER_LOGIC_I/Mram_char_mem.A_pins<12> = BEL
+        "vga_0/vga_0/USER_LOGIC_I/Mram_char_mem.A" PINNAME CLKA;
+PIN vga_0/vga_0/USER_LOGIC_I/Mram_char_mem.B_pins<12> = BEL
+        "vga_0/vga_0/USER_LOGIC_I/Mram_char_mem.B" PINNAME CLKB;
+PIN vga_0/vga_0/USER_LOGIC_I/Mram_video_mem1.A_pins<14> = BEL
+        "vga_0/vga_0/USER_LOGIC_I/Mram_video_mem1.A" PINNAME CLKA;
+PIN vga_0/vga_0/USER_LOGIC_I/Mram_video_mem1.B_pins<14> = BEL
+        "vga_0/vga_0/USER_LOGIC_I/Mram_video_mem1.B" PINNAME CLKB;
+PIN vga_0/vga_0/USER_LOGIC_I/Mram_video_mem4.A_pins<14> = BEL
+        "vga_0/vga_0/USER_LOGIC_I/Mram_video_mem4.A" PINNAME CLKA;
+PIN vga_0/vga_0/USER_LOGIC_I/Mram_video_mem4.B_pins<14> = BEL
+        "vga_0/vga_0/USER_LOGIC_I/Mram_video_mem4.B" PINNAME CLKB;
+PIN vga_0/vga_0/USER_LOGIC_I/Mram_video_mem2.A_pins<14> = BEL
+        "vga_0/vga_0/USER_LOGIC_I/Mram_video_mem2.A" PINNAME CLKA;
+PIN vga_0/vga_0/USER_LOGIC_I/Mram_video_mem2.B_pins<14> = BEL
+        "vga_0/vga_0/USER_LOGIC_I/Mram_video_mem2.B" PINNAME CLKB;
+PIN vga_0/vga_0/USER_LOGIC_I/Mram_video_mem3.A_pins<14> = BEL
+        "vga_0/vga_0/USER_LOGIC_I/Mram_video_mem3.A" PINNAME CLKA;
+PIN vga_0/vga_0/USER_LOGIC_I/Mram_video_mem3.B_pins<14> = BEL
+        "vga_0/vga_0/USER_LOGIC_I/Mram_video_mem3.B" PINNAME CLKB;
 TIMEGRP clock_generator_0_clock_generator_0_SIG_DCM0_CLKFX = PIN
         "lmb_bram/lmb_bram/ramb16_s9_s9_0.A_pins<12>" PIN
         "lmb_bram/lmb_bram/ramb16_s9_s9_0.B_pins<12>" PIN
@@ -3143,10 +3163,20 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_DCM0_CLKFX = PIN
         "xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/ps2_data_i_d1" BEL
         "xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/TX_Full_Clr" BEL
         "xps_ps2_0/xps_ps2_0/PS2_1_I/PS2_SIE_I/TX_NOACK_set" BEL
-        "vga_0/vga_0/USER_LOGIC_I/shf_blank_x_0" BEL
-        "vga_0/vga_0/USER_LOGIC_I/Mshreg_shf_blank_x_0" BEL
         "vga_0/vga_0/USER_LOGIC_I/shf_blank_y_0" BEL
         "vga_0/vga_0/USER_LOGIC_I/Mshreg_shf_blank_y_0" BEL
+        "vga_0/vga_0/USER_LOGIC_I/shf_blank_x_0" BEL
+        "vga_0/vga_0/USER_LOGIC_I/Mshreg_shf_blank_x_0" PIN
+        "vga_0/vga_0/USER_LOGIC_I/Mram_char_mem.A_pins<12>" PIN
+        "vga_0/vga_0/USER_LOGIC_I/Mram_char_mem.B_pins<12>" PIN
+        "vga_0/vga_0/USER_LOGIC_I/Mram_video_mem1.A_pins<14>" PIN
+        "vga_0/vga_0/USER_LOGIC_I/Mram_video_mem1.B_pins<14>" PIN
+        "vga_0/vga_0/USER_LOGIC_I/Mram_video_mem4.A_pins<14>" PIN
+        "vga_0/vga_0/USER_LOGIC_I/Mram_video_mem4.B_pins<14>" PIN
+        "vga_0/vga_0/USER_LOGIC_I/Mram_video_mem2.A_pins<14>" PIN
+        "vga_0/vga_0/USER_LOGIC_I/Mram_video_mem2.B_pins<14>" PIN
+        "vga_0/vga_0/USER_LOGIC_I/Mram_video_mem3.A_pins<14>" PIN
+        "vga_0/vga_0/USER_LOGIC_I/Mram_video_mem3.B_pins<14>" BEL
         "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_wrcomp_i" BEL
         "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/rd_clear_sl_busy"
         BEL
@@ -3165,10 +3195,56 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_DCM0_CLKFX = PIN
         "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/icount_out_1"
         BEL
         "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/icount_out_0"
+        BEL "vga_0/vga_0/USER_LOGIC_I/blank_x_str" BEL
+        "vga_0/vga_0/USER_LOGIC_I/blank_y_str" BEL
+        "vga_0/vga_0/USER_LOGIC_I/vsync_phase1" BEL
+        "vga_0/vga_0/USER_LOGIC_I/hsync_phase1" BEL
+        "vga_0/vga_0/USER_LOGIC_I/video_0" BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_31"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_30"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_29"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_28"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_27"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_26"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_25"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_wrdbus_reg_24"
         BEL
         "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_pavalid_reg"
         BEL
         "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/addr_cntl_cs_0"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_29"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_28"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_27"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_26"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_25"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_24"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_23"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_22"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_21"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_20"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_19"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_18"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_17"
         BEL
         "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_abus_reg_15"
         BEL
@@ -3205,11 +3281,56 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_DCM0_CLKFX = PIN
         "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_rearbitrate_i"
         BEL "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/plb_rnw_reg"
         BEL "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/set_sl_busy"
-        BEL
+        BEL "vga_0/vga_0/USER_LOGIC_I/vsync_phase2" BEL
+        "vga_0/vga_0/USER_LOGIC_I/hsync_phase2" BEL
+        "vga_0/vga_0/USER_LOGIC_I/bitsel_1_0" BEL
+        "vga_0/vga_0/USER_LOGIC_I/bitsel_1_1" BEL
+        "vga_0/vga_0/USER_LOGIC_I/bitsel_1_2" BEL
         "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_rnw_i"
         BEL
         "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/data_timeout"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_29"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_28"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_27"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_26"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_25"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_24"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_23"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_22"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_21"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_20"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_19"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_18"
+        BEL
+        "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_17"
         BEL "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/sl_busy" BEL
+        "vga_0/vga_0/USER_LOGIC_I/v_sync" BEL
+        "vga_0/vga_0/USER_LOGIC_I/h_sync" BEL
+        "vga_0/vga_0/USER_LOGIC_I/bitsel_0" BEL
+        "vga_0/vga_0/USER_LOGIC_I/bitsel_1" BEL
+        "vga_0/vga_0/USER_LOGIC_I/bitsel_2" BEL "vga_0/vga_0/USER_LOGIC_I/y_0"
+        BEL "vga_0/vga_0/USER_LOGIC_I/y_1" BEL "vga_0/vga_0/USER_LOGIC_I/y_2"
+        BEL "vga_0/vga_0/USER_LOGIC_I/y_3" BEL "vga_0/vga_0/USER_LOGIC_I/y_4"
+        BEL "vga_0/vga_0/USER_LOGIC_I/y_5" BEL "vga_0/vga_0/USER_LOGIC_I/y_6"
+        BEL "vga_0/vga_0/USER_LOGIC_I/y_7" BEL "vga_0/vga_0/USER_LOGIC_I/y_8"
+        BEL "vga_0/vga_0/USER_LOGIC_I/y_9" BEL "vga_0/vga_0/USER_LOGIC_I/x_0"
+        BEL "vga_0/vga_0/USER_LOGIC_I/x_1" BEL "vga_0/vga_0/USER_LOGIC_I/x_2"
+        BEL "vga_0/vga_0/USER_LOGIC_I/x_3" BEL "vga_0/vga_0/USER_LOGIC_I/x_4"
+        BEL "vga_0/vga_0/USER_LOGIC_I/x_5" BEL "vga_0/vga_0/USER_LOGIC_I/x_6"
+        BEL "vga_0/vga_0/USER_LOGIC_I/x_7" BEL "vga_0/vga_0/USER_LOGIC_I/x_8"
+        BEL "vga_0/vga_0/USER_LOGIC_I/x_9" BEL
         "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/INCLUDE_DATA_PHASE_WDT.I_DPTO_COUNTER/icount_out_8"
         BEL
         "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/decode_hit_reg"
@@ -3221,27 +3342,8 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_DCM0_CLKFX = PIN
         "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_s_h_0"
         BEL
         "vga_0/vga_0/PLBV46_SLAVE_SINGLE_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_s_h0_1"
-        BEL "vga_0/vga_0/USER_LOGIC_I/hsync_phase1" BEL
-        "vga_0/vga_0/USER_LOGIC_I/vsync_phase1" BEL
-        "vga_0/vga_0/USER_LOGIC_I/blank_x_str" BEL
-        "vga_0/vga_0/USER_LOGIC_I/video_4" BEL
-        "vga_0/vga_0/USER_LOGIC_I/blank_y_str" BEL
-        "vga_0/vga_0/USER_LOGIC_I/hsync_phase2" BEL
-        "vga_0/vga_0/USER_LOGIC_I/vsync_phase2" BEL
-        "vga_0/vga_0/USER_LOGIC_I/h_sync" BEL
-        "vga_0/vga_0/USER_LOGIC_I/v_sync" BEL "vga_0/vga_0/USER_LOGIC_I/x_0"
-        BEL "vga_0/vga_0/USER_LOGIC_I/x_1" BEL "vga_0/vga_0/USER_LOGIC_I/x_2"
-        BEL "vga_0/vga_0/USER_LOGIC_I/x_3" BEL "vga_0/vga_0/USER_LOGIC_I/x_4"
-        BEL "vga_0/vga_0/USER_LOGIC_I/x_5" BEL "vga_0/vga_0/USER_LOGIC_I/x_6"
-        BEL "vga_0/vga_0/USER_LOGIC_I/x_7" BEL "vga_0/vga_0/USER_LOGIC_I/x_8"
-        BEL "vga_0/vga_0/USER_LOGIC_I/x_9" BEL "vga_0/vga_0/USER_LOGIC_I/y_0"
-        BEL "vga_0/vga_0/USER_LOGIC_I/y_1" BEL "vga_0/vga_0/USER_LOGIC_I/y_2"
-        BEL "vga_0/vga_0/USER_LOGIC_I/y_3" BEL "vga_0/vga_0/USER_LOGIC_I/y_4"
-        BEL "vga_0/vga_0/USER_LOGIC_I/y_5" BEL "vga_0/vga_0/USER_LOGIC_I/y_6"
-        BEL "vga_0/vga_0/USER_LOGIC_I/y_7" BEL "vga_0/vga_0/USER_LOGIC_I/y_8"
-        BEL "vga_0/vga_0/USER_LOGIC_I/y_9" BEL
-        "clock_generator_0/clock_generator_0/DCM0_CLKFX_BUFG_INST.GCLKMUX" BEL
-        "clock_generator_0/clock_generator_0/DCM0_CLKFX_BUFG_INST";
+        BEL "clock_generator_0/clock_generator_0/DCM0_CLKFX_BUFG_INST.GCLKMUX"
+        BEL "clock_generator_0/clock_generator_0/DCM0_CLKFX_BUFG_INST";
 PIN
         clock_generator_0/clock_generator_0/DCM0_INST/Using_Virtex.DCM_INST_pins<3>
         = BEL

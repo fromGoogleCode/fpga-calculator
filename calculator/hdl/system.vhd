@@ -16,7 +16,7 @@ entity system is
     xps_ps2_0_PS2_1_DATA : inout std_logic;
     xps_ps2_0_PS2_1_CLK : inout std_logic;
     vga_0_v_sync_pin : out std_logic;
-    vga_0_video_pin : out std_logic_vector(0 to 6);
+    vga_0_video_pin : out std_logic_vector(5 downto 0);
     vga_0_h_sync_pin : out std_logic
   );
 end system;
@@ -1396,7 +1396,7 @@ architecture STRUCTURE of system is
       Sl_MIRQ : out std_logic_vector(0 to 1);
       hsync_port : out std_logic;
       vsync_port : out std_logic;
-      video_port : out std_logic_vector(0 to 6)
+      video_port : out std_logic_vector(5 downto 0)
     );
   end component;
 
@@ -1569,7 +1569,7 @@ architecture STRUCTURE of system is
   signal sys_rst_s : std_logic;
   signal vga_0_h_sync : std_logic;
   signal vga_0_v_sync : std_logic;
-  signal vga_0_video : std_logic_vector(0 to 6);
+  signal vga_0_video : std_logic_vector(5 downto 0);
   signal xps_ps2_0_PS2_1_CLK_I : std_logic;
   signal xps_ps2_0_PS2_1_CLK_O : std_logic;
   signal xps_ps2_0_PS2_1_CLK_T : std_logic;

@@ -56,7 +56,7 @@ entity vga_0_wrapper is
     Sl_MIRQ : out std_logic_vector(0 to 1);
     hsync_port : out std_logic;
     vsync_port : out std_logic;
-    video_port : out std_logic_vector(0 to 6)
+    video_port : out std_logic_vector(5 downto 0)
   );
 end vga_0_wrapper;
 
@@ -125,7 +125,7 @@ architecture STRUCTURE of vga_0_wrapper is
       Sl_MIRQ : out std_logic_vector(0 to (C_SPLB_NUM_MASTERS-1));
       hsync_port : out std_logic;
       vsync_port : out std_logic;
-      video_port : out std_logic_vector(0 to 6)
+      video_port : out std_logic_vector(5 downto 0)
     );
   end component;
 

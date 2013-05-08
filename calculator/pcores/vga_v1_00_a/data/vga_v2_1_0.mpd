@@ -83,5 +83,5 @@ PORT Sl_MIRQ = Sl_MIRQ, DIR = O, VEC = [0:(C_SPLB_NUM_MASTERS-1)], BUS = SPLB
 
 PORT hsync_port = "", DIR = O
 PORT vsync_port = "", DIR = O
-PORT video_port = "", DIR = O, VEC = [0:6]
+PORT video_port = "", DIR = O, VEC = [5:0]
 END

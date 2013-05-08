@@ -7,13 +7,14 @@ WARNING:Security:42 - Your software subscription period has lapsed. Your current
 
 ----------------------------------------------------------------------
 This is a Full version of ISim.
+WARNING: File "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/vga_test.v" Line 39.  For instance vga_test/uut/, width 6 of formal port video is not equal to width 7 of actual signal video.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run all
-Stopped at time : 12030520 ns : File "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/vga_test.v" Line 83
-# run all
-Stopped at time : 596853585 ns : File "G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/hdl/verilog/user_logic.v" Line 107
+# run 100.00us
+# run 100.00us
+# run 100.00us
+# run 100.00us

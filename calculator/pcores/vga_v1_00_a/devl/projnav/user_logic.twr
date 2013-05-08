@@ -1,0 +1,114 @@
+--------------------------------------------------------------------------------
+Release 13.2 Trace  (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+G:\Xilinx\13.2\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml user_logic.twx user_logic.ncd -o user_logic.twr
+user_logic.pcf
+
+Design file:              user_logic.ncd
+Physical constraint file: user_logic.pcf
+Device,package,speed:     xc3s250e,tq144,-4 (PRODUCTION 1.27 2011-06-20)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock Bus2IP_Clk
+---------------+------------+------------+------------------+--------+
+               |Max Setup to|Max Hold to |                  | Clock  |
+Source         | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+---------------+------------+------------+------------------+--------+
+Bus2IP_Addr<17>|    4.134(R)|    0.036(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Addr<18>|    3.215(R)|    0.139(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Addr<19>|    3.326(R)|    0.568(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Addr<20>|    3.712(R)|   -0.053(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Addr<21>|    2.979(R)|   -0.166(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Addr<22>|    2.412(R)|    0.277(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Addr<23>|    2.467(R)|   -0.050(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Addr<24>|    2.015(R)|    0.233(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Addr<25>|    2.268(R)|    0.408(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Addr<26>|    2.486(R)|    0.732(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Addr<27>|    2.221(R)|    0.661(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Addr<28>|    2.224(R)|    0.673(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Addr<29>|    2.594(R)|    0.780(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_CS<0>   |    2.453(R)|   -0.608(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_CS<1>   |    3.516(R)|   -0.818(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<24>|    1.686(R)|    0.397(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<25>|    1.544(R)|    0.171(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<26>|    1.304(R)|    0.706(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<27>|    0.837(R)|    0.841(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<28>|    1.086(R)|    0.644(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<29>|    1.850(R)|    0.666(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<30>|    2.145(R)|    0.737(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Data<31>|    2.287(R)|    0.522(R)|Bus2IP_Clk_BUFGP  |   0.000|
+Bus2IP_Reset   |    4.989(R)|    0.926(R)|Bus2IP_Clk_BUFGP  |   0.000|
+---------------+------------+------------+------------------+--------+
+
+Clock Bus2IP_Clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+h_sync      |    7.355(R)|Bus2IP_Clk_BUFGP  |   0.000|
+v_sync      |    7.426(R)|Bus2IP_Clk_BUFGP  |   0.000|
+video<1>    |    9.143(R)|Bus2IP_Clk_BUFGP  |   0.000|
+video<4>    |    9.176(R)|Bus2IP_Clk_BUFGP  |   0.000|
+video<5>    |    9.176(R)|Bus2IP_Clk_BUFGP  |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock Bus2IP_Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Bus2IP_Clk     |    6.354|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+Bus2IP_CS<0>   |IP2Bus_RdAck   |    8.864|
+Bus2IP_CS<0>   |IP2Bus_WrAck   |    8.305|
+Bus2IP_CS<1>   |IP2Bus_RdAck   |    9.135|
+Bus2IP_CS<1>   |IP2Bus_WrAck   |    8.576|
+---------------+---------------+---------+
+
+
+Analysis completed Thu May 02 18:46:36 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 147 MB
+
+
+

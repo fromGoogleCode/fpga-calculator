@@ -36,7 +36,7 @@ module vga_test;
 	// Outputs
 	wire h_sync;
 	wire v_sync;
-	wire [0:6] video;
+	wire [0:5] video;
 	wire [0:31] IP2Bus_Data;
 	wire IP2Bus_RdAck;
 	wire IP2Bus_WrAck;

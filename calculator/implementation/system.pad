@@ -1,7 +1,7 @@
 Release 13.2 - par O.61xd (nt64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Fri Apr 26 19:26:01 2013
+Wed May 08 17:10:52 2013
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -130,7 +130,7 @@ P108|||TMS||||||||||||
 P109|||TDO||||||||||||
 P110|||TCK||||||||||||
 P111||IBUF|IP|UNUSED||0|||||||||
-P112|vga_0_video_pin<6>|IOB|IO_L01P_0|OUTPUT|LVCMOS25*|0|12|SLOW|NONE**|||UNLOCATED|NO|NONE|
+P112||DIFFM|IO_L01P_0|UNUSED||0|||||||||
 P113||DIFFS|IO_L01N_0|UNUSED||0|||||||||
 P114||IBUF|IP|UNUSED||0|||||||||
 P115|||VCCINT||||||||1.2||||

@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2013-04-26T08:19:41</DateModified>
+  <DateModified>2013-05-08T11:49:35</DateModified>
   <ModuleName>vga</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <SummaryTimeStamp>2013-05-02T18:51:57</SummaryTimeStamp>
   <SavedFilePath>G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav/iseconfig/vga.xreport</SavedFilePath>
   <ImplementationReportsDirectory>G:/Sandboxes/Xilinx/calculator/pcores/vga_v1_00_a/devl/projnav\</ImplementationReportsDirectory>
-  <DateInitialized>2013-04-12T09:59:19</DateInitialized>
+  <DateInitialized>2013-05-02T18:59:46</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

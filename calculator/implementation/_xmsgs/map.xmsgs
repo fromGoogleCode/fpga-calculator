@@ -1757,15 +1757,6 @@
 <msg type="info" file="Pack" num="1720" delta="old" >Initializing voltage to <arg fmt="%0.3f" index="1">1.140</arg> Volts. (default - Range: <arg fmt="%0.3f" index="2">1.140</arg> to <arg fmt="%0.3f" index="3">1.320</arg> Volts)
 </msg>
 
-<msg type="warning" file="Place" num="837" delta="old" >Partially locked IO Bus is found. 
-<arg fmt="%s" index="1"> Following components of the bus are not locked: 
-	 Comp: vga_0_video_pin&lt;6&gt;
-</arg>
-</msg>
-
-<msg type="info" file="Place" num="834" delta="old" >Only a subset of IOs are locked. Out of <arg fmt="%d" index="1">36</arg> IOs, <arg fmt="%d" index="2">35</arg> are locked and <arg fmt="%d" index="3">1</arg> are not locked. <arg fmt="%s" index="4">If you would like to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1.</arg> 
-</msg>
-
 <msg type="info" file="Pack" num="1650" delta="old" >Map created a placed design.
 </msg>
 
