@@ -4,8 +4,8 @@
 #include "config.h"
 
 
-float operand1     = 0;
-float operand2     = 0;
+int operand1     = 0;
+int operand2     = 0;
 /*start state */
 unsigned int clear   = 0;
 /* 404 means no valid button pushed*/
@@ -15,7 +15,9 @@ unsigned int clear_counter=0;
 
 void startCalculator(void);
 void add_new1(unsigned int btn);
+#ifdef DECIMAL_POINT
 void add_new11(unsigned int x,unsigned int btn);
+#endif
 void got_number(unsigned int btn,unsigned int task);
 void got_number2(unsigned int x); /* after decimal point*/
 unsigned int got_operand(unsigned int btn);
@@ -171,6 +173,7 @@ void add_new1(unsigned int btn)
 	operand1=btn+(operand1*10);
 }	
 
+#ifdef DECIMAL_POINT
 void add_new11(unsigned int x,unsigned int btn)
 {
 	if(x==0)operand1=(float)(operand1+(0.1*btn));
@@ -180,7 +183,7 @@ void add_new11(unsigned int x,unsigned int btn)
 	if(x==4)operand1=(float)(operand1+(0.00001*btn));
 }
 
-
+#endif
 
 
 void got_number(unsigned int btn, unsigned int task)
