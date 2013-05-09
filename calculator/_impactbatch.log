@@ -1,6 +1,6 @@
 iMPACT Version: Jun 20 2011 22:01:49
 
-iMPACT log file Started on Wed May 08 17:16:10 2013
+iMPACT log file Started on Thu May 09 16:03:16 2013
 
 Preference Table
 Name                 Setting             
@@ -29,9 +29,11 @@ Type = 0x0004.
  Cable Type = 3, Revision = 0.
  Setting cable speed to 6 MHz.
 Cable connection established.
-Firmware version = 1303.
+Firmware version = 1029.
 File version of G:/Xilinx/13.2/ISE_DS/ISE/data/xusb_xlp.hex = 1303.
 Firmware hex file version = 1303.
+Downloading G:/Xilinx/13.2/ISE_DS/ISE/data/xusb_xlp.hex.
+Downloaded firmware version = 1303.
 PLD file version = 0012h.
  PLD version = 0012h.
 Type = 0x0004.
@@ -65,4 +67,4 @@ INFO:iMPACT:188 - '1': Programming completed successfully.
 LCK cycle: NoWait
 INFO:iMPACT - '1': Checking done pin....done.
 '1': Programmed successfully.
-Elapsed time =      3 sec.
+Elapsed time =      2 sec.

@@ -24,36 +24,29 @@
 #include "platform.h"
 #include "xparameters.h"
 #include "xps2.h"
+#include "ps2.h"
 
-static XPs2 Ps2Inst; 		/* Ps2 driver instance */
+
+
 
 void print(char *str);
 
-void pputchar(int x, int y, unsigned char c )
-{
-	unsigned int addr = (x + y *128)*4 + XPAR_VGA_0_MEM1_BASEADDR;
-	volatile unsigned int * ptr = (unsigned int *) addr;
-	*ptr = c;
-}
-
-void ggetchar()
-{
-
-	unsigned int BytesReceived;
-	BytesReceived = XPs2_Recv(&Ps2Inst, &RxBuffer, 1);
-}
 
 int main()
 {
     int i = 0;
-	init_platform();
-
+    XPs2_Config *ConfigPtr;
+	u8 ch = 0x14;
+    init_platform();
+//
     print("Hello World\n\r");
 
     cleanup_platform();
-    for(i = 0; i< 63; i++)
-    {
-    	pputchar(i,i,0x13);
-    }
+	ConfigPtr = XPs2_LookupConfig(XPAR_PS2_0_DEVICE_ID);
+	if (ConfigPtr == NULL) {
+		return XST_FAILURE;
+	}
+	XPs2_CfgInitialize(&Ps2Inst, ConfigPtr, ConfigPtr->BaseAddress);
+	startCalculator();
     return 0;
 }

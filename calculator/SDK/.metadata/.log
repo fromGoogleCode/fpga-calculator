@@ -1,12 +1,21 @@
-!SESSION 2013-05-08 17:25:26.742 -----------------------------------------------
+!SESSION 2013-05-09 16:29:35.221 -----------------------------------------------
 eclipse.buildId=Release 13.2 Build SDK_O.61xd
 java.version=1.6.0_21
 java.vendor=Sun Microsystems Inc.
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=hu_HU
 Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
-!ENTRY org.eclipse.cdt.core 1 0 2013-05-08 17:26:39.901
-!MESSAGE Indexed 'calc' (2 sources, 31 headers) in 1,09 sec: 871 declarations; 824 references; 3 unresolved inclusions; 0 syntax errors; 1 unresolved names (0,06%)
+!ENTRY org.eclipse.cdt.core 1 0 2013-05-09 16:30:44.503
+!MESSAGE Indexed 'calc_bsp' (49 sources, 42 headers) in 2,09 sec: 1 118 declarations; 5 675 references; 23 unresolved inclusions; 0 syntax errors; 69 unresolved names (1,01%)
 
-!ENTRY org.eclipse.cdt.core 1 0 2013-05-08 17:26:41.227
-!MESSAGE Indexed 'calc_bsp_0' (49 sources, 42 headers) in 1,32 sec: 1 118 declarations; 5 675 references; 23 unresolved inclusions; 0 syntax errors; 69 unresolved names (1,01%)
+!ENTRY org.eclipse.cdt.core 1 0 2013-05-09 16:30:45.021
+!MESSAGE Indexed 'calc' (2 sources, 31 headers) in 0,49 sec: 871 declarations; 824 references; 3 unresolved inclusions; 0 syntax errors; 1 unresolved names (0,06%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-05-09 16:39:49.121
+!MESSAGE Indexed 'test' (2 sources, 31 headers) in 0,44 sec: 871 declarations; 824 references; 3 unresolved inclusions; 0 syntax errors; 1 unresolved names (0,06%)
+
+!ENTRY org.eclipse.osgi 2 1 2013-05-09 18:52:51.879
+!MESSAGE NLS unused message: RenameCSourceFolderChange_ErrorMsg in: org.eclipse.cdt.internal.ui.refactoring.rename.Messages
+
+!ENTRY org.eclipse.osgi 2 1 2013-05-09 18:52:51.881
+!MESSAGE NLS missing message: RenameCSourceFolderChange_ErroMsg in: org.eclipse.cdt.internal.ui.refactoring.rename.Messages

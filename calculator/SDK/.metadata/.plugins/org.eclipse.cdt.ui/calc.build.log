@@ -2,11 +2,32 @@
 **** Build of configuration Debug for project calc ****
 
 make all 
-Building file: ../src/helloworld.c
+Building file: ../src/vga.c
 Invoking: MicroBlaze gcc compiler
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../calc_bsp_0/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o"src/helloworld.o" "../src/helloworld.c"
-../src/helloworld.c: In function 'ggetchar':
-../src/helloworld.c:43: error: 'RxBuffer' undeclared (first use in this function)
-../src/helloworld.c:43: error: (Each undeclared identifier is reported only once
-../src/helloworld.c:43: error: for each function it appears in.)
-make: *** [src/helloworld.o] Error 1
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../calc_bsp/microblaze_0/include -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -MMD -MP -MF"src/vga.d" -MT"src/vga.d" -o"src/vga.o" "../src/vga.c"
+Finished building: ../src/vga.c
+' '
+Building target: calc.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../calc_bsp/microblaze_0/lib -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.20.a -mno-xl-soft-mul -o"calc.elf"  ./src/calculator.o ./src/helloworld.o ./src/initialize.o ./src/platform.o ./src/ps2.o ./src/vga.o   
+Finished building target: calc.elf
+' '
+Invoking: MicroBlaze Print Size
+mb-size calc.elf  |tee "calc.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6318	    312	   1138	   7768	   1e58	calc.elf
+Finished building: calc.elf.size
+' '
+Invoking: Xilinx ELF Check
+elfcheck calc.elf -hw ../../calculator_hw_platform/system.xml -pe microblaze_0  |tee "calc.elf.elfcheck"
+elfcheck
+Xilinx EDK 13.2 Build EDK_O.61xd
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: elfcheck -hw ../../calculator_hw_platform/system.xml -pe
+microblaze_0 calc.elf 
+
+ELF file	: calc.elf
+elfcheck passed.
+Finished building: calc.elf.elfcheck
+' '

@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Thu Apr 04 17:06:13 2013">
+  <application stringID="Xst" timeStamp="Thu May 09 14:51:29 2013">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="PATH"/>
-          <item stringID="value" value="G:\Xilinx\13.2\ISE_DS\ISE\\lib\nt64;G:\Xilinx\13.2\ISE_DS\EDK\lib\nt64;G:\Xilinx\13.2\ISE_DS\ISE\\bin\nt64;G:\Xilinx\13.2\ISE_DS\EDK\bin\nt64;G:\Xilinx\13.2\ISE_DS\EDK\gnu\microblaze\nt64\bin;G:\Xilinx\13.2\ISE_DS\EDK\gnu\powerpc-eabi\nt64\bin;G:\Xilinx\13.2\ISE_DS\EDK\gnuwin\bin;G:\Xilinx\13.2\ISE_DS\EDK\\bin\nt64;G:\Xilinx\13.2\ISE_DS\EDK\\lib\nt64;G:\Xilinx\13.2\ISE_DS\PlanAhead\bin;G:\Xilinx\13.2\ISE_DS\ISE\bin\nt64;G:\Xilinx\13.2\ISE_DS\ISE\lib\nt64;G:\Xilinx\13.2\ISE_DS\common\bin\nt64;G:\Xilinx\13.2\ISE_DS\common\lib\nt64;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Java\jre7\bin;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\bin;C:\Program Files (x86)\WinMerge;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\Program Files (x86)\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\bin"/>
+          <item stringID="value" value="G:\Xilinx\13.2\ISE_DS\ISE\\lib\nt64;G:\Xilinx\13.2\ISE_DS\EDK\lib\nt64;G:\Xilinx\13.2\ISE_DS\ISE\\bin\nt64;G:\Xilinx\13.2\ISE_DS\EDK\bin\nt64;G:\Xilinx\13.2\ISE_DS\EDK\gnu\microblaze\nt64\bin;G:\Xilinx\13.2\ISE_DS\EDK\gnu\powerpc-eabi\nt64\bin;G:\Xilinx\13.2\ISE_DS\EDK\gnuwin\bin;G:\Xilinx\13.2\ISE_DS\EDK\\bin\nt64;G:\Xilinx\13.2\ISE_DS\EDK\\lib\nt64;G:\Xilinx\13.2\ISE_DS\PlanAhead\bin;G:\Xilinx\13.2\ISE_DS\ISE\bin\nt64;G:\Xilinx\13.2\ISE_DS\ISE\lib\nt64;G:\Xilinx\13.2\ISE_DS\common\bin\nt64;G:\Xilinx\13.2\ISE_DS\common\lib\nt64;G:\Perl64\site\bin;G:\Perl64\bin;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Java\jre7\bin;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\arm-none-eabi\bin;C:\Program Files (x86)\WinMerge;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\Program Files (x86)\CodeSourcery\Sourcery_CodeBench_Lite_for_ARM_EABI\bin"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -31,7 +31,7 @@
           <item stringID="value" value="G:\Xilinx\13.2\ISE_DS\PlanAhead"/>
         </row>
         <row stringID="row" value="5">
-          <item stringID="variable" value="Xilinx"/>
+          <item stringID="variable" value="XILINX"/>
           <item stringID="value" value="G:\Xilinx\13.2\ISE_DS\ISE\;G:\Xilinx\13.2\ISE_DS\EDK"/>
         </row>
       </table>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
 	<name>calc</name>
-	<comment>calc_bsp_0 - microblaze_0</comment>
+	<comment>calc_bsp - microblaze_0</comment>
 	<projects>
-		<project>calc_bsp_0</project>
+		<project>calc_bsp</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

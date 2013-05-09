@@ -1,0 +1,8 @@
+#ifndef __PS2__
+#define __PS2__
+
+extern static XPs2 Ps2Inst; 		/* Ps2 driver instance */
+extern u8 RxBuffer;
+unsigned int getCaracter(void);
+
+#endif

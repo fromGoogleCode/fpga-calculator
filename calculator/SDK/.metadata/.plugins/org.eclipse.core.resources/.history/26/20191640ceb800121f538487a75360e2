@@ -1,0 +1,85 @@
+#include "config.h"
+#include "xps2.h"
+#include "ps2.h"
+
+u8 RxBuffer;
+XPs2 Ps2Inst; 		/* Ps2 driver instance */
+
+unsigned int getCaracter(void);
+unsigned int encode(char c);
+
+unsigned int getCaracter(void)
+{
+	unsigned int BytesReceived;
+	u32 StatusReg;
+	u32 i = 0;
+
+	while(i < 10000)
+	{i++;}
+	i=0;
+	do {
+		StatusReg = XPs2_GetStatus(&Ps2Inst);
+	}while((StatusReg & XPS2_STATUS_RX_FULL) == 0);
+	BytesReceived = XPs2_Recv(&Ps2Inst, &RxBuffer, 1);
+	return encode(RxBuffer);
+}
+
+unsigned int encode(char c)
+{
+	unsigned int result;
+	switch(c)
+	{
+		case 0x0E:
+			result = 0;
+			break;
+		case 0x16:
+			result = 1;
+			break;
+		case 0x1E:
+			result = 2;
+			break;
+		case 0x26:
+			result = 3;
+			break;
+		case 0x25:
+			result = 4; 
+			break;
+		case 0x2E:
+			result = 5;
+			break;
+		case 0x36:
+			result = 6;
+			break;
+		case 0x3D:
+			result = 7;
+			break;
+		case 0x3E:
+			result = 8;
+			break;
+		case 0x46:
+			result = 9;
+			break;
+		case 0x1C:			/*Add - A*/
+			result = 11;
+			break;
+		case 0x1B:			/* Substract - S */
+			result = 12;
+			break;
+		case 0x2B:			/* Mul - F */
+			result = 13;
+			break;
+		case 0x23:			/* Div - D*/
+			result = 14;
+			break;
+		case 0x5A:			/* Enter */
+			result = 15;
+			break;
+		case 0x21:			/* Enter */
+			result = 16;
+			break;
+		default:
+			result = 404;
+	}
+
+	return result;
+}
