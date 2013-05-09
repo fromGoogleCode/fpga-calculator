@@ -6,6 +6,7 @@
 
 
 unsigned int getCaracter(void);
+unsigned int encode(char c);
 
 unsigned int getCaracter(void)
 {

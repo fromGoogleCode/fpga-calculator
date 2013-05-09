@@ -262,39 +262,6 @@ void write_result(unsigned int x)
 	else 
 	{
 		printNumber(operand2, 10, 10);
-		/*if(operand2<0)
-		{
-			operand2=(-1)*operand2;
-			//send_char(0xBF);
-			//sprintf(array , "%5f" , operandus2);	
-			for(i=0;i<6;i++)
-			{
-				if(array[i+1]=='.')
-				{
-					//send_char(convert_char2(array[i])-offs);
-					i++;
-				}
-				//else send_char(convert_char2(array[i]));
-			}
-		}
-		else if(operand2==0)
-		{
-			//clear_7seg();
-			//send_char(null);
-		}
-		else
-		{
-			//sprintf(array , "%6f" , operandus2);	
-			for(i=0;i<7;i++)
-			{
-				if(array[i+1]=='.')
-				{
-					//send_char(convert_char2(array[i])-offs);
-					i++;
-				}
-				//else send_char(convert_char2(array[i]));
-			}
-		}*/
 	}
 	operand1=0;
 }
